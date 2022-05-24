@@ -108,7 +108,7 @@ Using the second approach would be better and also recommended, as in this appro
 ## In this chapter you will learn how to setup your project
 
 ### Use assets
-Assets are essentially all the images, fonts and sound tracks you use to make your game better. And if you are using pygame in general, you can place the assets wherever you feel like, but with pygbag, you would need to place all your assets inside an assets folder, without it your program won't run. Thought if your game doesn't need any assets then you are good to go ahead not using the assets folder.
+Assets are essentially all the images, fonts and sound tracks you use to make your game better. And if you are using pygame in general, you can place the assets wherever you feel like, but with pygbag, you would need to place all your assets inside your game folder, without it your program won't run. Thought if your game doesn't need any assets then you are good to go ahead not using the assets folder.
 
 ### Importing other libraries
 Libraries ae basically packets of code, they are used by people to avoid the complexity of doing certain things, for eg. pygame is a graphics rendering library, and people use it so that they don't need to code all those functionalities by themselves. You wouldn't need to change anything to use libraries, you can import them how you usually do!
