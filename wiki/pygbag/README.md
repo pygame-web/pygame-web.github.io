@@ -29,7 +29,7 @@ Then you can watch [this](https://www.youtube.com/watch?v=AdUZArA-kZw) tutorial 
 `pip install git+https://github.com/pmp-p/pygbag --user --upgrade`<br>
 This would install and upgrade pygbag onto your device
 > The following command would install the pygbag repository in your device, though if you want you can also run this command<br>`pip install pygbag --upgrade`<br>This would install as well as update it so as to get the most recent version of the library. But this command is less preferred as just in case
-the author forgets to publish the latest version of the library.
+the author forgets to publish the latest version of the library to PyPI.
 ***
 
 # *Web Testing*
