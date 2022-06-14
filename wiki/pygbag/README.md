@@ -89,14 +89,14 @@ If you were able to complete this step, congratulations you were successfully ab
 So, you might be wondering that how will the players play your game if your window looks so small and the console takes up so much of place. To fix this, you can change the layout of the webpage using templates.
 
 ### Using other templates
-So currently, pygbag uses the default template which u might wanna change, for that there are 2 ways you can try
+So currently, pygbag uses the default template which you might wanna change, for that there are 2 ways you can try
 #### 1. Using the in-built templates
-For that u can use the following command<br>
+For that you can use the following command<br>
 `pygbag --template window-template.tmpl folder_name`<br>
 this would now use the window-template which is prebuilt in pygbag and this template would clear everything except the window, from the webpage and align your game window to the top right corner.
 
 #### 2. Installing a template and customizing it
-For this u can go to the static folder in the [pygbag repo](https://github.com/pmp-p/pygbag/tree/main/static) and from there install one of the templates and then you can use the following command:<br>
+For this you can go to the static folder in the [pygbag repo](https://github.com/pmp-p/pygbag/tree/main/static) and from there install one of the templates and then you can use the following command:<br>
 `pygbag --template template-name.tmpl test`<br>
 replace template-name with the name you gave to the .tmpl file and running tht would port your game to web with your desired template
 <br><br>
@@ -140,7 +140,7 @@ for that for
 ### Uploading to itch.io
 So to upload the file
 1. Create a new project
-2. Select the Kinf of project as HTML
+2. Select the Kind of project as HTML
 3. Upload the .zip file on the website
 4. Select `This file will be played in the browser`
 5. Then save your project
