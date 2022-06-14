@@ -12,14 +12,14 @@ CDN root
 
 [Stuncat](https://pmp-p.itch.io/stuntcat)
 
-[Save the Crabs](https://tank-king.itch.io/save-the-crabs]
+[Save the Crabs](https://tank-king.itch.io/save-the-crabs)
 
 [pygame tech demo pycon DE 2022](https://pmp-p.github.io/pygame-wasm/)
 
 
 # Techonology:
 
-[Python Wasm explained by core dev Christian Heimes]https://www.youtube.com/watch?v=oa2LllRZUlU
+[Python Wasm explained by core dev Christian Heimes (ENG)](https://www.youtube.com/watch?v=oa2LllRZUlU)
 
 
 
