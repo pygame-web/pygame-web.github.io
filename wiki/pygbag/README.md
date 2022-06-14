@@ -151,3 +151,6 @@ Thought, if your are unable to do so, you can ask for help in the [pygame discor
 # *The End*
 Congratulations! You were able to finish this tutorial on pygbag, now you can go ahead and try to make all your games available in the web too!!<br>
 Thank you for following along!
+
+
+[contribute to this page](https://github.com/pygame-web/pygame-web.github.io/edit/main/wiki/pygbag/README.md)
