@@ -26,7 +26,7 @@ Then you can watch [this](https://www.youtube.com/watch?v=AdUZArA-kZw) tutorial 
 ### Install pygbag
 1. Like the previous step, open your command prompt
 2. Type the following command in it:<br>
-`pip install git+https://github.com/pmp-p/pygbag --user --upgrade`<br>
+`pip install git+https://github.com/pygame-web/pygbag --user --upgrade`<br>
 This would install and upgrade pygbag onto your device
 > The following command would install the pygbag repository in your device, though if you want you can also run this command<br>`pip install pygbag --upgrade`<br>This would install as well as update it so as to get the most recent version of the library. But this command is less preferred as just in case
 the author forgets to publish the latest version of the library to PyPI.
@@ -96,7 +96,7 @@ For that you can use the following command<br>
 this would now use the window-template which is prebuilt in pygbag and this template would clear everything except the window, from the webpage and align your game window to the top right corner.
 
 #### 2. Installing a template and customizing it
-For this you can go to the static folder in the [pygbag repo](https://github.com/pmp-p/pygbag/tree/main/static) and from there install one of the templates and then you can use the following command:<br>
+For this you can go to the static folder in the [pygbag repo](https://github.com/pygame-web/pygbag/tree/main/static) and from there install one of the templates and then you can use the following command:<br>
 `pygbag --template template-name.tmpl test`<br>
 replace template-name with the name you gave to the .tmpl file and running tht would port your game to web with your desired template
 <br><br>
