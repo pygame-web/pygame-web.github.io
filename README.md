@@ -1,9 +1,11 @@
 # pygame-web.github.io
-CDN root
+CDN root used by [pygbag](https://pypi.org/project/pygbag/)
 
-# WIKI
-[Pygbag packager wiki](https://pygame-web.github.io/wiki/pygbag/)
+___
 
+# [Pygbag packager WIKI](https://pygame-web.github.io/wiki/pygbag/)
+
+___
 
 ## Existing Demos:
 
@@ -14,7 +16,7 @@ CDN root
 [pygame tech demo pycon DE 2022](https://pmp-p.github.io/pygame-wasm/)
 
 
-## Techonology:
+## Technology:
 
 [Python Wasm explained by core dev Christian Heimes (youtube video)](https://www.youtube.com/watch?v=oa2LllRZUlU)
 
@@ -27,6 +29,7 @@ CDN root
 
 
 
+### edit this page
 
 [Work in Progress, PR welcomed, please contribute !!!](https://github.com/pygame-web/pygame-web.github.io/edit/main/README.md)
 
