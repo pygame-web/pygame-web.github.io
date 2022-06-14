@@ -96,9 +96,14 @@ For that you can use the following command<br>
 this would now use the window-template which is prebuilt in pygbag and this template would clear everything except the window, from the webpage and align your game window to the top right corner.
 
 #### 2. Installing a template and customizing it
-For this you can go to the static folder in the [pygbag repo](https://github.com/pygame-web/pygbag/tree/main/static) and from there install one of the templates and then you can use the following command:<br>
+For this you can go to the static folder in the [pygbag repo](https://github.com/pygame-web/pygbag/tree/main/static) and look for the various templates avaiable online.
+<br>
+To use one of them go with the following command:<br>
 `pygbag --template template-name.tmpl test`<br>
-replace template-name with the name you gave to the .tmpl file and running tht would port your game to web with your desired template
+replace template-name with the name you gave to the .tmpl file.
+Run again will port your game to web with your desired template without need to erase the cache.
+<br>
+If you want to use a template of your own just give the full path of your template file instead.
 <br><br>
 Using the second approach would be better and also recommended, as in this approach, you can customize the template as per your choice and test out how would they look.(ps. the files are basically html files with internal styling and  internal javascript scripting)
 >NOTE: Almost all line are important, so please think a lot before deleting a line which might seem important, cause even one important line could break the whole thing
