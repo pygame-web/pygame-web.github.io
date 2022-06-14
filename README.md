@@ -1,10 +1,11 @@
 # pygame-web.github.io
 CDN root
 
+# WIKI
+[Pygbag packager wiki](https://pygame-web.github.io/wiki/pygbag/)
 
-[Work in Progress, PR welcomed !!!](https://github.com/pygame-web/pygame-web.github.io/edit/main/README.md)
+[Work in Progress, PR welcomed please contribute !!!](https://github.com/pygame-web/pygame-web.github.io/edit/main/README.md)
 
-[Pygbag packager wiki, please contribute](https://github.com/pygame-web/pygbag/wiki)
 
 ### Thanks for supporting pygame. Without support now, there won't be pygame later.
 
