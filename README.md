@@ -19,7 +19,7 @@ CDN root
 
 # Techonology:
 
-[Python Wasm explained by core dev Christian Heimes (ENG)](https://www.youtube.com/watch?v=oa2LllRZUlU)
+[Python Wasm explained by core dev Christian Heimes (youtube video)](https://www.youtube.com/watch?v=oa2LllRZUlU)
 
 
 
