@@ -13,7 +13,7 @@ ___
 
 [Save the Crabs](https://tank-king.itch.io/save-the-crabs)
 
-[pygame tech demo pycon DE 2022](https://pmp-p.github.io/pygame-wasm/)
+[pygame tech demo PyCon DE & PyData Berlin 2022](https://pmp-p.github.io/pygame-wasm/)
 
 
 ## Technology:
@@ -29,7 +29,7 @@ ___
 
 
 
-### edit this page
+### edit this page, propose links to games or tutorials !
 
 [Work in Progress, PR welcomed, please contribute !!!](https://github.com/pygame-web/pygame-web.github.io/edit/main/README.md)
 
