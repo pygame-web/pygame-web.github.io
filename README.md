@@ -9,6 +9,8 @@ ___
 
 ## Existing Demos:
 
+[Breakout](https://pmp-p.github.io/pygame-breakout-wasm)
+
 [Stuncat](https://pmp-p.itch.io/stuntcat)
 
 [Save the Crabs](https://tank-king.itch.io/save-the-crabs)
