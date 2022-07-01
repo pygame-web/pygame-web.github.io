@@ -9,11 +9,14 @@ ___
 
 ## Existing Demos:
 
+
 [Breakout](https://pmp-p.github.io/pygame-breakout-wasm)
 
-[Stuncat](https://pmp-p.itch.io/stuntcat)
 
-[Save the Crabs](https://tank-king.itch.io/save-the-crabs)
+
+
+[games on itch.io](https://itch.io/c/2563651/pygame-wasm)
+
 
 [pygame tech demo PyCon DE & PyData Berlin 2022](https://pmp-p.github.io/pygame-wasm/)
 
