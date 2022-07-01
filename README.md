@@ -7,21 +7,23 @@ ___
 
 ___
 
-## Existing Demos on github pages:
+### Demos on github pages:
 
 
 [Breakout](https://pmp-p.github.io/pygame-breakout-wasm)
 
 
-## Existing Demos on itch.io:
+### Demos on itch.io:
 
 [games on itch.io](https://itch.io/c/2563651/pygame-wasm)
 
 
-## early demos:
+### Early demos:
 
 [pygame tech demo PyCon DE & PyData Berlin 2022](https://pmp-p.github.io/pygame-wasm/)
 
+
+___
 
 ## Technology:
 
