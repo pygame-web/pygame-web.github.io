@@ -14,6 +14,8 @@ ___
 
 [PyChess](https://pmp-p.github.io/pygame-pychess-wasm/index.html)
 
+[Penguins Can't Fly !](https://pmp-p.github.io/pygame-PenguinsCantFly-wasm/)
+
 
 ### Demos on itch.io:
 
