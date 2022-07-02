@@ -10,7 +10,9 @@ ___
 ### Demos on github pages:
 
 
-[Breakout](https://pmp-p.github.io/pygame-breakout-wasm)
+[Breakout](https://pmp-p.github.io/pygame-breakout-wasm/index.html)
+
+[PyChess](https://pmp-p.github.io/pygame-pychess-wasm/index.html)
 
 
 ### Demos on itch.io:
@@ -18,9 +20,11 @@ ___
 [games on itch.io](https://itch.io/c/2563651/pygame-wasm)
 
 
-### Early demos:
+### Early demos ( may not fully work as intended ):
 
 [pygame tech demo PyCon DE & PyData Berlin 2022](https://pmp-p.github.io/pygame-wasm/)
+
+[Galaxy Attack](https://pmp-p.github.io/pygame-galaxy-attack-wasm/)
 
 
 ___
