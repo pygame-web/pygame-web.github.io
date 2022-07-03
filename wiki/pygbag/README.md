@@ -71,7 +71,7 @@ asyncio.run( main() )
 You don't need to understand what this code does, for now, as this is just some test code to check if you have the right setup.
 
 ### Running your code with pygbag
-Now open your command line interface and and navigate to the parent directory of the folder you made for the project. (Parent directory as in the directory which holds the folder).
+Now open your command line interface and navigate to the parent directory of the folder you made for the project. (Parent directory as in the directory which holds the folder).
 > Now type this command into it and press enter:<br>
 `pygbag folder_name`<br>
 (replace folder_name with the name that you gave to your game folder).<br>
