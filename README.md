@@ -7,6 +7,8 @@ ___
 
 ___
 
+# [Coding for WASM](https://pygame-web.github.io/wiki/python-wasm/)
+
 ### Demos on github pages:
 
 
