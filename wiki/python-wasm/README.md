@@ -1,5 +1,9 @@
 ## Python Wasm specifics, when in the browser with emscripten runtime
 
+### main loop (async)
+
+TODO
+
 
 ### Handling persistent data across sessions
 
@@ -9,20 +13,7 @@ backup :
 restore :
 `myvalue = window.localStorage.getItem("mygame")`
 
-
-### client socket usage ( async )
-
-TODO
-
-
-
 ### mobile events handling 
-
-TODO
-
-
-
-### main loop (async)
 
 TODO
 
@@ -30,6 +21,16 @@ TODO
 ### i18n: keyboard layout independant keycodes
 
 TODO
+
+### downloading files (async)
+
+TODO
+
+### client socket usage ( async )
+
+TODO
+
+
 
 
 
