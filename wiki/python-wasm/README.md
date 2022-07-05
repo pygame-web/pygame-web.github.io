@@ -3,14 +3,11 @@
 
 ### Handling persistent data across sessions
 
-backup
-_______
-window.localStorage.setItem("mygame", str(myvalue) )
+backup :
+`window.localStorage.setItem("mygame", str(myvalue) )`
 
-restore
-_______
-myvalue = window.localStorage.getItem("mygame")
-
+restore :
+`myvalue = window.localStorage.getItem("mygame")`
 
 
 ### client socket usage ( async )
