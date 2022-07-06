@@ -17,7 +17,7 @@ ___
 
 [Penguins Can't Fly !](https://pmp-p.github.io/pygame-PenguinsCantFly-wasm/)
 
-[[view the code]](https://github.com/pmp-p?tab=repositories&q=pygame-&sort=name)
+[[view the code]](https://github.com/pmp-p?tab=repositories&q=pygame-.-wasm&sort=name)
 
 ### Demos on itch.io:
 
