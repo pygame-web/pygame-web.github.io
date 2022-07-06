@@ -25,15 +25,16 @@ def play():
 game_state = menu
 
 async def main():
-    global game_condition
-    # or here 
-    #
+    global game_state
+    
+    # or init pygame here 
+
     while game_state:
         game_state()
         pygame.display.update()
         await asyncio.sleep(0)
         
-    # Closing the game
+    # Closing the game. not strictly required neither on desktop
     pygame.quit()
     sys.exit()
         
