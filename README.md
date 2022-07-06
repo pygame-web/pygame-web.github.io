@@ -11,13 +11,13 @@ ___
 
 ### Demos on github pages:
 
-
 [Breakout](https://pmp-p.github.io/pygame-breakout-wasm/index.html)
 
 [PyChess](https://pmp-p.github.io/pygame-pychess-wasm/index.html)
 
 [Penguins Can't Fly !](https://pmp-p.github.io/pygame-PenguinsCantFly-wasm/)
 
+[Code samples](https://github.com/pmp-p?tab=repositories&q=pygame-&sort=name)
 
 ### Demos on itch.io:
 
