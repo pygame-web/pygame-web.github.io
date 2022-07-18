@@ -11,6 +11,8 @@ ___
 
 ### Demos on github pages:
 
+[Alien Dimension](https://pmp-p.github.io/pygame-alien-dimension-wasm/)
+
 [Breakout](https://pmp-p.github.io/pygame-breakout-wasm/index.html)
 
 [PyChess](https://pmp-p.github.io/pygame-pychess-wasm/index.html)
