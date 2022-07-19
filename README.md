@@ -9,6 +9,8 @@ ___
 
 # [Coding for WASM](https://pygame-web.github.io/wiki/python-wasm/)
 
+# [Debugging](https://pygame-web.github.io/wiki/pygbag-debug/)
+
 ### Demos on github pages:
 
 [Alien Dimension](https://pmp-p.github.io/pygame-alien-dimension-wasm/)
