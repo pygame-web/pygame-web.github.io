@@ -9,7 +9,7 @@ ___
 
 # [Coding for WASM](https://pygame-web.github.io/wiki/python-wasm/)
 
-# [Debugging](https://pygame-web.github.io/wiki/pygbag-debug/)
+# [Debug](https://pygame-web.github.io/wiki/pygbag-debug/)
 
 ### Demos on github pages:
 
@@ -46,6 +46,10 @@ ___
 [Python Wasm explained by core dev Christian Heimes (youtube video)](https://www.youtube.com/watch?v=oa2LllRZUlU)
 
 
+## current status
+
+[explore current issues](https://github.com/pygame-web/pygbag/issues)
+
 
 ### Thanks for supporting pygame. Without support now, there won't be pygame later.
 
@@ -53,8 +57,8 @@ ___
 
 
 
-
 ### edit this page, propose links to games or tutorials !
 
 [Work in Progress, PR welcomed, please contribute !!!](https://github.com/pygame-web/pygame-web.github.io/edit/main/README.md)
+
 
