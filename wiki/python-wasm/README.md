@@ -1,4 +1,4 @@
-## Python Wasm specifics, when in the browser with emscripten runtime
+## CPython Wasm specifics, when in the browser with emscripten runtime
 
 ### detect browser platform
 
