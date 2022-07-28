@@ -51,6 +51,11 @@ backup :
 restore :
 `myvalue = window.localStorage.getItem("mygame")`
 
+### change page background color ( around pygame screen )
+```py
+if __import__("sys").platform == "emscripten":
+    __import__('platform').document.body.style.background = "#000000"
+```    
 ### mobile events handling 
 
 TODO
