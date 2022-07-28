@@ -50,6 +50,8 @@ ___
 
 [explore current issues](https://github.com/pygame-web/pygbag/issues)
 
+[PyPI stats](https://pepy.tech/project/pygbag)
+
 
 ### Thanks for supporting pygame. Without support now, there won't be pygame later.
 
