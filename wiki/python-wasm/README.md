@@ -2,7 +2,15 @@
 
 ### detect browser platform
 
-`if sys.platform == "emscripten":`
+```py
+if sys.platform == "emscripten":
+```
+
+### detect Web Assembly CPU
+
+```py
+if 'wasm' in __import__('platform').machine():
+```
 
 ### main loop (async)
 
