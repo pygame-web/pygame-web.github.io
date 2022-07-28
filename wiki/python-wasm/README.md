@@ -62,7 +62,7 @@ restore :
 ### change page background color ( around pygame screen )
 ```py
 if __import__("sys").platform == "emscripten":
-    __import__('platform').document.body.style.background = "#000000"
+    __import__('platform').document.body.style.background = "#404040"
 ```    
 ### mobile events handling 
 
