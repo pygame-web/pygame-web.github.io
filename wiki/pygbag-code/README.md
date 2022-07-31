@@ -18,6 +18,20 @@ platform.window.dlg_multifile.hidden = false
 ___
 
 ### File downloading
+
+#### sample : async downlaod of (r) utf-8 textfiles or (rb) binary files
+```py
+import platform
+from pathlib import Path
+cdn = Path("https://cdn.jsdelivr.net/pyodide/dev/full")
+
+async def main():
+    async with platform.xopen( cdn / "repodata.json", "r") ) as textfile:
+        print( len( textfile.read() ) )
+asyncio.run(main())
+```
+
+
 #### sample : DEPRECATED synchronous download of non binary files
 ```py
 from pathlib import Path
