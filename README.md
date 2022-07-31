@@ -9,6 +9,8 @@ ___
 
 # [Coding for WASM](https://pygame-web.github.io/wiki/python-wasm/)
 
+# [Coding with pygbag](https://pygame-web.github.io/wiki/pygbag-code/)
+
 # [Debug](https://pygame-web.github.io/wiki/pygbag-debug/)
 
 ### Demos on github pages:
