@@ -18,7 +18,7 @@ platform.window.dlg_multifile.hidden = false
 ___
 
 ### File downloading
-#### sample : DEPRECATED synchronous download
+#### sample : DEPRECATED synchronous download of non binary files
 ```py
 from pathlib import Path
 cdn = Path("https://cdn.jsdelivr.net/pyodide/dev/full")
