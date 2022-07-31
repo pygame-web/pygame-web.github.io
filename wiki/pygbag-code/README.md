@@ -37,3 +37,8 @@ with open(outfile) as data:
 print( json.dumps(repo["packages"], sort_keys=True, indent=4) )
 ```
 
+
+
+
+[contribute to this page](https://github.com/pygame-web/pygame-web.github.io/edit/main/wiki/pygbag-code/README.md)
+
