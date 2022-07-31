@@ -26,7 +26,7 @@ from pathlib import Path
 cdn = Path("https://cdn.jsdelivr.net/pyodide/dev/full")
 
 async def main():
-    async with platform.xopen( cdn / "repodata.json", "r") ) as textfile:
+    async with platform.fopen( cdn / "repodata.json", "r") ) as textfile:
         print( len( textfile.read() ) )
 asyncio.run(main())
 ```
