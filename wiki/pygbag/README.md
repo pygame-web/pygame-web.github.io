@@ -40,7 +40,7 @@ So, now we will check out how to run our games on web using pygbag.
 Firstly, make a folder. This folder would include all your game files.
 
 Now, add a main.py inside that folder and put this code inside it<br>
-```
+```py
 import asyncio
 import pygame
 
@@ -77,7 +77,7 @@ Now open your command line interface and navigate to the parent directory of the
 (replace folder_name with the name that you gave to your game folder).<br>
 Note that you can also use `python -m pygbag folder_name`, if `pygbag` isn't recognized as a command.
 
-After running this command go to your preferred web browser, and go to https://localhost:8000 and it should show something like
+After running this command go to your preferred web browser, and go to https://localhost:8000#debug and it should show something like
 ![image](https://user-images.githubusercontent.com/78538391/169882643-a93622e2-99fe-4f71-90ed-017ab2da51c6.png)
 > Don't worry if you didn't get the same result, just try redoing the previous steps, and if even that doesn't work, you can feel free to join the [pygame discord server](https://discord.gg/653AkjMd) and ask your queries there!
 
@@ -86,14 +86,14 @@ If you were able to complete this step, congratulations you were successfully ab
 
 # *Templates*
 ## In this chapter you will learn about templates in pygbag
-So, you might be wondering that how will the players play your game if your window looks so small and the console takes up so much of place. To fix this, you can change the layout of the webpage using templates.
+So, you might be wondering that how will the players play your game if your window looks so small and the console takes up so much of place. To fix this, you can change the layout of the webpage using templates or remove the #debug from url.
 
 ### Using other templates
-So currently, pygbag uses the default template which you might wanna change, for that there are 2 ways you can try
+Currently, pygbag uses the default template which you might wanna change, for that there are 2 ways you can try
 #### 1. Using the in-built templates
 For that you can use the following command<br>
-`pygbag --template window-template.tmpl folder_name`<br>
-this would now use the window-template which is prebuilt in pygbag and this template would clear everything except the window, from the webpage and align your game window to the top right corner.
+`pygbag --template default.tmpl folder_name`<br>
+this would now use the default template which is prebuilt in pygbag and this template would clear everything except the window on normal mode , or in #debug mode align your game window to the top right corner in debug mode to half the page and display the terminal, file upload widget and iframe + some controls.
 
 #### 2. Installing a template and customizing it
 For this you can go to the static folder in the [pygbag repo](https://github.com/pygame-web/pygbag/tree/main/static) and look for the various templates available online.
