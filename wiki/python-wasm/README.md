@@ -52,14 +52,15 @@ if __name__ == "__main__":
 
 
 ### Handling persistent data across sessions
-
-import platform.window as window
-
+```py
+if __import__("sys").platform == "emscripten":
+    import platform.window as window
+```
 backup :
-`window.localStorage.setItem("mygame", str(myvalue) )`
+`   window.localStorage.setItem("mygame", str(myvalue) )`
 
 restore :
-`myvalue = window.localStorage.getItem("mygame")`
+`   myvalue = window.localStorage.getItem("mygame")`
 
 ### change page background color ( around pygame screen )
 ```py
