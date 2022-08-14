@@ -53,6 +53,8 @@ if __name__ == "__main__":
 
 ### Handling persistent data across sessions
 
+import platform.window as window
+
 backup :
 `window.localStorage.setItem("mygame", str(myvalue) )`
 
