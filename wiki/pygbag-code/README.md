@@ -31,7 +31,7 @@ ___
 
 ### File downloading
 
-#### sample : async downlaod of (r) utf-8 textfiles or (rb) binary files
+#### sample : async downloading of (r) utf-8 textfiles or (rb) binary files
 ```py
 import platform
 from pathlib import Path
