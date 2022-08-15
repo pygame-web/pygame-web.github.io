@@ -1,5 +1,17 @@
 ## Python code specifics, when in the browser with pygbag runtime
 
+### Sound problems
+SDL2 is hard realtime, so sometimes the game asks too much from average devices and is a bit late on frame :
+As a result SFX get garbled, here's a less than ideal fix that can leverage the problem.
+```py
+import pygame
+pygame.init()
+try:
+    pygame.mixer.SoundPatch()
+except:
+    pass
+```
+
 ### File uploading
 #### sample : image file viewer
 ```py
