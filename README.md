@@ -28,6 +28,8 @@ ___
 [[view the code]](https://github.com/pmp-p?tab=repositories&q=pygame-.-wasm&sort=name)
 
 Please ! use the tag [pygame-wasm](https://github.com/topics/pygame-wasm) for your projects hosted on Github
+and also add a favicon.png icon 32x32 next to your game main.py, so it is picked up by default.
+
 
 ### Demos on itch.io:
 
