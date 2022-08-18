@@ -13,7 +13,9 @@ ___
 
 # [Debug](https://pygame-web.github.io/wiki/pygbag-debug/)
 
-### Demos on github pages:
+### Demos on github pages :
+
+(for testing, may not always work since they use daily/weekly devel version)
 
 [Alien Dimension](https://pmp-p.github.io/pygame-alien-dimension-wasm/)
 
@@ -32,6 +34,8 @@ and also add a favicon.png icon 32x32 next to your game main.py, so it is picked
 
 
 ### Demos on itch.io:
+
+( expected to be stable )
 
 [games on itch.io](https://itch.io/c/2563651/pygame-wasm)
 
