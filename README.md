@@ -14,7 +14,7 @@ ___
 
 # [Debug](https://pygame-web.github.io/wiki/pygbag-debug/)
 
-# [pygame-script](https://pygame-web.github.io/wiki/pygame-script/)
+# [pygame-script](https://pygame-web.github.io/wiki/pygame-script/) (wip!)
 
 ### Demos on github pages :
 
