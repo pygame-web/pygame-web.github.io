@@ -13,6 +13,8 @@ ___
 
 # [Debug](https://pygame-web.github.io/wiki/pygbag-debug/)
 
+# [pygame-script](https://pygame-web.github.io/wiki/pygame-script/)
+
 ### Demos on github pages :
 
 (for testing, may not always work since they use daily/weekly devel version)
