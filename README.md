@@ -1,6 +1,7 @@
 # pygame-web.github.io
 CDN root used by [pygbag](https://pypi.org/project/pygbag/)
 
+[Github repo](https://github.com/pygame-web/pygame-web.github.io)
 ___
 
 # [Pygbag packager WIKI](https://pygame-web.github.io/wiki/pygbag/)
