@@ -12,7 +12,7 @@ ___
 
 # [Coding with pygbag](https://pygame-web.github.io/wiki/pygbag-code/)
 
-# [Debug](https://pygame-web.github.io/wiki/pygbag-debug/)
+# [Enter Debug mode](https://pygame-web.github.io/wiki/pygbag-debug/)
 
 # [pygame-script](https://pygame-web.github.io/wiki/pygame-script/) (wip!)
 
