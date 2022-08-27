@@ -4,7 +4,7 @@
  - if your code can still fit in one file 
  - you just want quick testing in real conditions but pygbag repl (#debug) is not handy.
  - for making python/pygame small examples and fit them in a iframe
- 
+ - for writing pygbag's load screens
 
 Create a .html file like this one :
 ```html
