@@ -8,7 +8,7 @@
 
 Create a .html file like this one :
 ```html
-<html><head><meta charset="utf-8"></head><script src="https://github.com/pygame-web/archives/tree/main/0.1.4/runpy.js" type=module id="site" data-src="fs,vtx,gui" async defer>#<!--
+<html><head><meta charset="utf-8"></head><script src="https://pygame-web.github.io/archives/0.1.4/runpy.js" type=module id="site" data-src="fs,vtx,gui" async defer>#<!--
 import sys
 import platform
 import asyncio
