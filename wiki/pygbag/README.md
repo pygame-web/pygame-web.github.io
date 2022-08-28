@@ -151,7 +151,7 @@ So to upload the file
 5. Then save your project
 
 After following these step, if you view your game page, then you would be able to see you game.
-Thought, if your are unable to do so, you can ask for help in the [pygame discord server](https://discord.gg/653AkjMd)
+Thought, if your are unable to do so, you can ask for help in the [pygame discord server](https://discord.gg/s6Hhrh77aq)
 
 # *The End*
 Congratulations! You were able to finish this tutorial on pygbag, now you can go ahead and try to make all your games available in the web too!!<br>
