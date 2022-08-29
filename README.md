@@ -2,19 +2,20 @@
 CDN root used by [pygbag](https://pypi.org/project/pygbag/)
 
 [Github repo](https://github.com/pygame-web/archives)
+
 ___
 
 # [Pygbag packager WIKI](https://pygame-web.github.io/wiki/pygbag/)
 
 ___
 
-# [Coding for WASM](https://pygame-web.github.io/wiki/python-wasm/)
+## [Coding for WASM](https://pygame-web.github.io/wiki/python-wasm/)
 
-# [Coding with pygbag](https://pygame-web.github.io/wiki/pygbag-code/)
+## [Coding with pygbag](https://pygame-web.github.io/wiki/pygbag-code/)
 
-# [Enter Debug mode](https://pygame-web.github.io/wiki/pygbag-debug/)
+## [Enter Debug mode](https://pygame-web.github.io/wiki/pygbag-debug/)
 
-# [pygame-script](https://pygame-web.github.io/wiki/pygame-script/) (wip!)
+## [pygame-script](https://pygame-web.github.io/wiki/pygame-script/) (wip!)
 
 ### Demos on github pages :
 
