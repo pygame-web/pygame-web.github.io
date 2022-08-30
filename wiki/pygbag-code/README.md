@@ -63,7 +63,29 @@ with open(outfile) as data:
 print( json.dumps(repo["packages"], sort_keys=True, indent=4) )
 ```
 
+#### sample : chroma keying the display of a progress bar over a webpage
+```py
+import pygame
+screen = pygame.display.set_mode([1024, 600], pygame.SRCALPHA, 32)
+screen.set_colorkey( (0,0,0,0), pygame.RLEACCEL )
+screen.fill( (0,0,0,0) )
 
+async def main():
+    global ctx
+    rng = 10 # resolution of progress bar
+    slot = (1024-200)/rng
+    for i in range(rng):
+
+        marginx = 100
+        marginy = 200
+        pygame.draw.rect(screen,(10,10,10),( marginx-10, marginy-10, (rng*slot)+20, 110 ) )
+        pygame.draw.rect(screen,(0,255,0), ( marginx, marginy, (1+i)*slot, 90) )
+        pygame.display.update()
+        window.chromakey(None, *screen.get_colorkey(), 30)
+        await asyncio.sleep(1)
+
+asyncio.run(main())
+```
 
 
 [contribute to this page](https://github.com/pygame-web/pygame-web.github.io/edit/main/wiki/pygbag-code/README.md)
