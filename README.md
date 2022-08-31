@@ -7,6 +7,14 @@ ___
 
 # [Pygbag packager WIKI](https://pygame-web.github.io/wiki/pygbag/)
 
+#### IMPORTANT: Please do not use .WAV audio format when packaging, pygbag 0.1.5 will not work 
+only .ogg is ok ( if linux+ffmpeg conversion is automatic, on windows you can use audacity )
+```py
+if sys.platform == "emscripten":
+    snd = pygame.mixer.Sound("sound.ogg")
+else:
+    snd = pygame.mixer.Sound("sound.wav") # or .WAV
+```
 ___
 
 ## [Coding for WASM](https://pygame-web.github.io/wiki/python-wasm/)
