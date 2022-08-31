@@ -21,6 +21,8 @@ ___
 
 (for testing, may not always work since they use daily/weekly devel version)
 
+[Perfect Rain](https://pmp-p.github.io/pygame-perfect-rain-wasm/)
+
 [Alien Dimension](https://pmp-p.github.io/pygame-alien-dimension-wasm/)
 
 [Breakout](https://pmp-p.github.io/pygame-breakout-wasm/index.html)
