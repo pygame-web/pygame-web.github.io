@@ -9,6 +9,7 @@ ___
 
 #### IMPORTANT: Please do not use .WAV audio format when packaging, pygbag 0.1.5 will not work 
 only .ogg is ok ( if linux+ffmpeg conversion is automatic, on windows you can use audacity )
+adapt your code this way is you still want wav format on desktop
 ```py
 if sys.platform == "emscripten":
     snd = pygame.mixer.Sound("sound.ogg")
