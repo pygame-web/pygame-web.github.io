@@ -21,9 +21,13 @@ ___
 
 (for testing, may not always work since they use daily/weekly devel version)
 
+##### heavy cpu load not for low-end devices:
+
 [Perfect Rain](https://pmp-p.github.io/pygame-perfect-rain-wasm/)
 
 [Alien Dimension](https://pmp-p.github.io/pygame-alien-dimension-wasm/)
+
+##### Light cpu load :
 
 [Breakout](https://pmp-p.github.io/pygame-breakout-wasm/index.html)
 
