@@ -28,10 +28,13 @@ embed.run()
 the data-src tags allows for 
   - fs : you will be able to use Filesystem, camera, photo and user uploaded files.
   - vt : simple vt100 with no worker
-  - vtx : full xterm.js, requires worker
+  - vtx : full xterm.js ( with sixel graphics requires webgl+worker )
   - stdout : no vt100, only `<pre>` output in body.
   - gui : can use canvas, mandatory for pygame.
-
+  
+ future tags:
+  - p3d : support Panda3D import
+  - hg3d : support Harfang3D import
 
 
 [contribute to this page](https://github.com/pygame-web/pygame-web.github.io/edit/main/wiki/pygame-script/README.md)
