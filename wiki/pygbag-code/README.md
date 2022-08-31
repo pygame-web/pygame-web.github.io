@@ -1,6 +1,6 @@
 ## Python code specifics, when in the browser with pygbag runtime
 
-### Sound problems
+### Sound problems for versions < 0.1.5
 SDL2 is hard realtime, so sometimes the game asks too much from average devices and is a bit late on frame :
 As a result SFX get garbled, here's a less than ideal fix that can leverage the problem.
 ```py
