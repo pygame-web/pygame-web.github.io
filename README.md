@@ -81,7 +81,7 @@ ___
 [PyPI stats](https://pepy.tech/project/pygbag)
 
 
-### Thanks for supporting pygame. Without support now, there won't be pygame later.
+### Thanks for supporting pygame and pygbag. Without support now, there won't be pygame or pygbag later.
 
 [Hello from the pygame community.](https://www.pygame.org/contribute.html)
 
