@@ -8,8 +8,9 @@ ___
 # [Pygbag packager WIKI](https://pygame-web.github.io/wiki/pygbag/)
 
 #### IMPORTANT: Please do not use .WAV audio format when packaging, pygbag 0.1.5 will not work.
-sfx sound patch need ogg format ( if linux+ffmpeg conversion is automatic, on windows you can use audacity )
-adapt your code this way is you still want wav format on desktop :
+sfx sound patch need ogg format ( if linux+ffmpeg conversion is automatic, on windows you can use audacity ).
+
+Adapt your code this way if you still want wav format on desktop :
 ```py
 if sys.platform == "emscripten":
     snd = pygame.mixer.Sound("sound.ogg")
@@ -85,9 +86,7 @@ ___
 [Hello from the pygame community.](https://www.pygame.org/contribute.html)
 
 
+#### Work in Progress, PR welcomed,  propose links to games or tutorials, please contribute !!!
 
-### edit this page, propose links to games or tutorials !
-
-[Work in Progress, PR welcomed, please contribute !!!](https://github.com/pygame-web/pygame-web.github.io/edit/main/README.md)
-
+[edit this page](https://github.com/pygame-web/pygame-web.github.io/edit/main/README.md)
 
