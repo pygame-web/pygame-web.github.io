@@ -3,6 +3,8 @@ CDN root used by [pygbag](https://pypi.org/project/pygbag/)
 
 [Github repo](https://github.com/pygame-web/archives)
 
+This software does not track usage at all not even for statistics so if you like it please do not forget to [star](https://github.com/pygame-web/pygbag/stargazers) it !
+
 ___
 
 # [Pygbag packager WIKI](https://pygame-web.github.io/wiki/pygbag/)
@@ -87,6 +89,7 @@ ___
 
 
 #### Work in Progress, PR welcomed,  propose links to games or tutorials, please contribute !!!
+
 
 [edit this page](https://github.com/pygame-web/pygame-web.github.io/edit/main/README.md)
 
