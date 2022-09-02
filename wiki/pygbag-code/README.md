@@ -10,7 +10,9 @@ then prepend `--ume_block=0` on pygbag command line and your game will auto star
 
 ### Sound problems for versions < 0.1.5
 SDL2 is hard realtime, so sometimes the game asks too much from average devices and is a bit late on frame :
-As a result SFX get garbled, solution : upgrade to 0.1.5 or use openal or external javascript sound manager
+As a result SFX get garbled, solution : upgrade to 0.1.5 or use external javascript sound manager.
+
+possible other solution: replace sdl2_audio by openal, PR welcomed ...
 
 
 ### File uploading
