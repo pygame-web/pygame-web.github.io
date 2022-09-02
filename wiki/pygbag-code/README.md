@@ -1,5 +1,13 @@
 ## Python code specifics, when in the browser with pygbag runtime
 
+
+### My game does not start automatically
+This is the default, because browser will not start any music until user says so
+by interacting clicking/gamepad/keyboard with game tab
+
+### but i really don't have any music on game start
+then prepend `--ume_block=0` on pygbag command line and your game will auto start.
+
 ### Sound problems for versions < 0.1.5
 SDL2 is hard realtime, so sometimes the game asks too much from average devices and is a bit late on frame :
 As a result SFX get garbled, here's a less than ideal fix that can leverage the problem.
