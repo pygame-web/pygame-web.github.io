@@ -10,15 +10,8 @@ then prepend `--ume_block=0` on pygbag command line and your game will auto star
 
 ### Sound problems for versions < 0.1.5
 SDL2 is hard realtime, so sometimes the game asks too much from average devices and is a bit late on frame :
-As a result SFX get garbled, here's a less than ideal fix that can leverage the problem.
-```py
-import pygame
-pygame.init()
-try:
-    pygame.mixer.SoundPatch()
-except:
-    pass
-```
+As a result SFX get garbled, solution : upgrade to 0.1.5 or use openal or external javascript sound manager
+
 
 ### File uploading
 #### sample : image file viewer
