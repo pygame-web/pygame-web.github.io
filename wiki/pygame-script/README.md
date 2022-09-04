@@ -5,7 +5,7 @@
  - you just want quick testing in real conditions but pygbag repl (#debug) is not handy.
  - for writing pygbag's load screens.
  - for making python/pygame small examples and fit them in a iframe. 
- - when hosting locally cdn files with no outside access
+ - when hosting locally cdn files with no outside access (though pygbag supports local cdn with --cdn)
  - when making a single app html file.
 
 Create a .html file like this one :
