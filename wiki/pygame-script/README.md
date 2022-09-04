@@ -39,4 +39,13 @@ the data-src tags allows for
   - hg3d : support Harfang3D import
 
 
+#### running the script outside browser
+simple just type :
+```
+python3 -x index.html
+```
+
+#### formatting my pygame script ?
+follow that issue : https://github.com/psf/black/issues/3214
+
 [contribute to this page](https://github.com/pygame-web/pygame-web.github.io/edit/main/wiki/pygame-script/README.md)
