@@ -1,14 +1,16 @@
 ## When to use pygame script ?
 
- - when you don't need assets packaging because you download them at runtime
- - if your code can still fit in one file 
+ - when you don't need assets packaging because you download them at runtime.
+ - if your code can still fit in one file.
  - you just want quick testing in real conditions but pygbag repl (#debug) is not handy.
- - for making python/pygame small examples and fit them in a iframe
- - for writing pygbag's load screens
+ - for writing pygbag's load screens.
+ - for making python/pygame small examples and fit them in a iframe. 
+ - when hosting locally cdn files with no outside access
+ - when making a single app html file.
 
 Create a .html file like this one :
 ```html
-<html><head><meta charset="utf-8"></head><script src="https://pygame-web.github.io/archives/0.1.4/runpy.js" type=module id="site" data-src="fs,vtx,gui" async defer>#<!--
+<html><head><meta charset="utf-8"></head><script src="https://pygame-web.github.io/archives/0.2.0/python.js" type=module id="site" data-src="fs,vtx,gui" async defer>#<!--
 import sys
 import platform
 import asyncio
