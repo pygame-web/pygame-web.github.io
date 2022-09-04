@@ -73,6 +73,8 @@ ___
 
 ## Technology:
 
+[devlog](https://github.com/pygame/pygame/issues/718)
+
 [Python Wasm explained by core dev Christian Heimes (youtube video)](https://www.youtube.com/watch?v=oa2LllRZUlU)
 
 
@@ -81,6 +83,8 @@ ___
 [explore current issues](https://github.com/pygame-web/pygbag/issues)
 
 [PyPI stats](https://pepy.tech/project/pygbag)
+
+[pyodide/pyscript](https://github.com/pyodide/pyodide/issues/289#issuecomment-1121021861)
 
 
 ### Thanks for supporting pygame and pygbag. Without support now, there won't be pygame or pygbag later.
