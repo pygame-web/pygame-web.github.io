@@ -14,6 +14,20 @@ As a result SFX get garbled, solution : upgrade to 0.1.5 or use external javascr
 
 possible other solution: replace sdl2_audio by openal, PR welcomed ...
 
+### I have custom modules or something looks like its missing from stdlib
+
+just add everything you need alonside you main.py, including stdlib modules.
+We did not put everything from stdlib in to keep a small size for mobile connections.
+
+### but I want numpy or binary modules
+
+just add everything you need alonside you main.py, including binary modules.
+They just have to **match python version** pygbag is loading if they are not abi3 modules.
+Sometimes you may have to wait for maintener (like pymunk), or pyodide's build, or build your own/ask/offer a link to it
+here https://github.com/pygame-web/pygbag/issues/37
+
+
+
 
 ### File uploading
 #### sample : image file viewer
