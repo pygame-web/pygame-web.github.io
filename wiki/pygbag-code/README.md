@@ -22,7 +22,7 @@ We did not put everything from stdlib in to keep a small size for mobile connect
 ### but I want numpy or binary modules
 
 just add everything you need alonside you main.py, including binary modules.
-They just have to **match python version** pygbag is loading if they are not abi3 modules.
+They just have to **match python version** pygbag is loading if they are not wasm abi3 modules.
 Sometimes you may have to wait for maintener (like pymunk), build your own with [python-wasm-sdk](https://github.com/pygame-web/python-wasm-sdk), extract a wheel from or pyodide's build,  or maybe just ask/offer a link to it
 here https://github.com/pygame-web/pygbag/issues/37
 
