@@ -11,7 +11,7 @@
  - when pygbag can not run for you (mobile or restricted work environnement).
 
 Create a .html file like this one :
-```html
+```py
 <html><head><meta charset="utf-8"></head><script src="https://pygame-web.github.io/archives/0.2.0/pythons.js" type=module id="site" data-src="fs,vtx,gui" async defer>#<!--
 import sys
 import platform
