@@ -26,6 +26,7 @@ asyncio.run(main())
 
 embed.run()
 
+# do not change/remove the following comment it is for clearly separating python code from html body
 # --></script></html>
 ```
 
