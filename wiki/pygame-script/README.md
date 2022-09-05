@@ -13,6 +13,7 @@
 Create a .html file like this one :
 ```py
 <html><head><meta charset="utf-8"></head><script src="https://pygame-web.github.io/archives/0.2.0/pythons.js" type=module id="site" data-src="fs,vtx,gui" async defer>#<!--
+
 import sys
 import platform
 import asyncio
