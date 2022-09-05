@@ -12,16 +12,16 @@ then prepend `--ume_block=0` on pygbag command line and your game will auto star
 SDL2 is hard realtime, so sometimes the game asks too much from average devices and is a bit late on frame :
 As a result SFX get garbled, solution : upgrade to 0.1.5 or use external javascript sound manager.
 
-possible other solution: replace sdl2_audio by openal, PR welcomed ...
+Possible other solution: replace sdl2_audio by openal, PR welcomed ...
 
 ### I have custom modules or something looks like its missing from stdlib
 
-just add everything you need alonside you main.py, including stdlib modules.
-We did not put everything from stdlib in to keep a small size for mobile connections.
+Just add everything you need alonside you main.py, including stdlib modules.
+We did not put everything from stdlib in order to keep a small size for mobile connections.
 
 ### but I want numpy or binary modules
 
-just add everything you need alonside you main.py, including binary modules.
+Just add everything you need alonside you main.py, including binary modules.
 They just have to **match python version** pygbag is loading if they are not wasm abi3 modules.
 Sometimes you may have to wait for maintener (like pymunk), build your own with [python-wasm-sdk](https://github.com/pygame-web/python-wasm-sdk), extract a wheel from or pyodide's build,  or maybe just ask/offer a link to it
 [here](https://github.com/pygame-web/pygbag/issues/37)
