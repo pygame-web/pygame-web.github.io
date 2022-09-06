@@ -31,6 +31,9 @@ embed.run()
 # --></script></html>
 ```
 
+mobile demo : https://pygame-web.github.io/showroom/pygame-scripts/org.pygame.touchpong.html
+
+
 the data-src tags allows for 
   - fs : you will be able to use Filesystem, camera, photo and user uploaded files.
   - vt : simple vt100 with no worker
