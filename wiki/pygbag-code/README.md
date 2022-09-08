@@ -16,9 +16,9 @@ As a result SFX get garbled, solution : upgrade to 0.1.5 or use external javascr
 
 Possible other solution: replace sdl2_audio by openal, PR welcomed ...
 
-### I have custom modules or something looks like its missing from stdlib
+### I have custom modules or something looks like it is missing from stdlib
 
-Just add everything you need alonside you main.py, including stdlib modules.
+Just add everything you need alonside you main.py, including hand picked stdlib modules.
 We did not put everything from stdlib in order to keep a small size for mobile connections.
 
 ### but I want numpy or binary modules
