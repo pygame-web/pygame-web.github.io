@@ -1,6 +1,6 @@
 ## Python code specifics, when in the browser with pygbag runtime
 
-on some platform pygbag is not in the PATH, so use `python -m pygbag` instead of just pygbag.
+on some platforms pygbag is not in the PATH, so use `python -m pygbag` instead of just pygbag.
 
 
 ### My game does not start automatically
