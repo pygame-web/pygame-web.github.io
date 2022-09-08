@@ -1,5 +1,7 @@
 ## Python code specifics, when in the browser with pygbag runtime
 
+on some platform pygbag is not in the PATH, so use `python -m pygbag` instead of just pygbag.
+
 
 ### My game does not start automatically
 This is the default, because browser will not start any music until user says so
