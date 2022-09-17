@@ -9,6 +9,7 @@ Hey there, Welcome to the Pygbag Wiki!
 * Project Setup
 * Bonus: Uploading your game on itch.io
 * The End
+
 ***
 
 # *Installation*
