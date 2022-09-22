@@ -57,10 +57,10 @@ if __import__("sys").platform == "emscripten":
     import platform.window as window
 ```
 backup :
-`   window.localStorage.setItem("mygame", str(myvalue) )`
+`window.localStorage.setItem("mygame", str(myvalue) )`
 
 restore :
-`   myvalue = window.localStorage.getItem("mygame")`
+`myvalue = window.localStorage.getItem("mygame")`
 
 ### change page background color ( around pygame screen )
 ```py
