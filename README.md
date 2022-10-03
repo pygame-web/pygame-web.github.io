@@ -91,6 +91,11 @@ ___
 
 [Hello from the pygame community.](https://www.pygame.org/contribute.html)
 
+#### Connect with Discord
+
+[Pygame community](https://discord.gg/p7RjnVNTcM)
+
+[WebAssembly/Python](https://discord.gg/MCTM4xFDMK)
 
 #### Work in Progress, PR welcomed,  propose links to games or tutorials, please contribute !!!
 
