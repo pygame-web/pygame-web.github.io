@@ -6,83 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="/pygame-web.github.io/static/images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="/pygame-web.github.io/static/styles/style.css" />
-    <title> Pygame WebAssembly CDN </title>
   </head>
 
-  <header class="header header--loggedIn">
-    <div class="container">
-        <a href="/pygame-web.github.io/" class="header__logo">
-            <img src="/pygame-web.github.io/static/images/favicon.ico" />
-            <h1> Pygame WebAssembly CDN </h1>
-        </a>
-
-        <div class="sections">
-            <a href="/pygame-web.github.io/"> <h1> HOME </h1></a>
-        </div>
-
-        <div class="sections">
-            <a href="wiki/pygbag/"> <h1> HOW TO USE </h1></a>
-        </div>
-
-        <div class="sections">
-            <a href="/pygame-web.github.io/contact/"> <h1> CONTACT </h1></a>
-        </div>
-
-        <div class="sections">
-            <a href="/pygame-web.github.io/about/"> <h1> ABOUT </h1></a>
-        </div>
-
-        <div class="language">
-            <div>
-                <a href="/pygame-web.github.io/"> EN </a>
-            </div>
-            |
-            <div>
-                <a href="/pygame-web.github.io/"> ES </a>  <!--TODO versión español-->
-            </div>
-        </div>
-
-    </div>
-  </header>
-
-
-  <body>
-    <main class="layout layout--3">
-      <div class="container">
-        <div class="topics">
-            <div class="topics__header">
-                <h2> Browse Topics </h2>
-            </div>
-
-            <ul class="topics__list">
-                <li>
-                    <a href="/pygame-web.github.io/" class="active"> All <span> 4 </span></a>
-                </li>
-
-                <li>
-                    <a href="/pygame-web.github.io/heavy/"> Heavy CPU Load <span> 1 </span></a>
-                </li>
-
-                <li>
-                    <a href="/pygame-web.github.io/light/"> Light CPU Load <span> 2 </span></a>
-                </li>
-
-                <li>
-                    <a href="/pygame-web.github.io/arcade/"> Arcade <span> 1 </span></a>
-                </li>
-            </ul>
-
-            <!--<a class="btn btn--link" href="topics.html">
-                More
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
-                    <title>chevron-down</title>
-                    <path d="M16 21l-13-13h-3l16 16 16-16h-3l-13 13z"></path>
-                </svg>
-            </a>-->
-        </div>
-
-        <div class="roomList">
-            <!--<div class="mobile-menu">
+  <body style="width: 95%">
+    <!--<div class="mobile-menu">
               <form class="header__search">
                 <label>
                   <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
@@ -101,9 +28,9 @@
               </div>
             </div>-->
 
-            <div class="roomList__header">
+    <div class="roomList__header">
               <div>
-                <h2> Games </h2>
+                <h2> Arcade Games </h2>
                   <p> 1 Game available </p>
               </div>
 
@@ -117,7 +44,7 @@
               </a>
             </div>
 
-            <div id="pixel_runner" class="roomListRoom" style="--url: url('../images/pixel_runner.gif')">
+    <div id="pixel_runner" class="roomListRoom" style="--url: url('../images/pixel_runner.gif')">
                 <div class="roomListRoom__header">
                     <a href="https://github.com/DaniMorales97" target="_blank" class="roomListRoom__author" title="GitHub Profile">
                         <div class="avatar avatar--small">
@@ -133,7 +60,7 @@
                 </div>
 
                 <div class="roomListRoom__content">
-                    <a href="https://DaniMorales97.github.io/PIXEL_RUNNER" target="_blank" class="roomListRoom__content_a"> Pixel Runner </a>
+                    <a href="https://DaniMorales97.github.io/PIXEL_RUNNER" target="iframe" class="roomListRoom__content_a"> Pixel Runner </a>
                     <p>
                         It is a version with some changes of the Pixel Runner game
                         <a href="https://github.com/clear-code-projects" target="_blank">
@@ -149,112 +76,18 @@
 
                 <div class="roomListRoom__meta">
                     <a href="https://github.com/DaniMorales97/PIXEL_RUNNER" target="_blank" class="roomListRoom__joined" title="GitHub Repository">
-                        <div style="position:relative; top:3.8px">
-                            <img src="/pygame-web.github.io/static/images/github-logo.png" width="20px" height="20px"/>
+                        <div class="gh-logo">
+                            <img src="/pygame-web.github.io/static/images/github-logo.png"/>
                         </div>
 
                         <span> Source Code </span>
                     </a>
 
-                    <a href="/pygame-web.github.io/arcade/" class="roomListRoom__joined">
+                    <a href="/pygame-web.github.io/arcade/" target="iframe" class="roomListRoom__joined">
                         <p class="roomListRoom__topic"> Arcade </p>
                     </a>
                 </div>
             </div>
 
-        </div>
-
-        <div class="activities">
-            <div class="activities__header">
-                <h2> WIKI ENTRIES </h2>
-            </div>
-
-            <div class="activities__box">
-                <div class="activities__boxHeader">
-                    <a href="wiki/pygbag/" class="roomListRoom__author">
-                        <!--<div class="avatar avatar--small">
-                            <img src="https://randomuser.me/api/portraits/women/11.jpg" />
-                        </div>-->
-
-                        <p> PYGBAG PACKAGER </p>
-                    </a>
-                </div>
-
-                <div class="activities__boxContent">
-                    <p> Tutorial on how to use pygbag to convert your pygame code into a package
-                        that can be run on a web browser. Mobile too!
-                    </p>
-                </div>
-            </div>
-
-            <div class="activities__box">
-                <div class="activities__boxHeader">
-                    <a href="wiki/python-wasm" class="roomListRoom__author">
-                        <!--<div class="avatar avatar--small">
-                            <img src="https://randomuser.me/api/portraits/women/11.jpg" />
-                        </div>-->
-
-                        <p> PYTHON WASM </p>
-                    </a>
-                </div>
-
-                <div class="activities__boxContent">
-                    <p> CPython WASM specifics, when in the browser with emscripten runtime. </p>
-                </div>
-            </div>
-
-            <div class="activities__box">
-                <div class="activities__boxHeader">
-                    <a href="wiki/pygbag-code" class="roomListRoom__author">
-                        <!--<div class="avatar avatar--small">
-                            <img src="https://randomuser.me/api/portraits/women/11.jpg" />
-                        </div>-->
-
-                        <p> PYGBAG FAQ </p>
-                    </a>
-                </div>
-
-                <div class="activities__boxContent">
-                    <p> Solutions for some of the most common problems encountered using pygbag. </p>
-                </div>
-            </div>
-
-            <div class="activities__box">
-                <div class="activities__boxHeader">
-                    <a href="wiki/pygbag-debug" class="roomListRoom__author">
-                        <!--<div class="avatar avatar--small">
-                            <img src="https://randomuser.me/api/portraits/women/11.jpg" />
-                        </div>-->
-
-                        <p> DEBUG MODE </p>
-                    </a>
-                </div>
-
-                <div class="activities__boxContent">
-                    <p> How to enter debug mode while running your game on a browser. </p>
-                </div>
-            </div>
-
-            <div class="activities__box">
-                <div class="activities__boxHeader">
-                    <a href="wiki/pygame-script" class="roomListRoom__author">
-                        <!--<div class="avatar avatar--small">
-                            <img src="https://randomuser.me/api/portraits/women/11.jpg" />
-                        </div>-->
-
-                        <p> PYGAME SCRIPT </p>
-                    </a>
-                </div>
-
-                <div class="activities__boxContent">
-                    <p> When to use pygame script directly on your html. </p>
-                </div>
-            </div>
-
-        </div>
-      </div>
-    </main>
-
-    <script src="static/js/script.js"></script>
   </body>
 </html>

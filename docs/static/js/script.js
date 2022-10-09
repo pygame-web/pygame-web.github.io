@@ -67,3 +67,15 @@ if (photoInput)
 // Scroll to Bottom
 const conversationThread = document.querySelector(".room__box");
 if (conversationThread) conversationThread.scrollTop = conversationThread.scrollHeight;
+
+// Nav for iframe
+function nav(url) {
+    console.log("FRAME", url)
+    iframe.location=url
+//    iframe.style.zIndex = 20
+    blanker.hidden = true
+}
+
+function new_tab(url) {
+    window.open(url, '_blank')
+}
