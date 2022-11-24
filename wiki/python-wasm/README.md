@@ -21,14 +21,20 @@ import pygame
 
 # init pygame here
 
-def menu():
-    #draw
-    pass
+def menu(events):
+    ...
+    # draw
+    # check events
+    # change state
+    ...
 
 
-def play():
-    #draw
-    pass
+def play(events):
+    ...
+    # draw
+    # check events
+    # change state
+    ...
 
 game_state = menu
 
@@ -38,7 +44,7 @@ async def main():
     # or init pygame here 
 
     while game_state:
-        game_state()
+        game_state(pygame.event.get())
         pygame.display.update()
         await asyncio.sleep(0)
         
