@@ -18,7 +18,7 @@ Possible other solution: replace sdl2_audio by openal, PR welcomed ...
 
 ### I have custom modules or something looks like it is missing from stdlib
 
-Just add everything you need alonside your main.py, including hand picked stdlib modules.
+Just add everything you need alongside your main.py, including hand picked stdlib modules.
 We did not put everything from stdlib in order to keep a small size for mobile connections.
 you can find extra stdlib modules in pythonx.xx.x.zip from https://github.com/pygame-web/archives/tree/main/ [pygbag version]
 
