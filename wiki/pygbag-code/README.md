@@ -16,6 +16,10 @@ As a result SFX get garbled, solution : upgrade to 0.1.5 or use external javascr
 
 Possible other solution: replace sdl2_audio by openal, PR welcomed ...
 
+### I get very low fps, but only on web ...
+make you have removed all debug print() or logging to console, printing to terminal or javascript console is very costly 
+in term of performance
+
 ### I have custom modules or something looks like it is missing from stdlib
 
 Just add everything you need alongside your main.py, including hand picked stdlib modules.
