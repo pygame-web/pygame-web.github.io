@@ -29,6 +29,10 @@ ___
 
 ## [pygame-script](https://pygame-web.github.io/wiki/pygame-script/) (wip!)
 
+[List of available wheels](https://github.com/pygame-web/archives/tree/main/repo/pkg)
+mandatory: put the  "import " at top of main.py ( eg import numpy, matplotlib )
+if using pygame zero : put #!pgzrun near the top of main ( 2nd line is perfect if file has already a shebang )
+
 ### Demos on github pages :
 
 (for testing, may not always work since they use daily/weekly devel version)
