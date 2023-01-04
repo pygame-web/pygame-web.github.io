@@ -1,7 +1,7 @@
 
-# *Uploading your game on itch.io (Bonus)*
-## In this chapter you will learn how to upload your game on itch.io
-So, for others to be able to play your game you online, you would need to publish your game in some platform like itch.io
+# *Uploading your game on itch.io*
+
+For others to be able to play your game online, you need to publish it since pygbag is not ( and should not be) reachable from outside your local network. Itch.io allows you to do that and more.
 
 ### Zipping the files
 To upload you website to itch.io you would need to zip its source code and upload it to itch.io
