@@ -1,6 +1,6 @@
 
 
-[contribute to this page](https://github.com/pygame-web/pygame-web.github.io/edit/main/wiki/pygbag/github.io/README.md)
+
 
 How to deploy your game on github pages
 
@@ -17,3 +17,14 @@ This will create a gh-pages repository with all the build files for your game. N
 ![2023-01-03 (6)](https://user-images.githubusercontent.com/113060021/210572805-7fb58ab5-202c-4d02-a70e-1bdcc18858b4.png)
 
 Finally go back to actions a run the pages-build-deployment action and your game will be published to username.github.io/repo-name/.
+
+
+
+
+
+
+
+
+
+
+[contribute to this page](https://github.com/pygame-web/pygame-web.github.io/edit/main/wiki/pygbag/github.io/README.md)
