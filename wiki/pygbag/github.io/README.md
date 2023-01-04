@@ -8,6 +8,8 @@ First you need this yml file:
 
 ![2023-01-03 (1)](yml.png)
 
+[get a copy of that file](pygbag.yml)
+
 Put it in your main repository. Once it's there you should be able to go to the action tab in your repo and run the pygbag action.
 
 ![2023-01-03 (4)](actions.png)
