@@ -21,17 +21,27 @@ else:
 ```
 ___
 
-## [Coding for WASM](https://pygame-web.github.io/wiki/python-wasm/)
-
-## [Coding with pygbag](https://pygame-web.github.io/wiki/pygbag-code/)
-
-## [Enter Debug mode](https://pygame-web.github.io/wiki/pygbag-debug/)
-
-## [pygame-script](https://pygame-web.github.io/wiki/pygame-script/) (wip!)
-
-[List of available wheels](https://github.com/pygame-web/archives/tree/main/repo/pkg)
+## [Coding]
+- [for WASM](https://pygame-web.github.io/wiki/python-wasm/)
+- [with pygbag](https://pygame-web.github.io/wiki/pygbag-code/)
+- [List of available wheels](https://github.com/pygame-web/archives/tree/main/repo/pkg)
 mandatory: put the  "import " at top of main.py ( eg import numpy, matplotlib )
 if using pygame zero : put #!pgzrun near the top of main ( 2nd line is perfect if file has already a shebang )
+
+
+## [Debugging]
+- [enter debug mode](https://pygame-web.github.io/wiki/pygbag-debug/)
+- TODO: android remote debugging via chromium browsers series.
+- TODO: universal remote debugging via irc client or websocket.
+
+## [Publishing]
+- [to github pages from your repo](https://pygame-web.github.io/wiki/pygbag/github.io/)
+- [to itch from web.zip](https://pygame-web.github.io/wiki/pygbag/itch.io/)
+   
+## [Running]
+- [pygame-script](https://pygame-web.github.io/wiki/pygame-script/) (wip!)
+- [REPL](https://pygame-web.github.io/showroom/python.html)
+- [CPython testsuite](https://pygame-web.github.io/showroom/pythondev.html?-d#src/testsuite.py%20all) (wip!)
 
 ### Demos on github pages :
 
@@ -57,7 +67,6 @@ if using pygame zero : put #!pgzrun near the top of main ( 2nd line is perfect i
 
 Please ! use the tag [pygame-wasm](https://github.com/topics/pygame-wasm) for your projects hosted on Github
 and also add a favicon.png icon 32x32 next to your game main.py, so it is picked up by default.
-
 
 ### Demos on itch.io:
 
