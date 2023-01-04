@@ -61,7 +61,9 @@ if using pygame zero : put #!pgzrun near the top of main ( 2nd line is perfect i
 
 [Penguins Can't Fly !](https://pmp-p.github.io/pygame-PenguinsCantFly-wasm/)
 
-[3D Tic Tac Tor](https://pmp-p.github.io/pygame-ttt-3d-wasm/)
+[John's Adventure](https://pmp-p.github.io/pygame-JohnsAdventure-wasm/)
+
+[3D Tic-Tac-Toe](https://pmp-p.github.io/pygame-ttt-3d-wasm/)
 
 ### view code from above games and others on github
 
