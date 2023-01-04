@@ -6,9 +6,13 @@ How to deploy your game on github pages
 
 First you need this yml file:
 
-![2023-01-03 (1)](yml.png)
+[get a copy of text file pygbag.yml](pygbag.yml)
 
-[get a copy of that file](pygbag.yml)
+**Note the specific folder it is always `.github/workflows/` whatever the repo or file name is**
+
+it should look that way once in your repo :
+
+![2023-01-03 (1)](yml.png)
 
 Put it in your main repository. Once it's there you should be able to go to the action tab in your repo and run the pygbag action.
 
