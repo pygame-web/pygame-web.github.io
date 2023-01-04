@@ -40,7 +40,7 @@ if using pygame zero : put #!pgzrun near the top of main ( 2nd line is perfect i
    
 ## [Running]
 - [pygame-script](https://pygame-web.github.io/wiki/pygame-script/) (wip!)
-- [REPL](https://pygame-web.github.io/showroom/python.html)
+- [REPL](https://pygame-web.github.io/showroom/python.html?-d#https://gist.githubusercontent.com/pmp-p/cfd398c75608504293d21f2642e87968/raw/773022eef4a2cc676ab0475890577a2b5e79e429/hello.py)
 - [CPython testsuite](https://pygame-web.github.io/showroom/pythondev.html?-d#src/testsuite.py%20all) (wip!)
 
 ### Demos on github pages :
