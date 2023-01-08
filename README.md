@@ -70,6 +70,9 @@ if using pygame zero : put #!pgzrun near the top of main ( 2nd line is perfect i
 
 [3D Tic-Tac-Toe](https://pmp-p.github.io/pygame-ttt-3d-wasm/)
 
+[Arachnoids](https://pmp-p.github.io/pygame-arachnoids-wasm/)
+
+
 ### view code from above games and others on github
 
 [[view the code]](https://github.com/pmp-p?tab=repositories&q=pygame-.-wasm&sort=name)
