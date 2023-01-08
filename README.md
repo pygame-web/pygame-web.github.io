@@ -12,7 +12,7 @@ ___
 #### IMPORTANT: do not use python installed from windows store, use an official python.org build
 you can check version installed with `py --list ` command
 
-#### IMPORTANT: Please do not use wav/mp3 audio formats when packaging, pygbag 0.1.5+ will not work.
+#### IMPORTANT: Please do not use wav/mp3 audio formats when packaging, pygbag would not work.
 
 Adapt your code this way if you still want wav format on desktop :
 ```py
@@ -21,6 +21,8 @@ if sys.platform == "emscripten":
 else:
     snd = pygame.mixer.Sound("sound.wav") # or .WAV,.mp3,.MP3
 ```
+
+also avoid raw format like BMP for your assets they are too big for web use. prefer PNG or JPG
 ___
 
 ## [Coding]
