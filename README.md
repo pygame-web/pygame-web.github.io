@@ -9,8 +9,9 @@ ___
 
 # [Pygbag packager WIKI](https://pygame-web.github.io/wiki/pygbag/)
 
-#### IMPORTANT: do not use python installed from windows store, use an official python.org build
-you can check version installed with `py --list ` command
+#### IMPORTANT WIN32 users : do not use python installed from windows store, use an official python.org build
+you can check version installed with `py --list ` command.
+If python/pygbag is not installed your path use `py -m pygbag`
 
 #### IMPORTANT: Please do not use wav/mp3 audio formats when packaging, pygbag would not work.
 
