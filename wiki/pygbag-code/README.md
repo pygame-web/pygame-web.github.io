@@ -88,7 +88,7 @@ print( json.dumps(repo["packages"], sort_keys=True, indent=4) )
 ```
 
 
-#### sample : using async input() 
+#### sample : using async input() [[try it]](https://pygame-web.github.io/showroom/pypad_git.html#src/test_input.py)
 ```py
 import asyncio
 
@@ -99,7 +99,8 @@ async def main():
 asyncio.run(main())
 ```
 
-#### sample : using pygame zero
+
+#### sample : using pygame zero [[try it]](https://pygame-web.github.io/showroom/pypad.html#src/test_pg0_0.py)
 do not forget the leading #!pgzrun !
 ```py
 #!pgzrun
@@ -123,6 +124,7 @@ def draw():
     screen.fill((80,0,70))
     ship.update()
 ```
+
 
 #### sample : chroma keying the display of a progress bar over a webpage
 ```py
