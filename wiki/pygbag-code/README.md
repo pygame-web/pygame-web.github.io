@@ -24,7 +24,7 @@ in term of performance
 
 Just add everything you need alongside your main.py, including hand picked stdlib modules.
 We did not put everything from stdlib in order to keep a small size for mobile connections.
-you can find extra stdlib modules in pythonx.xx.x.zip from https://github.com/pygame-web/archives/tree/main/ [pygbag version]
+you can find extra stdlib modules in pythonx.xx.x.zip from [python.org](https://www.python.org/downloads/source/) matching pygbag python version ( 3.11 is the default )
 
 ### but I want numpy or binary modules
 
