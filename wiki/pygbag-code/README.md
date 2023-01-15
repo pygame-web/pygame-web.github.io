@@ -87,6 +87,43 @@ with open(outfile) as data:
 print( json.dumps(repo["packages"], sort_keys=True, indent=4) )
 ```
 
+
+#### sample : using async input() 
+```py
+import asyncio
+
+async def main():
+    color = await input("what is your favorite colour ? ")
+    print(f" {color=} ")
+
+asyncio.run(main())
+```
+
+#### sample : using pygame zero
+do not forget the leading #!pgzrun !
+```py
+#!pgzrun
+WIDTH = 800
+HEIGHT = 600
+
+class ship:
+    x = 370
+    y = 550
+    @classmethod
+    def update(cls):
+        screen.draw.filled_circle( (cls.x, cls.y), 10, (128,128,128))
+
+def update():
+    if keyboard.left:
+        ship.x = ship.x - 5
+    if keyboard.right:
+        ship.x = ship.x + 5
+
+def draw():
+    screen.fill((80,0,70))
+    ship.update()
+```
+
 #### sample : chroma keying the display of a progress bar over a webpage
 ```py
 import pygame
