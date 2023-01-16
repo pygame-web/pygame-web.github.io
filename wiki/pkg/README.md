@@ -8,7 +8,7 @@ It should have a short example whenever possible and covers those points :
 - files added which are they for ?
 - files removed ( size / irrrelevant )
 - missing/extra functionnalitites list details
-
+- what it brings that pygame cannot do, or cannot do in an easy way.
 
 
 
