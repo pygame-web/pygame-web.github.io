@@ -10,6 +10,12 @@ It should have a short example whenever possible and covers those points :
 - missing/extra functionnalitites list details
 - what does it bring that pygame cannot do, or cannot do in an easy way.
 
+The actual wheels are located here :
+
+https://github.com/pygame-web/archives/tree/main/repo/pkg
+
+They are downloaded on code evaluation, from executing your main.py modules based on raised import errors.
+so put your imports at the top, and possibly order them to limit looping over import errors.
 
 
 [edit this page](https://github.com/pygame-web/pygame-web.github.io/edit/main/wiki/pkg/README.md)
