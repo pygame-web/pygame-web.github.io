@@ -29,7 +29,7 @@ ___
 ## [Coding]
 - [for WASM](https://pygame-web.github.io/wiki/python-wasm/)
 - [with pygbag](https://pygame-web.github.io/wiki/pygbag-code/)
-- [List of available wheels](https://github.com/pygame-web/archives/tree/main/repo/pkg)
+- [List of available wheels](https://pygame-web.github.io/wiki/pkg/)
 mandatory: put the  "import " at top of main.py ( eg import numpy, matplotlib )
 if using pygame zero : put #!pgzrun near the top of main ( 2nd line is perfect if file has already a shebang )
 
