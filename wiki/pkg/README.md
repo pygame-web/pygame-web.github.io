@@ -12,7 +12,7 @@ It should have a short example whenever possible and covers those points :
 
 The actual wheels are located here :
 
-https://github.com/pygame-web/archives/tree/main/repo/pkg
+[https://github.com/pygame-web/archives/tree/main/repo/pkg/](https://github.com/pygame-web/archives/tree/main/repo/pkg/)
 
 They are downloaded on code evaluation, from executing your main.py modules based on raised import errors.
 so put your imports at the top, and possibly order them to limit looping over import errors.
