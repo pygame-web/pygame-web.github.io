@@ -13,7 +13,7 @@ ___
 you can check version installed with `py --list ` command.
 If python/pygbag is not installed in your PATH env, use the command  `py -m pygbag`
 
-### IMPORTANT MAC users : if you get SSL error, use the file "Install Certificates.command" in Applications/Python 3.XX
+#### IMPORTANT MAC users : if you get SSL error, use the file "Install Certificates.command" in Applications/Python 3.XX
 
 #### IMPORTANT: Please do not use wav/mp3 audio formats when packaging, pygbag would not work.
 
