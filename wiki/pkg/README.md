@@ -18,5 +18,9 @@ The actual wheels are located here :
 They are downloaded on code evaluation, from executing your main.py modules based on raised import errors.
 so put your imports at the top, and possibly order them to limit looping over import errors.
 
+documented modified packages :
+ - [nurses 2](https://github.com/pygame-web/pygame-web.github.io/edit/main/wiki/pkg/nurses_2/README.md)
+ 
+
 
 [edit this page](https://github.com/pygame-web/pygame-web.github.io/edit/main/wiki/pkg/README.md)
