@@ -30,7 +30,8 @@ ___
 
 ## [Coding]
 - [for WASM](https://pygame-web.github.io/wiki/python-wasm/)
-- [with pygbag](https://pygame-web.github.io/wiki/pygbag-code/) with [example snippets](https://github.com/pygame-web/pygame-web.github.io/blob/main/wiki/pygbag-code/README.md#pygbag-code-specifics-samples-)
+- [with pygbag](https://pygame-web.github.io/wiki/pygbag-code/) FAQ
+- [pygbag code examples](https://github.com/pygame-web/pygame-web.github.io/blob/main/wiki/pygbag-code/README.md#pygbag-code-specifics-samples-)
 - [List of available wheels](https://pygame-web.github.io/wiki/pkg/)
 mandatory: put the  "import " at top of main.py ( eg import numpy, matplotlib )
 if using pygame zero : put #!pgzrun near the top of main ( 2nd line is perfect if file has already a shebang )
