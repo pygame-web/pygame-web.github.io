@@ -96,9 +96,9 @@ print( json.dumps(repo["packages"], sort_keys=True, indent=4) )
 
 ### upload a local file (async)
 
-implemented, TODO sample
+implemented, event based, TODO sample
 
-### downloading files (async)
+### downloading files created by python
 
 ```
 type in the repl: rx name_of_file_to_downlaod
@@ -106,7 +106,7 @@ type in the repl: rx name_of_file_to_downlaod
 
 ### editing local files 
 
-TODO, https://developer.mozilla.org/en-US/docs/Web/API/FileSystemDirectoryHandle
+not implemented, TODO : https://developer.mozilla.org/en-US/docs/Web/API/FileSystemDirectoryHandle
 
 
 
