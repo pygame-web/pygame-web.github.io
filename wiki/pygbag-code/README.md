@@ -1,7 +1,8 @@
-## Python code specifics, when in the browser with pygbag runtime
+## Python code specifics, when in the browser with pygbag runtime FAQ:
 
-on some platforms pygbag is not in the PATH, so use `python -m pygbag` instead of just pygbag.
-
+### `pygbag` command is not found
+on some platforms pygbag is not in the PATH, so use `python3 -m pygbag` instead of just pygbag, 
+just python if you don't have also python2 installed or `py -m pygbag` on win32 platforms ( use official python, not a store one)
 
 ### My game does not start automatically
 This is the default, because browser will not start any music until user says so
@@ -33,7 +34,13 @@ They just have to **match python version** pygbag is loading if they are not was
 Sometimes you may have to wait for maintener (like pymunk), build your own with [python-wasm-sdk](https://github.com/pygame-web/python-wasm-sdk), extract a wheel from or pyodide's build,  or maybe just ask/offer a link to it
 [here](https://github.com/pygame-web/pygbag/issues/37)
 
+### i want to access a micro controller via pyserial
 
+it is possible to access FTDI (and clones) usb serial ports, but it is very experimental.
+you need to remove driver using the serial port for that ( rmmod or zadig )
+
+
+## pygbag code specifics, samples :
 
 
 ### File uploading
@@ -154,6 +161,56 @@ async def main():
 
 asyncio.run(main())
 ```
+
+
+### Handling persistent data across sessions
+```py
+if __import__("sys").platform == "emscripten":
+    import platform.window as window
+```
+backup :
+`window.localStorage.setItem("mygame", str(myvalue) )`
+
+restore :
+`myvalue = window.localStorage.getItem("mygame")`
+
+### change page background color ( around pygame screen )
+```py
+import sys
+import platform
+
+# document may not exist on non-emscripten platforms
+if sys.platform == "emscripten":    
+    platform.document.body.style.background = "#404040"
+```    
+### mobile events handling 
+
+TODO, drag/drop events, gestures.
+
+### getting camera image [try it](http://pygame-web.github.io/showroom/pypad_git.html?-i#src/vidcap.py)
+
+TODO, pygame interface is not finished.
+
+### i18n: keyboard layout independant keycodes
+
+TODO
+
+### upload a local file (async)
+
+TODO
+
+### downloading files (async)
+
+TODO
+
+### editing local files 
+
+TODO, https://developer.mozilla.org/en-US/docs/Web/API/FileSystemDirectoryHandle
+
+### client socket usage ( async )
+
+TODO
+
 
 
 [contribute to this page](https://github.com/pygame-web/pygame-web.github.io/edit/main/wiki/pygbag-code/README.md)
