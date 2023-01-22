@@ -2,7 +2,7 @@
 CDN root used by [pygbag](https://pypi.org/project/pygbag/)
 
 
-[Github repo, and older runtimes](https://github.com/pygame-web/archives)
+[Github repo](https://github.com/pygame-web/pygbag), and [older runtimes](https://github.com/pygame-web/archives)
 
 This software does not track usage at all, even for statistics purpose so if you like it : please do not forget to [star](https://github.com/pygame-web/pygbag/stargazers) it !
 
