@@ -28,8 +28,24 @@ else:
 also avoid raw format like BMP for your assets they are too big for web use. prefer PNG or JPG
 ___
 
-## [packaging HOWTO](https://pygame-web.github.io/wiki/pygbag/)
-___
+## template project
+
+There is none actually, because pygbag is not a framework. Most desktop games will run (and will continue to run) with a few lines changes. 
+
+[basic structure of a game should be like :](https://github.com/pygame-web/pygbag/tree/main/test)
+[
+```
+test
+├── img
+│   ├── pygc.bmp
+│   ├── pygc.png
+│   └── tiger.svg
+├── main.py
+└── sfx
+    └── beep.ogg
+```
+then run `pygbag test/main.py` against it, and first goes to http://localhost:8000?-i (with terminal and debugging info) or  http://localhost:8000 (fullscreen windowed when it is running ok)
+
 
 ## [Coding]
 - [for WASM](https://pygame-web.github.io/wiki/python-wasm/)
@@ -44,16 +60,18 @@ if using pygame zero : put #!pgzrun near the top of main ( 2nd line is perfect i
 - [enter debug mode](https://pygame-web.github.io/wiki/pygbag-debug/)
 - TODO: android remote debugging via chromium browsers series.
 - TODO: universal remote debugging via irc client or websocket.
-
-## [Publishing]
-- [to github pages from your repo](https://pygame-web.github.io/wiki/pygbag/github.io/)
-- [to itch from web.zip](https://pygame-web.github.io/wiki/pygbag/itch.io/)
    
 ## [Running]
 - [pygame-script](https://pygame-web.github.io/wiki/pygame-script/) (wip!)
 - [REPL](https://pygame-web.github.io/showroom/python.html?-d#https://gist.githubusercontent.com/pmp-p/cfd398c75608504293d21f2642e87968/raw/773022eef4a2cc676ab0475890577a2b5e79e429/hello.py)
 - [CPython testsuite](https://pygame-web.github.io/showroom/pythondev.html?-d#src/testsuite.py%20all) (wip!)
 
+## [packaging]
+[ how to package a game](https://pygame-web.github.io/wiki/pygbag/)
+
+## [Publishing]
+- [to github pages from your repo](https://pygame-web.github.io/wiki/pygbag/github.io/)
+- [to itch from web.zip](https://pygame-web.github.io/wiki/pygbag/itch.io/)
 ### Demos on github pages :
 
 (for testing, may not always work since they use daily/weekly devel version)
