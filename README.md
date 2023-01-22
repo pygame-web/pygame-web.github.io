@@ -16,7 +16,7 @@ If python/pygbag is not installed in your PATH env, use the command  `py -m pygb
 
 #### IMPORTANT: Please do not use wav/mp3 audio formats when packaging, pygbag would not work.
 
-Before packaing, adapt your code this way if you still want wav format on desktop :
+Before packaging, adapt your code this way if you still want wav format on desktop :
 ```py
 if sys.platform == "emscripten":
     snd = pygame.mixer.Sound("sound.ogg")
