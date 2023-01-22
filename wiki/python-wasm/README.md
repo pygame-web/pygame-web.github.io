@@ -4,12 +4,14 @@
 
 ```py
 if sys.platform == "emscripten":
+    ...
 ```
 
 ### detect Web Assembly CPU
 
 ```py
 if 'wasm' in __import__('platform').machine():
+    ...
 ```
 
 ### main loop (async)
@@ -48,7 +50,7 @@ async def main():
         pygame.display.update()
         await asyncio.sleep(0)
         
-    # Closing the game. not strictly required neither on desktop
+    # Closing the game. not strictly required, neither on desktop
     pygame.quit()
     sys.exit()
         
@@ -79,8 +81,11 @@ if sys.platform == "emscripten":
 ```    
 ### mobile events handling 
 
-TODO
+TODO, drag/drop events, gestures.
 
+### getting camera image [try it](http://pygame-web.github.io/showroom/pypad_git.html?-i#src/vidcap.py)
+
+TODO, pygame interface is not finished.
 
 ### i18n: keyboard layout independant keycodes
 
@@ -93,6 +98,10 @@ TODO
 ### downloading files (async)
 
 TODO
+
+### editing local files 
+
+TODO, https://developer.mozilla.org/en-US/docs/Web/API/FileSystemDirectoryHandle
 
 ### client socket usage ( async )
 
