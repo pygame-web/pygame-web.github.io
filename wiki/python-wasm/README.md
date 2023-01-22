@@ -58,58 +58,8 @@ if __name__ == "__main__":
     asyncio.run(main())
 ```
 
-
-### Handling persistent data across sessions
-```py
-if __import__("sys").platform == "emscripten":
-    import platform.window as window
-```
-backup :
-`window.localStorage.setItem("mygame", str(myvalue) )`
-
-restore :
-`myvalue = window.localStorage.getItem("mygame")`
-
-### change page background color ( around pygame screen )
-```py
-import sys
-import platform
-
-# document may not exist on non-emscripten platforms
-if sys.platform == "emscripten":    
-    platform.document.body.style.background = "#404040"
-```    
-### mobile events handling 
-
-TODO, drag/drop events, gestures.
-
-### getting camera image [try it](http://pygame-web.github.io/showroom/pypad_git.html?-i#src/vidcap.py)
-
-TODO, pygame interface is not finished.
-
-### i18n: keyboard layout independant keycodes
-
-TODO
-
-### upload a local file (async)
-
-TODO
-
-### downloading files (async)
-
-TODO
-
-### editing local files 
-
-TODO, https://developer.mozilla.org/en-US/docs/Web/API/FileSystemDirectoryHandle
-
-### client socket usage ( async )
-
-TODO
-
-
-
-
+everything else if probably pygbag specific so look here instead
+[pygbag with example snippets](https://github.com/pygame-web/pygame-web.github.io/blob/main/wiki/pygbag-code/README.md#pygbag-code-specifics-samples-)
 
 
 [contribute to this page](https://github.com/pygame-web/pygame-web.github.io/edit/main/wiki/python-wasm/README.md)
