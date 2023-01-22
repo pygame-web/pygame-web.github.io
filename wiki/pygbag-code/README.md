@@ -94,6 +94,22 @@ with open(outfile) as data:
 print( json.dumps(repo["packages"], sort_keys=True, indent=4) )
 ```
 
+### upload a local file (async)
+
+implemented, TODO sample
+
+### downloading files (async)
+
+```
+type in the repl: rx name_of_file_to_downlaod
+```
+
+### editing local files 
+
+TODO, https://developer.mozilla.org/en-US/docs/Web/API/FileSystemDirectoryHandle
+
+
+
 
 #### sample : using async input() [[try it]](https://pygame-web.github.io/showroom/pypad_git.html#src/test_input.py)
 ```py
@@ -194,18 +210,6 @@ TODO, pygame interface is not finished.
 ### i18n: keyboard layout independant keycodes
 
 TODO
-
-### upload a local file (async)
-
-TODO
-
-### downloading files (async)
-
-TODO
-
-### editing local files 
-
-TODO, https://developer.mozilla.org/en-US/docs/Web/API/FileSystemDirectoryHandle
 
 ### client socket usage ( async )
 
