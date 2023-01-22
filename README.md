@@ -1,13 +1,13 @@
 # pygame-web.github.io
 CDN root used by [pygbag](https://pypi.org/project/pygbag/)
 
-[Github repo](https://github.com/pygame-web/archives)
+
+[Github repo, and older runtimes](https://github.com/pygame-web/archives)
 
 This software does not track usage at all, even for statistics purpose so if you like it : please do not forget to [star](https://github.com/pygame-web/pygbag/stargazers) it !
 
+# Pygbag WIKI
 ___
-
-# [Pygbag packager WIKI](https://pygame-web.github.io/wiki/pygbag/)
 
 #### IMPORTANT WIN32 users : do not use python installed from windows store, use an official python.org build
 you can check version installed with `py --list ` command.
@@ -17,7 +17,7 @@ If python/pygbag is not installed in your PATH env, use the command  `py -m pygb
 
 #### IMPORTANT: Please do not use wav/mp3 audio formats when packaging, pygbag would not work.
 
-Adapt your code this way if you still want wav format on desktop :
+Before packaing, adapt your code this way if you still want wav format on desktop :
 ```py
 if sys.platform == "emscripten":
     snd = pygame.mixer.Sound("sound.ogg")
@@ -26,6 +26,9 @@ else:
 ```
 
 also avoid raw format like BMP for your assets they are too big for web use. prefer PNG or JPG
+___
+
+## [packaging HOWTO](https://pygame-web.github.io/wiki/pygbag/)
 ___
 
 ## [Coding]
