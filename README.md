@@ -7,7 +7,6 @@ CDN root used by [pygbag](https://pypi.org/project/pygbag/)
 This software does not track usage at all, even for statistics purpose so if you like it : please do not forget to [star](https://github.com/pygame-web/pygbag/stargazers) it !
 
 # Pygbag WIKI
-___
 
 #### IMPORTANT WIN32 users : do not use python installed from windows store, use an official python.org build
 you can check version installed with `py --list ` command.
@@ -30,7 +29,7 @@ ___
 
 ## template project
 
-There is none actually, because pygbag is not a framework it is just a friendly web version of official CPython. Most desktop code will run (and will continue to run) with only a few lines changes. This is actually true for games  but for applications it can be very difficult to port, even sometimes impossible.
+There is none actually, because pygbag is not a framework it is just a friendly web version of official CPython (nothing has been changed, just [some facilities added](https://discuss.python.org/t/status-of-wasm-in-cpythons-main-branch/15542/12?u=pmp-p)). Most desktop code will run (and will continue to run) with only a few lines changes. This is actually true for games  but for applications it can be very difficult to port, even sometimes impossible.
 
 Try to avoid relying on CPython stdlib for web operations or I/O as it is very synchronous, platform specific and will probably stay that way.
 As alternative using pygame or pygbag supported game engines will ensure you platform independence including access to mobile ones.
@@ -74,6 +73,9 @@ if using pygame zero : put #!pgzrun near the top of main ( 2nd line is perfect i
 ## [Publishing]
 - [to github pages from your repo](https://pygame-web.github.io/wiki/pygbag/github.io/)
 - [to itch from web.zip](https://pygame-web.github.io/wiki/pygbag/itch.io/)
+
+___
+
 ### Demos on github pages :
 
 (for testing, may not always work since they use daily/weekly devel version)
