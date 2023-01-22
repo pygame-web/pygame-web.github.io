@@ -33,7 +33,6 @@ ___
 There is none actually, because pygbag is not a framework. Most desktop games will run (and will continue to run) with a few lines changes. 
 
 [basic structure of a game should be like :](https://github.com/pygame-web/pygbag/tree/main/test)
-[
 ```
 test
 ├── img
