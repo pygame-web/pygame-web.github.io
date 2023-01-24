@@ -47,6 +47,16 @@ test
 ```
 then run `pygbag test/main.py` against it, and first goes to http://localhost:8000?-i (with terminal and debugging info) or  http://localhost:8000 (fullscreen windowed when it is running ok)
 
+usefull additions to your .gitignore 
+```
+*.wav
+*.mp3
+*.pyc
+*.egg-info
+*-pygbag.???
+/build
+/dist
+```
 
 ## [Coding]
 - [for WASM](https://pygame-web.github.io/wiki/python-wasm/)
