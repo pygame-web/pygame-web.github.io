@@ -34,7 +34,7 @@ ___
 
 There is none actually, because pygbag is not a framework it is just a friendly web version of official CPython (nothing has been changed, just [some facilities added](https://discuss.python.org/t/status-of-wasm-in-cpythons-main-branch/15542/12?u=pmp-p)). Most desktop code will run (and will continue to run) with only a few lines changes. This is actually true for games  but for applications it can be very difficult to port, even sometimes impossible.
 
-Try to avoid relying on CPython stdlib for web operations or I/O as it is very synchronous, platform specific and will probably stay that way.
+Try to avoid relying on CPython stdlib for web operations, gui or I/O as it is very synchronous, platform specific and will probably stay that way.
 As alternative using pygame or pygbag supported game engines will ensure you platform independence including access to mobile ones.
 
 [basic structure of a game should be like :](https://github.com/pygame-web/pygbag/tree/main/test)
