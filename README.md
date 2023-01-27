@@ -10,9 +10,12 @@ This software does not track usage at all, even for statistics purpose so if you
 
 #### IMPORTANT ALL: add `--template noctx.tmpl` to pygbag command line when using 3D/WebGL
 
-#### IMPORTANT WIN32 users : do not use python installed from windows store, use an official python.org build
+#### IMPORTANT WIN32 users :
+- do not use python installed from windows store, use an official python.org build
 you can check version installed with `py --list ` command.
 If python/pygbag is not installed in your PATH env, use the command  `py -m pygbag`
+
+- do not use "\\" a path separator, pygbag is POSIX and use "/" instead eg open("img/my_image.png","rb)
 
 #### IMPORTANT MAC users : if you get SSL error, use the file "Install Certificates.command" in Applications/Python 3.XX
 
