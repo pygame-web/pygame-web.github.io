@@ -15,7 +15,7 @@ This software does not track usage at all, even for statistics purpose so if you
 you can check version installed with `py --list ` command.
 If python/pygbag is not installed in your PATH env, use the command  `py -m pygbag`
 
-- do not use "\\" a path separator, pygbag is POSIX and use "/" instead eg open("img/my_image.png","rb)
+- do not use "\\" a path separator, pygbag is POSIX and use "/" instead eg open("img/my_image.png","rb) the change should not interfere and still work on recent Win32.
 
 #### IMPORTANT MAC users : if you get SSL error, use the file "Install Certificates.command" in Applications/Python 3.XX
 
