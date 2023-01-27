@@ -8,15 +8,17 @@ This software does not track usage at all, even for statistics purpose so if you
 
 # Pygbag WIKI
 
+#### IMPORTANT ALL: Please do not use wav/mp3 audio formats when packaging, pygbag would not work.
+
+#### IMPORTANT ALL: add `--template noctx.tmpl` to pygbag command line when using 3D/WebGL
+
 #### IMPORTANT WIN32 users : do not use python installed from windows store, use an official python.org build
 you can check version installed with `py --list ` command.
 If python/pygbag is not installed in your PATH env, use the command  `py -m pygbag`
 
 #### IMPORTANT MAC users : if you get SSL error, use the file "Install Certificates.command" in Applications/Python 3.XX
 
-#### IMPORTANT: Please do not use wav/mp3 audio formats when packaging, pygbag would not work.
-
-#### IMPORTANT: add `--template noctx.tmpl` to pygbag command line when using 3D/WebGL
+#### IMPORTANT Linux users: when using webusb ftdi serial emulation use `sudo rmmod ftdi_sio` after plugging devices.
 
 
 Before packaging, adapt your code this way if you still want wav format on desktop :
