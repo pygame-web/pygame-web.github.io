@@ -182,7 +182,7 @@ asyncio.run(main())
 ### Handling persistent data across sessions
 ```py
 if __import__("sys").platform == "emscripten":
-    import platform.window as window
+    from platform import window
 ```
 backup :
 `window.localStorage.setItem("mygame", str(myvalue) )`
