@@ -119,6 +119,7 @@ ___
 
 [Arachnoids](https://pmp-p.github.io/pygame-arachnoids-wasm/)
 
+[Sudoku Solver](https://www.pete-j-matthews.com/Sudoku-Solver/)
 
 ### view code from above games and others on github
 
