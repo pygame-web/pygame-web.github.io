@@ -21,6 +21,7 @@ If python/pygbag is not installed in your PATH env, use the command  `py -m pygb
 
 #### IMPORTANT Linux users: when using webusb ftdi serial emulation use `sudo rmmod ftdi_sio` after plugging devices.
 
+#### IMPORTANT ALL: when importing complex wheels that depend on each other, always put them in order (but numpy first) in main.py
 
 #### IMPORTANT ALL: Please do not use wav/mp3 audio formats when packaging, pygbag would not work.
 
