@@ -54,7 +54,7 @@ test
 └── sfx
     └── beep.ogg
 ```
-then run `pygbag test/main.py` against it, and first goes to http://localhost:8000?-i (with terminal and debugging info) or  http://localhost:8000 (fullscreen windowed when it is running ok)
+then run `pygbag test/main.py` against it, and first goes to http://localhost:8000?-i (with terminal and debugging info, for older pygbag version use http://localhost:8000#debug instead) or  http://localhost:8000 (fullscreen windowed when it is running ok)
 
 usefull additions to your .gitignore 
 ```
