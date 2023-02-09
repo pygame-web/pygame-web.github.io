@@ -19,6 +19,7 @@ They are downloaded on code evaluation, from executing your main.py modules base
 so put your imports at the top, and possibly order them to limit looping over import errors.
 
 Current packages troubleshooting until full acceptation is done here :
+
 https://github.com/pygame-web/pkg-porting-wasm/issues?q=is%3Aissue+is%3Aopen+label%3A%22AVAIL+FOR+TESTING%22
 
 
