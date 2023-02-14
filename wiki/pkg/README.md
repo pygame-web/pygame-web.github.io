@@ -9,7 +9,7 @@ It should have at least a short example and attempt to cover those points :
 - files removed ( explain why , maybe size / irrelevant ... )
 - missing/extra functionnalitites list details
 - what does it bring that pygame cannot do, or cannot do in an easy way.
-- ideally point to a PR from a pygbag branch pull request toward main branch. [example](https://github.com/pmp-p/nurses_2-wasm/pull/1/files)
+- ideally point to a pull request (PR) from a pygbag branch toward main branch. [example](https://github.com/pmp-p/nurses_2-wasm/pull/1/files)
 
 The actual wheels are located here :
 
