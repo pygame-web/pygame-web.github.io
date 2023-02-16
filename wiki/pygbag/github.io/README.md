@@ -6,23 +6,23 @@ How to deploy your game on github pages
 
 First you need this yml file:
 
-[get a copy of text file pygbag.yml](pygbag.yml)
+[Download pygbag.yml](pygbag.yml)
 
-**Note the specific folder it is always `.github/workflows/` whatever the repo or file name is**
+**Note this file must be in the folder `.github/workflows/`, regardless of the repository's name**
 
-it should look that way once in your repo :
+It should look like this once in your repo :
 
 ![2023-01-03 (1)](yml.png)
 
-Put it in your main repository. Once it's there you should be able to go to the action tab in your repo and run the pygbag action.
+Put it in your main branch. Once it's there, you should be able to go to the "Actions" tab in your repo and run the pygbag action.
 
 ![2023-01-03 (4)](actions.png)
 
-This will create a gh-pages repository with all the build files for your game. Next, go to settings and under Code and automation, click on pages. Set your branch to be built from to gh-pages.
+This will create a gh-pages branch with all the build files for your game. Next, go to "Settings" and under "Code and automation", click on "Pages". Set your branch to be built from "gh-pages".
 
 ![2023-01-03 (6)](pages.png)
 
-Finally go back to actions a run the pages-build-deployment action and your game will be published to username.github.io/repo-name/.
+Finally, go back to "Actions" and run the "pages-build-deployment" action. Now your game will be published to username.github.io/repo-name/.
 
 
 
