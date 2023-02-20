@@ -25,7 +25,7 @@ Current packages troubleshooting until full acceptation is done here :
 
 
 documented modified packages :
- - [nurses 2](https://github.com/pygame-web/pygame-web.github.io/edit/main/wiki/pkg/nurses_2/README.md)
+ - [nurses 2](https://pygame-web.github.io/wiki/pkg/nurses_2/)
  
 
 
