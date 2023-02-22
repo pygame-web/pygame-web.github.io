@@ -31,7 +31,7 @@ Starting with 0.7 pygbag runtime will use [pygame-ce](https://github.com/pygame-
 
  - [nurses_2](https://pygame-web.github.io/wiki/pkg/nurses_2/)
  - [harfang] from [vendored pygbag](https://github.com/harfang3d/harfang-wasm)
- - [panda3d](https://pygame-web.github.io/wiki/pkg/panda3d/) from [Panda3D wasm branch](https://github.com/panda3d/panda3d/tree/webgl-port)
+ - [panda3d](https://pygame-web.github.io/wiki/pkg/panda3d/) from [Panda3D wasm branch](https://github.com/panda3d/panda3d/tree/webgl-port) + [vendored pygbag](https://github.com/pmp-p/panda3d-wasm)
  
 
 [edit this page](https://github.com/pygame-web/pygame-web.github.io/edit/main/wiki/pkg/README.md)
