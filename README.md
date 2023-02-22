@@ -152,6 +152,8 @@ ___
 
 [Python Wasm explained by core dev Christian Heimes (youtube video)](https://www.youtube.com/watch?v=oa2LllRZUlU)
 
+French : Python WebAssembly at PyCon FR 2023
+[Pour quoi, pour qui et comment](https://harfang3d.github.io/pyconfr2023/#1)
 
 ## current status
 
