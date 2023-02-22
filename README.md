@@ -8,6 +8,8 @@ This software does not track usage at all, even for statistics purpose so if you
 
 # Pygbag WIKI
 
+Starting with 0.7 pygbag runtime will use [pygame-ce](https://github.com/pygame-community/pygame-ce) codebase.
+
 #### IMPORTANT ALL: add `--template noctx.tmpl` to pygbag command line when using 3D/WebGL
 
 #### IMPORTANT WIN32 users :
