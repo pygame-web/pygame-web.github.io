@@ -34,7 +34,7 @@ changes made https://github.com/pmp-p/nurses_2-wasm/pull/1/files
 
 
 accessing the async repl  while running nurses app:
- - add ?-i  to #debug to url to force interactive mode.
+ - add ?-i ( or #debug for older versions) to url to force interactive mode.
 
 
 
