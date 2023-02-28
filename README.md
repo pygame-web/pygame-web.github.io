@@ -97,6 +97,7 @@ if using pygame zero : put #!pgzrun near the top of main ( 2nd line is perfect i
 
 ___
 
+
 ### Demos on github pages :
 
 (for testing, may not always work since they use daily/weekly devel version)
@@ -136,12 +137,19 @@ and also add a favicon.png icon 32x32 next to your game main.py, so it is picked
 
 [games on itch.io](https://itch.io/c/2563651/pygame-wasm)
 
+### Script demos
 
-### Early demos ( may not fully work as intended ):
+nb : code is read-only, prefer right-click then open in new window.
 
-[pygame tech demo PyCon DE & PyData Berlin 2022](https://pmp-p.github.io/pygame-wasm/)
+[i18](/showroom/pypad_dev.html?-i#src/test_hb.py)
 
-[Galaxy Attack](https://pmp-p.github.io/pygame-galaxy-attack-wasm/)
+[camera](/showroom/pypad_git.html?-i#src/test_vidcap.py)
+
+[Panda3D](/showroom/pypad_dev.html?-i#src/test_panda3d_cube.py)
+
+[Audio Record/Play](/showroom/pypad_dev.html?-i#src/test_audio.py)
+
+[Html output](/showroom/pypad_dev.html?-i#src/test_html.py)
 
 
 ___
@@ -151,6 +159,14 @@ ___
 [devlog](https://github.com/pygame/pygame/issues/718)
 
 [Python Wasm explained by core dev Christian Heimes (youtube video)](https://www.youtube.com/watch?v=oa2LllRZUlU)
+
+
+### Early demos from above talk, may not fully work as intended :)
+
+[pygame tech demo PyCon DE & PyData Berlin 2022](https://pmp-p.github.io/pygame-wasm/)
+
+[Galaxy Attack](https://pmp-p.github.io/pygame-galaxy-attack-wasm/)
+
 
 French : Python WebAssembly at PyCon FR 2023
 [Pour quoi, pour qui et comment](https://harfang3d.github.io/pyconfr2023/#1)
