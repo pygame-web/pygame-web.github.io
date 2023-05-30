@@ -18,7 +18,7 @@ As a result SFX get garbled, solution : upgrade to 0.1.5 or use external javascr
 Possible other solution: replace sdl2_audio by openal, PR welcomed ...
 
 ### I get very low fps, but only on web ...
-make you have removed all debug print() or logging to console, printing to terminal or javascript console is very costly 
+make sure you have removed all debug print() or logging to console, printing to terminal or javascript console is very costly 
 in term of performance
 
 ### I have custom modules or something looks like it is missing from stdlib
@@ -30,9 +30,9 @@ you can find extra stdlib modules in pythonx.xx.x.zip from [python.org](https://
 ### but I want numpy or binary modules
 
 Just add everything you need alonside you main.py, including binary modules.
-They just have to **match python version** pygbag is loading if they are not wasm abi3 modules.
-Sometimes you may have to wait for maintener (like pymunk), build your own with [python-wasm-sdk](https://github.com/pygame-web/python-wasm-sdk), extract a wheel from or pyodide's build,  or maybe just ask/offer a link to it
-[here](https://github.com/pygame-web/pygbag/issues/37)
+They just have to **match python version** pygbag is loading - in the web page : beware this may not be the python version you used to run pygbag - when they are not wasm abi3 modules.
+Sometimes you may have to wait for maintener to provide a build, build your own with [python-wasm-sdk](https://github.com/pygame-web/python-wasm-sdk), extract a wheel from or pyodide's build,  or maybe just ask/offer a link to it
+[here](https://github.com/pygame-web/pkg-porting-wasm/issues)
 
 ### i want to access a micro controller via pyserial
 
