@@ -14,7 +14,7 @@ if 'wasm' in __import__('platform').machine():
     ...
 ```
 
-### main loop (async)
+### MANDATORY main loop (async) 
 
 ```py
 import asyncio
