@@ -8,6 +8,9 @@ This software does not track usage at all, even for statistics purpose so if you
 
 # Pygbag WIKI
 
+<ins>Do NOT forget to read the coding section for WASM. You WILL have to change a few lines to classic pygame code.</ins>
+
+
 #### IMPORTANT ALL: add `--template noctx.tmpl` to pygbag command line when using 3D/WebGL
 
 #### IMPORTANT WIN32 users :
