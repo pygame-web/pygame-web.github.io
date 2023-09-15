@@ -12,7 +12,7 @@
 
 Create a .html file like this one :
 ```py
-<html><head><meta charset="utf-8"></head><script src="https://pygame-web.github.io/archives/0.7/pythons.js" type=module id="site" data-src="fs,vtx,gui" async defer>#<!--
+<html><head><meta charset="utf-8"></head><script src="https://pygame-web.github.io/archives/0.7/pythons.js" type=module id="site" data-os="fs,vtx,gui" async defer>#<!--
 
 import sys
 import platform
@@ -32,7 +32,7 @@ asyncio.run(main())
 mobile demo : [https://pygame-web.github.io/showroom/pygame-scripts/org.pygame.touchpong.html](https://pygame-web.github.io/showroom/pygame-scripts/org.pygame.touchpong.html)
 
 
-the data-src tags allows for 
+the data-os tags allows for 
   - fs : you will be able to use Filesystem, camera, photo and user uploaded files.
   - vt : simple vt100 with no worker
   - vtx : full xterm.js ( with sixel graphics requires webgl+worker )
