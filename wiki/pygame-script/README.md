@@ -29,7 +29,7 @@ asyncio.run(main())
 # --></script></html>
 ```
 
-mobile demo : https://pygame-web.github.io/showroom/pygame-scripts/org.pygame.touchpong.html
+mobile demo : [https://pygame-web.github.io/showroom/pygame-scripts/org.pygame.touchpong.html](https://pygame-web.github.io/showroom/pygame-scripts/org.pygame.touchpong.html)
 
 
 the data-src tags allows for 
