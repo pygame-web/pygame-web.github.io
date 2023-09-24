@@ -4,7 +4,9 @@ CDN root used by [pygbag](https://pypi.org/project/pygbag/)
 
 [Github repo](https://github.com/pygame-web/pygbag), and [older runtimes](https://github.com/pygame-web/archives)
 
-This software does not track usage at all, even for statistics purpose so if you like it : please do not forget to [star](https://github.com/pygame-web/pygbag/stargazers) it !
+This software does not track usage at all, not even for statistics purpose so if you like it :
+
+please do not forget to :star::star:[star](https://github.com/pygame-web/pygbag/stargazers):star::star: it !
 
 # Pygbag WIKI
 
@@ -43,7 +45,10 @@ ___
 
 There is none actually, because pygbag is not a framework it is just a friendly web version of official CPython (nothing has been changed, just [some facilities added](https://discuss.python.org/t/status-of-wasm-in-cpythons-main-branch/15542/12?u=pmp-p)). Most desktop code will run (and will continue to run) with only a few lines changes. This is actually true for games  but for applications it can be very difficult to port, even sometimes impossible.
 
-Try to avoid relying on CPython stdlib for web operations, gui or I/O as it is very synchronous, platform specific and will probably stay that way.
+Try to avoid relying on CPython stdlib for web operations, GUI (like tk) or I/O as it is very synchronous, platform specific and will probably stay that way.
+
+Note about GUI:  pygame-ce provides pygame_gui, Panda3D provides directgui and Harfang3D imgui => and they are all cross platform.
+
 As alternative using pygame or pygbag supported game engines will ensure you platform independence including access to mobile ones.
 
 [basic structure of a game should be like :](https://github.com/pygame-web/pygbag/tree/main/test)
@@ -78,8 +83,8 @@ usefull additions to your .gitignore
 - 
 mandatory when importing packages : put the  "import " at top of main.py ( eg import numpy, matplotlib )
 
-if using pygame zero : put #!pgzrun near the top of main ( 2nd line is perfect if file already has a shebang )
-
+if using pygame-zero : put #!pgzrun near the top of main ( 2nd line is perfect if file already has a shebang )
+Note: pgzero is mostly untested 
 
 ## [Debugging]
 - [enter debug mode](https://pygame-web.github.io/wiki/pygbag-debug/)
