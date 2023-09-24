@@ -6,7 +6,7 @@ CDN root used by [pygbag](https://pypi.org/project/pygbag/)
 
 This software does not track usage at all, not even for statistics purpose so if you like it :
 
-please do not forget to :star::star:[star](https://github.com/pygame-web/pygbag/stargazers):star::star: it !
+please do not forget to [:star::star: Star :star::star:](https://github.com/pygame-web/pygbag/stargazers) it !
 
 # Pygbag WIKI
 
