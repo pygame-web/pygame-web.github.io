@@ -100,8 +100,10 @@ implemented, event based, TODO sample
 
 ### downloading files created by python
 
+( you can use cd/ls/pwd to navigate filesystem)
+type in the repl:
 ```
-type in the repl: rx name_of_file_to_downlaod
+rx /path/of/file_to_download/name_of_file
 ```
 
 ### editing local files 
