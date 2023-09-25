@@ -86,8 +86,9 @@ mandatory when importing packages : put the  "import " at top of main.py ( eg im
 if using pygame-zero : put #!pgzrun near the top of main ( 2nd line is perfect if file already has a shebang )
 Note: pgzero is mostly untested 
 
-## [Debugging]
+## [Debugging / Desktop Simulator]
 - [enter debug mode](https://pygame-web.github.io/wiki/pygbag-debug/)
+- while working you can access simulator of web loop by replacing `import asyncio` by `import pygbag.aio as asyncio` at top of main.py
 - TODO: android remote debugging via chromium browsers series.
 - TODO: universal remote debugging via irc client or websocket.
    
