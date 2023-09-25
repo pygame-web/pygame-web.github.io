@@ -88,7 +88,7 @@ Note: pgzero is mostly untested
 
 ## [Debugging / Desktop Simulator]
 - [enter debug mode](https://pygame-web.github.io/wiki/pygbag-debug/)
-- while working you can access simulator of web loop by replacing `import asyncio` by `import pygbag.aio as asyncio` at top of main.py
+- while working you can access simulator of web loop by replacing `import asyncio` by `import pygbag.aio as asyncio` at top of main.py and run program directly from main.py folder
 - TODO: android remote debugging via chromium browsers series.
 - TODO: universal remote debugging via irc client or websocket.
    
