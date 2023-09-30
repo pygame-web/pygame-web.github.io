@@ -184,14 +184,16 @@ French : Python WebAssembly at PyCon FR 2023
 
 [explore current issues](https://github.com/pygame-web/pygbag/issues)
 
+[package porting](https://github.com/pygame-web/pkg-porting-wasm/issues)
+
 [PyPI stats](https://pepy.tech/project/pygbag)
 
 [pyodide/pyscript](https://github.com/pyodide/pyodide/issues/289#issuecomment-1121021861)
 
 
-### Thanks for supporting pygame and pygbag. Without support now, there won't be pygame or pygbag later.
+### Thanks for supporting pygame-ce and pygbag. Without support now, there would not be pygame-ce + pygbag later.
 
-[Hello from the pygame community.](https://www.pygame.org/contribute.html)
+[Hello from the pygame-ce community.](https://pyga.me/)
 
 #### Connect with Discord
 
