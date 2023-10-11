@@ -8,6 +8,8 @@ typical import
 import panda3d.core as p3d
 ```
 
+## main loop
+
 ShowBase.run() must be patched because it is not async 
 pygbag runtime applies a monkey-patch for that automatically.
 but it you use taskMbr.step() then you should do that way:
@@ -21,7 +23,7 @@ if __name__=="__main__":
     asyncio.run( main() )
 ```
 
-# shaders
+## shaders
 use either '#version 100' GLES1/2 or GLES3 like this:
 ```
 #version 300 es
