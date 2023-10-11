@@ -11,7 +11,7 @@ import panda3d.core as p3d
 ## main loop
 ShowBase.run() must be patched because it is not async 
 pygbag runtime applies a monkey-patch for that automatically.
-but it you use taskMbr.step() then you should do that way:
+but it you use taskMgr.step() then you should do it that way:
 ```py
 async def main():
     while True:
