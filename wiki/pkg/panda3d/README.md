@@ -9,7 +9,29 @@ import panda3d.core as p3d
 ```
 
 ShowBase.run() must be patched because it is not async 
-pygbag runtime applies a monkey-patch automatically.
+pygbag runtime applies a monkey-patch for that automatically.
+but it you use taskMbr.step() then you should do that way:
+```py
+async def main():
+    while True:
+        taskMgr.step()
+        await asyncio.sleep(0)
+
+if __name__=="__main__":
+    asyncio.run( main() )
+```
+
+# shaders
+use either '#version 100' GLES1/2 or GLES3 like this:
+```
+#version 300 es
+precision mediump float;
+```
+
+Precision is mandatory, also mobile devices are often single precicision.
+
+
+
 
 
 
@@ -17,3 +39,7 @@ Changes made to get a wheel [PR against webgl-port branch](https://github.com/pm
 
 
 [append issues here](https://github.com/pygame-web/pkg-porting-wasm/issues/6)
+
+
+
+[edit this page](https://github.com/pygame-web/pygame-web.github.io/edit/main/wiki/pkg/panda3d/README.md)
