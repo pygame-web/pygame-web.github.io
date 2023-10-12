@@ -8,15 +8,31 @@ typical import
 import panda3d.core as p3d
 ```
 
+## main loop
 ShowBase.run() must be patched because it is not async 
-pygbag runtime applies a monkey-patch automatically.
+pygbag runtime applies a monkey-patch for that automatically.
+but it you use taskMgr.step() then you should do it that way:
+```py
+async def main():
+    while True:
+        taskMgr.step()
+        await asyncio.sleep(0)
 
+if __name__=="__main__":
+    asyncio.run( main() )
+```
 
+## shaders
+use either '#version 100' GLES1/2 or GLES3 like this:
+```
+#version 300 es
+precision mediump float;
+```
+
+Precision is mandatory, also mobile devices are often single precicision.
 
 Changes made to get a wheel [PR against webgl-port branch](https://github.com/pmp-p/panda3d/pull/4)
 
-
-[append issues here](https://github.com/pygame-web/pkg-porting-wasm/issues/6)
 
 
 # conversion tutorial
@@ -27,7 +43,9 @@ the basic command to produce a itch.io compatible zip is
 python -m pygbag --archive --template noctx.tmpl --ume_block 0 main.py
 ```
 
-This zip can be uploaded directly. (provided everything else works and is set up as detailed below)
+note: only yse `--ume_block 0` when you have no sound on game startup
+
+This zip can be uploaded directly on itch after selection on the HTML game type . (provided everything else works and is set up as detailed below)
 
 ## testing
 
@@ -95,4 +113,8 @@ with an additional import of
 import pygbag.aio as asyncio
 ```
 
-which "gives control the browser" in between ticks.
+which "gives control to the browser" in between ticks.
+=======
+
+
+[edit this page](https://github.com/pygame-web/pygame-web.github.io/edit/main/wiki/pkg/panda3d/README.md)
