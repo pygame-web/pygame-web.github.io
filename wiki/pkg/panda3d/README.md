@@ -43,36 +43,15 @@ the basic command to produce a itch.io compatible zip is
 python -m pygbag --archive --template noctx.tmpl --ume_block 0 main.py
 ```
 
-note: only yse `--ume_block 0` when you have no sound on game startup
+note: only use `--ume_block 0` when you have no sound playing at game startup ( loading screen / main menu )
 
-This zip can be uploaded directly on itch after selection on the HTML game type . (provided everything else works and is set up as detailed below)
-
-## testing
-
-
-If you leave `--archive` out, it starts a local webserver instead and you can visit (default) http://localhost:8000/ to test how well it works.
-
-You can visit http://localhost:8000/?-X&dev&-i instead to get to the debug console.
-
-The name `main.py` is actually important, your main file has to be called `main.py`, alternative names will not work.
+This zip archive can be uploaded directly on itch after selection on the HTML game type . (provided everything else works and is set up as detailed below)
 
 ## changes to the code.
 
-I used https://github.com/BMaxV/panda3d_shading 03main.py
+The base used was https://github.com/BMaxV/panda3d_shading 03main.py
 
-## custom modules
-
-The imported custom module is https://github.com/BMaxV/panda3d_interface_glue and that one should have no dependencies except panda3d.
-
-but it's a good example for importing your custom modules.
-
-I built the "interface glue" with
-
-```
-python3 setup.py bdist_wheel --universal
-```
-
-which builds the module into a wheel at `interfacegluedir/dist` The wheel then should be unpacked with some zip unpacking. The folder of interest is the `panda_interface_glue` folder, that has to exist at the same level as your main.py
+note: preferably use a 1024x600 screen size.
 
 ## changes to the code for web
 
@@ -114,6 +93,33 @@ import pygbag.aio as asyncio
 ```
 
 which "gives control to the browser" in between ticks.
+
+## importing custom modules
+
+The imported custom module is https://github.com/BMaxV/panda3d_interface_glue and that one should have no dependencies except panda3d.
+
+but it's a good example for importing your custom modules.
+
+I built the "interface glue" with
+
+```
+python3 setup.py bdist_wheel --universal
+```
+
+which builds the module into a wheel at `interfacegluedir/dist` The wheel then should be unpacked with some zip unpacking. The folder of interest is the `panda_interface_glue` folder, that has to exist at the same level as your main.py
+
+
+
+
+## testing
+
+If you leave `--archive` out, it starts a local webserver instead and you can visit (default) http://localhost:8000/ to test how well it works.
+
+You can visit http://localhost:8000/?-X&dev&-i instead to get to the debug console.
+
+The name `main.py` is actually important, your main file has to be called `main.py`, alternative names will not work.
+
+
 =======
 
 
