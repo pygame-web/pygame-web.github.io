@@ -192,6 +192,14 @@ backup :
 restore :
 `myvalue = window.localStorage.getItem("mygame")`
 
+erase :
+```py
+keys = []
+for i in range(window.localStorage.length):
+    keys.append(window.localStorage.key(i))
+while keys: window.localStorage.removeItem(keys.pop())
+```
+
 ### change page background color ( around pygame screen )
 ```py
 import sys
