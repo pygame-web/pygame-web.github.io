@@ -9,9 +9,9 @@ import panda3d.core as p3d
 ```
 
 ## main loop
-ShowBase.run() must be patched because it is not async 
-pygbag runtime applies a monkey-patch for that automatically.
-but it you use taskMgr.step() then you should do it that way:
+ShowBase.run() must be patched because it is not async, for convenience
+pygbag runtime applies a monkey-patch to do that automatically.
+But if you use taskMgr.step() or use the wheel in your own python runtime then you should do it that way:
 ```py
 async def main():
     while True:
@@ -23,7 +23,8 @@ if __name__=="__main__":
 ```
 
 ## shaders
-use either '#version 100' GLES1/2 or GLES3 like this:
+Use either '#version 100' GLES1/2 or GLES3 
+Like this:
 ```
 #version 300 es
 precision mediump float;
@@ -49,7 +50,7 @@ This zip archive can be uploaded directly on itch after selection on the HTML ga
 
 ## changes to the code.
 
-The base used was https://github.com/BMaxV/panda3d_shading 03main.py
+The base used was [https://github.com/BMaxV/panda3d_shading 03main.py](https://github.com/BMaxV/panda3d_shading 03main.py)
 
 note: preferably use a 1024x600 screen size.
 
@@ -94,13 +95,15 @@ import pygbag.aio as asyncio
 
 which "gives control to the browser" in between ticks.
 
-## importing custom modules
+## importing a "pure python" custom module
 
-The imported custom module is https://github.com/BMaxV/panda3d_interface_glue and that one should have no dependencies except panda3d.
+For example the imported custom module is https://github.com/BMaxV/panda3d_interface_glue and that one should have no dependencies except Panda3D.
 
-but it's a good example for importing your custom modules.
+NB: If module uses Numpy be sure to add "import numpy" at top of your main.py
 
-I built the "interface glue" with
+This is a good example for importing your custom modules but you can also download the wheel from pypi, where pure python wheels usually have "py3-none" in their name.
+
+Here I built the "interface glue" with
 
 ```
 python3 setup.py bdist_wheel --universal
@@ -110,17 +113,15 @@ which builds the module into a wheel at `interfacegluedir/dist` The wheel then s
 
 
 
-
 ## testing
 
 If you leave `--archive` out, it starts a local webserver instead and you can visit (default) http://localhost:8000/ to test how well it works.
 
-You can visit http://localhost:8000/?-X&dev&-i instead to get to the debug console.
+You can visit [http://localhost:8000/?-X&dev&-i](http://localhost:8000/?-X&dev&-i) instead to get to the debug console.
 
 The name `main.py` is actually important, your main file has to be called `main.py`, alternative names will not work.
 
-
-=======
+_________
 
 
 [edit this page](https://github.com/pygame-web/pygame-web.github.io/edit/main/wiki/pkg/panda3d/README.md)
