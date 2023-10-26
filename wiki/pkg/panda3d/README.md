@@ -117,7 +117,7 @@ which builds the module into a wheel at `interfacegluedir/dist` The wheel then s
 
 If you leave `--archive` out, it starts a local webserver instead and you can visit (default) http://localhost:8000/ to test how well it works.
 
-You can visit [http://localhost:8000/?-X&dev&-i](http://localhost:8000/?-X&dev&-i) instead to get to the debug console.
+You can visit [http://localhost:8000/?-i](http://localhost:8000/?-i) instead to get to the debug console.
 
 The name `main.py` is actually important, your main file has to be called `main.py`, alternative names will not work.
 
