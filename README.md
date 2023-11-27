@@ -150,7 +150,7 @@ and also add a favicon.png icon 32x32 next to your game main.py, so it is picked
 
 nb : code is read-only, prefer right-click then open in new window.
 
-[i18n bidi,complex scripts](/showroom/pypad_dev.html?-i#src/test_hb.py)
+[i18n bidi,complex scripts](/showroom/pythongit.html?-i?#src/test_hb.py)
 
 [camera](/showroom/pypad_git.html?-i#src/test_vidcap.py)
 
