@@ -78,7 +78,7 @@ usefull additions to your .gitignore
 ## [Coding]
 - [for WASM](https://pygame-web.github.io/wiki/python-wasm/)
 - [with pygbag](https://pygame-web.github.io/wiki/pygbag-code/) FAQ
-- [pygbag code examples](https://github.com/pygame-web/pygame-web.github.io/blob/main/wiki/pygbag-code/README.md#pygbag-code-specifics-samples-)
+- [pygbag code examples](https://pygame-web.github.io/wiki/pygbag-code/#pygbag-code-specifics-samples-)
 - [List of available wheels](https://pygame-web.github.io/wiki/pkg/)
 - 
 mandatory when importing packages : put the  "import " at top of main.py ( eg import numpy, matplotlib )
