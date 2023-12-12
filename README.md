@@ -165,7 +165,8 @@ ___
 
 ## Technology:
 
-[devlog](https://github.com/pygame/pygame/issues/718)
+[initial devlog](https://github.com/pygame/pygame/issues/718) 
+[pygame-ce devlog](https://github.com/pygame-community/pygame-ce/issues/540)
 
 [Python Wasm explained by core dev Christian Heimes (youtube video)](https://www.youtube.com/watch?v=oa2LllRZUlU)
 
