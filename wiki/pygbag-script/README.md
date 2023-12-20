@@ -1,9 +1,9 @@
-## When to use pygame script ?
+## When to use pygbag script ?
 
  - when you don't need assets packaging because you download them at runtime.
  - if your code can still fit in one file.
  - you just want quick testing in real conditions but pygbag repl (#debug) is not handy.
- - for writing pygbag's load screens.
+ - for writing pygbag's load screens (files .tmpl in static folder from source repo).
  - for making python/pygame small examples and fit them in a iframe.
  - for making interactive tutorials.
  - when making a single app html file.
@@ -32,17 +32,18 @@ asyncio.run(main())
 mobile demo : [https://pygame-web.github.io/showroom/pygame-scripts/org.pygame.touchpong.html](https://pygame-web.github.io/showroom/pygame-scripts/org.pygame.touchpong.html)
 
 
-the data-os tags allows for 
+the data-os tags allows for
   - fs : you will be able to use Filesystem, camera, photo and user uploaded files.
   - vt : simple vt100 with no worker
   - vtx : full xterm.js ( with sixel graphics requires webgl+worker )
   - stdout : no vt100, only `<pre>` output in body.
   - gui : can use canvas, mandatory for pygame.
-  
- future tags:
-  - p3d : support Panda3D import
-  - hg3d : support Harfang3D import
 
+the data-python tag:
+  - cpython : use cpython runtime (default cpython3.11) eg cpython3.11 cpython312
+  - pkpy : use PocketPy runtime (default pkpy1.3)
+  - wapy : use WaPy runtime ( default wapy2.0, currently not available )
+  - python : use python runtime ( future limited ABI)
 
 #### running the script outside browser
 simple just type :
