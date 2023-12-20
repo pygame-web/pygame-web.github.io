@@ -93,7 +93,7 @@ Note: pgzero is mostly untested
 - TODO: universal remote debugging via irc client or websocket using pygbag.net
    
 ## [Running]
-- [pygame-script](https://pygame-web.github.io/wiki/pygame-script/) (wip!)
+- [pygbag-script](https://pygame-web.github.io/wiki/pygame-script/) (wip!)
 - [REPL](https://pygame-web.github.io/showroom/python.html?-i-&-X-dev#https://gist.githubusercontent.com/pmp-p/cfd398c75608504293d21f2642e87968/raw/773022eef4a2cc676ab0475890577a2b5e79e429/hello.py)
 - [CPython testsuite](https://pygame-web.github.io/showroom/pythondev.html?-d#src/testsuite.py%20all) (wip!)
 
