@@ -8,7 +8,7 @@ This software does not track usage at all, not even for statistics purpose so if
 
 please do not forget to [:star::star: Star :star::star:](https://github.com/pygame-web/pygbag/stargazers) it !
 
-Stop talking i want to see some [Demos]([https://pygame-web.github.io/#demos-on-github-pages-](https://pygame-web.github.io/#demos-on-itchio--expected-to-be-stable-)) before reading everything.
+Stop talking i want to see some [Demos]([https://pygame-web.github.io/#demos-on-github-pages-](https://pygame-web.github.io/#demos-on-itchio--expected-to-be-stable-) before reading everything.
 
 # Pygbag WIKI
 
