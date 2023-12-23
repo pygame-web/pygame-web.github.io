@@ -109,6 +109,12 @@ Note: pgzero is mostly untested
 ___
 
 
+
+### Demos on itch.io ( expected to be stable ):
+
+[games on itch.io](https://itch.io/c/2563651/pygame-wasm)
+
+
 ### Demos on github pages :
 
 (for testing, may not always work since they use daily/weekly devel version)
@@ -141,12 +147,6 @@ ___
 
 Please ! use the tag [pygame-wasm](https://github.com/topics/pygame-wasm) for your projects hosted on Github
 and also add a favicon.png icon 32x32 next to your game main.py, so it is picked up by default.
-
-### Demos on itch.io:
-
-( expected to be stable )
-
-[games on itch.io](https://itch.io/c/2563651/pygame-wasm)
 
 ### Script demos
 
