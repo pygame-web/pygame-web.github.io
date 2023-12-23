@@ -114,6 +114,7 @@ ___
 
 [games on itch.io](https://itch.io/c/2563651/pygame-wasm) ( expected to be stable )
 
+[Panda3D demos](https://itch.io/c/3724091/panda3d-wasm) (still experimental)
 
 ### Demos on github pages :
 
