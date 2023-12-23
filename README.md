@@ -8,6 +8,8 @@ This software does not track usage at all, not even for statistics purpose so if
 
 please do not forget to [:star::star: Star :star::star:](https://github.com/pygame-web/pygbag/stargazers) it !
 
+Stop talking i want to see some [Demos](https://pygame-web.github.io/#demos-on-github-pages-) before reading everything.
+
 # Pygbag WIKI
 
 <ins>Do NOT forget to read the coding section for WASM. You WILL have to change a few lines to classic python/pygame code.</ins>
