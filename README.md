@@ -1,38 +1,23 @@
 # pygame-web.github.io
-CDN root used by [pygbag](https://pypi.org/project/pygbag/)
+This is the CDN root used by [Pygbag](https://pypi.org/project/pygbag/) and the site of its wiki.
+([Source code](https://github.com/pygame-web/pygbag)/[Old runtimes](https://github.com/pygame-web/archives))
+
+Pygbag does not track usage at all, not even for statistical purposes. If you like it, please do not forget to [star](https://github.com/pygame-web/pygbag/stargazers) it !
+
+Check out some [demos](https://pygame-web.github.io/#demos-on-itchio-) before you start!
+
+**Work in progress, pull requests welcomed, feel free to propose links to games or tutorials, please contribute!!!**
 
 
-[Github repo](https://github.com/pygame-web/pygbag), and [older runtimes](https://github.com/pygame-web/archives)
+## Important notes
 
-This software does not track usage at all, not even for statistics purpose so if you like it :
+**Do NOT forget to read the coding section for WASM. You WILL have to change a few lines to classic python/pygame code.**
+### All operating systems
+- Add `--template noctx.tmpl` to pygbag command line if using 3D/WebGL.
+- When importing complex wheels that depend on each other, always put them in order (but numpy first) in main.py.
+- Make sure all audio files are OGG when packaging, otherwise pygbag would not work.
 
-please do not forget to [:star::star: Star :star::star:](https://github.com/pygame-web/pygbag/stargazers) it !
-
-Stop talking i want to see some [Demos](https://pygame-web.github.io/#demos-on-itchio-) before reading everything.
-
-# Pygbag WIKI
-
-<ins>Do NOT forget to read the coding section for WASM. You WILL have to change a few lines to classic python/pygame code.</ins>
-
-
-#### IMPORTANT ALL: add `--template noctx.tmpl` to pygbag command line when using 3D/WebGL
-
-#### IMPORTANT WIN32 users :
-- do not use python installed from windows store, use an official python.org build
-you can check version installed with `py --list ` command.
-If python/pygbag is not installed in your PATH env, use the command  `py -m pygbag`
-
-- do not use "\\" a path separator, pygbag is POSIX and use "/" instead eg open("img/my_image.png","rb) the change should not interfere and still work on recent Win32.
-
-#### IMPORTANT MAC users : if you get SSL error, use the file "Install Certificates.command" in Applications/Python 3.XX
-
-#### IMPORTANT Linux users: when using webusb ftdi serial emulation use `sudo rmmod ftdi_sio` after plugging devices.
-
-#### IMPORTANT ALL: when importing complex wheels that depend on each other, always put them in order (but numpy first) in main.py
-
-#### IMPORTANT ALL: Please do not use wav/mp3 audio formats when packaging, pygbag would not work.
-
-Before packaging, adapt your code this way if you still want wav format on desktop :
+Before packaging, adapt your code this way if you still want WAV/MP3 format on desktop :
 ```py
 if sys.platform == "emscripten":
     snd = pygame.mixer.Sound("sound.ogg")
@@ -40,8 +25,18 @@ else:
     snd = pygame.mixer.Sound("sound.wav") # or .WAV,.mp3,.MP3
 ```
 
-also avoid raw format like BMP for your assets they are too big for web use. prefer PNG or JPG
-___
+### Windows
+- Do not use python installed from the Windows Store, use an official python.org build. You can check version installed with
+`py --list` command. If python/pygbag is not in your PATH, add it to PATH or substitute any `pygbag` commands with `py -m pygbag`.
+- Use / instead of \ as a path separator (e.g. `open("img/my_image.png","rb")`) the change should not interfere and still work on recent Win32.
+
+### MacOS
+- If you get a SSL error, use the file "Install Certificates.command" in Applications/Python 3.XX
+
+### Linux
+- When using webusb ftdi serial emulation, use `sudo rmmod ftdi_sio` after plugging devices.
+
+Avoid raw formats like BMP for your image assets, they are too big for web use; use PNG or JPG instead.
 
 ## Template
 
@@ -106,8 +101,6 @@ Note: pgzero is mostly untested
 - [to github pages from your repo](https://pygame-web.github.io/wiki/pygbag/github.io/)
 - [to itch from web.zip](https://pygame-web.github.io/wiki/pygbag/itch.io/)
 
-___
-
 ### Demos on itch.io :
 
 - [Games using WASM on itch.io](https://itch.io/c/2563651/pygame-wasm) ( expected to be stable )
@@ -149,9 +142,6 @@ nb : code is read-only, prefer right-click then open in new window.
 - [Audio Record/Play](/showroom/pypad_dev.html?-i#src/test_audio.py)
 - [Html output](/showroom/pypad_dev.html?-i#src/test_html.py)
 
-
-___
-
 ## Technology:
 
 - [initial devlog](https://github.com/pygame/pygame/issues/718) 
@@ -162,7 +152,6 @@ ___
 
 - [pygame tech demo PyCon DE & PyData Berlin 2022](https://pmp-p.github.io/pygame-wasm/)
 - [Galaxy Attack](https://pmp-p.github.io/pygame-galaxy-attack-wasm/)
-
 
 French : Python WebAssembly at PyCon FR 2023
 [Pour quoi, pour qui et comment](https://harfang3d.github.io/pyconfr2023/#1)
@@ -183,7 +172,5 @@ French : Python WebAssembly at PyCon FR 2023
 
 - [Pygame Community](https://discord.gg/p7RjnVNTcM)
 - [WebAssembly/Python](https://discord.gg/MCTM4xFDMK)
-
-**Work in progress, pull requests welcomed, feel free to propose links to games or tutorials, please contribute!!!**
 
 [Edit this page](https://github.com/pygame-web/pygame-web.github.io/edit/main/README.md)
