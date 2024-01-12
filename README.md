@@ -43,7 +43,7 @@ else:
 also avoid raw format like BMP for your assets they are too big for web use. prefer PNG or JPG
 ___
 
-## template project
+## Template
 
 There is none actually, because pygbag is not a framework it is just a friendly web version of official CPython (nothing has been changed, just [some facilities added](https://discuss.python.org/t/status-of-wasm-in-cpythons-main-branch/15542/12?u=pmp-p)). Most desktop code will run (and will continue to run) with only a few lines changes. This is actually true for games  but for applications it can be very difficult to port, even sometimes impossible.
 
@@ -77,38 +77,36 @@ usefull additions to your .gitignore
 /dist
 ```
 
-## [Coding]
+## Coding
 - [for WASM](https://pygame-web.github.io/wiki/python-wasm/)
 - [with pygbag](https://pygame-web.github.io/wiki/pygbag-code/) FAQ
 - [pygbag code examples](https://pygame-web.github.io/wiki/pygbag-code/#pygbag-code-specifics-samples-)
 - [List of available wheels](https://pygame-web.github.io/wiki/pkg/)
-- 
+
 mandatory when importing packages : put the  "import " at top of main.py ( eg import numpy, matplotlib )
 
 if using pygame-zero : put #!pgzrun near the top of main ( 2nd line is perfect if file already has a shebang )
 Note: pgzero is mostly untested 
 
-## [Debugging / Desktop Simulator]
+## Debugging / Desktop Simulator
 - [enter debug mode](https://pygame-web.github.io/wiki/pygbag-debug/)
 - while working you can access simulator of web loop by replacing `import asyncio` by `import pygbag.aio as asyncio` at top of main.py and run program directly from main.py folder
 - TODO: android remote debugging via [chromium browsers series](https://developer.chrome.com/docs/devtools/remote-debugging/)
 - TODO: universal remote debugging via irc client or websocket using pygbag.net
    
-## [Running]
+## Running
 - [pygbag-script](https://pygame-web.github.io/wiki/pygame-script/) (wip!)
 - [REPL](https://pygame-web.github.io/showroom/python.html?-i-&-X-dev#https://gist.githubusercontent.com/pmp-p/cfd398c75608504293d21f2642e87968/raw/773022eef4a2cc676ab0475890577a2b5e79e429/hello.py)
 - [CPython testsuite](https://pygame-web.github.io/showroom/pythondev.html?-d#src/testsuite.py%20all) (wip!)
 
-## [packaging]
+## Packaging
 [ how to package a game](https://pygame-web.github.io/wiki/pygbag/)
 
-## [Publishing]
+## Publishing
 - [to github pages from your repo](https://pygame-web.github.io/wiki/pygbag/github.io/)
 - [to itch from web.zip](https://pygame-web.github.io/wiki/pygbag/itch.io/)
 
 ___
-
-
 
 ### Demos on itch.io :
 
@@ -120,13 +118,11 @@ ___
 
 (for testing, may not always work since they use daily/weekly devel version)
 
-##### heavy cpu load not for low-end devices:
+##### Heavy CPU load, not for low-end devices:
 
 [Perfect Rain](https://pmp-p.github.io/pygame-perfect-rain-wasm/)
 
-[Alien Dimension](https://pmp-p.github.io/pygame-alien-dimension-wasm/)
-
-##### Light cpu load :
+##### Light CPU load :
 
 [Breakout](https://pmp-p.github.io/pygame-breakout-wasm/index.html)
 
@@ -138,11 +134,7 @@ ___
 
 [3D Tic-Tac-Toe](https://pmp-p.github.io/pygame-ttt-3d-wasm/)
 
-[Arachnoids](https://pmp-p.github.io/pygame-arachnoids-wasm/)
-
-[Sudoku Solver](https://www.pete-j-matthews.com/Sudoku-Solver/)
-
-### view code from above games and others on github
+### View code from above games and others on github
 
 [[view the code]](https://github.com/pmp-p?tab=repositories&q=pygame-.-wasm&sort=name)
 
@@ -184,9 +176,7 @@ ___
 French : Python WebAssembly at PyCon FR 2023
 [Pour quoi, pour qui et comment](https://harfang3d.github.io/pyconfr2023/#1)
 
-## current status
-
-[explore current issues](https://github.com/pygame-web/pygbag/issues)
+## Current status
 
 [package porting](https://github.com/pygame-web/pkg-porting-wasm/issues)
 
@@ -199,7 +189,7 @@ French : Python WebAssembly at PyCon FR 2023
 
 [Hello from the pygame-ce community.](https://pyga.me/)
 
-#### Connect with Discord
+### Discord servers
 
 [Pygame community](https://discord.gg/p7RjnVNTcM)
 
