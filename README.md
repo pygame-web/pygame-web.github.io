@@ -110,9 +110,8 @@ ___
 
 ### Demos on itch.io :
 
-[games on itch.io](https://itch.io/c/2563651/pygame-wasm) ( expected to be stable )
-
-[Panda3D demos](https://itch.io/c/3724091/panda3d-wasm) (still experimental)
+- [Games using WASM on itch.io](https://itch.io/c/2563651/pygame-wasm) ( expected to be stable )
+- [Panda3D demos](https://itch.io/c/3724091/panda3d-wasm) (still experimental)
 
 ### Demos on github pages :
 
@@ -120,19 +119,18 @@ ___
 
 ##### Heavy CPU load, not for low-end devices:
 
-[Perfect Rain](https://pmp-p.github.io/pygame-perfect-rain-wasm/)
+- [Perfect Rain](https://pmp-p.github.io/pygame-perfect-rain-wasm/)
+- [Alien Dimension](https://pmp-p.github.io/pygame-alien-dimension-wasm/)
 
 ##### Light CPU load :
 
-[Breakout](https://pmp-p.github.io/pygame-breakout-wasm/index.html)
-
-[PyChess](https://pmp-p.github.io/pygame-pychess-wasm/index.html)
-
-[Penguins Can't Fly !](https://pmp-p.github.io/pygame-PenguinsCantFly-wasm/)
-
-[John's Adventure](https://pmp-p.github.io/pygame-JohnsAdventure-wasm/)
-
-[3D Tic-Tac-Toe](https://pmp-p.github.io/pygame-ttt-3d-wasm/)
+- [Breakout](https://pmp-p.github.io/pygame-breakout-wasm/index.html)
+- [PyChess](https://pmp-p.github.io/pygame-pychess-wasm/index.html)
+- [Penguins Can't Fly !](https://pmp-p.github.io/pygame-PenguinsCantFly-wasm/)
+- [John's Adventure](https://pmp-p.github.io/pygame-JohnsAdventure-wasm/)
+- [3D Tic-Tac-Toe](https://pmp-p.github.io/pygame-ttt-3d-wasm/)
+- [Arachnoids](https://pmp-p.github.io/pygame-arachnoids-wasm/)
+- [Sudoku Solver](https://www.pete-j-matthews.com/Sudoku-Solver/)
 
 ### View code from above games and others on github
 
@@ -145,32 +143,25 @@ and also add a favicon.png icon 32x32 next to your game main.py, so it is picked
 
 nb : code is read-only, prefer right-click then open in new window.
 
-[i18n bidi,complex scripts](/showroom/pypad_git.html?-i#src/test_hb.py)
-
-[camera](/showroom/pypad_git.html?-i#src/test_vidcap.py)
-
-[Panda3D](/showroom/pypad_dev.html?-i#src/test_panda3d_cube.py)
-
-[Audio Record/Play](/showroom/pypad_dev.html?-i#src/test_audio.py)
-
-[Html output](/showroom/pypad_dev.html?-i#src/test_html.py)
+- [i18n bidi,complex scripts](/showroom/pypad_git.html?-i#src/test_hb.py)
+- [camera](/showroom/pypad_git.html?-i#src/test_vidcap.py)
+- [Panda3D](/showroom/pypad_dev.html?-i#src/test_panda3d_cube.py)
+- [Audio Record/Play](/showroom/pypad_dev.html?-i#src/test_audio.py)
+- [Html output](/showroom/pypad_dev.html?-i#src/test_html.py)
 
 
 ___
 
 ## Technology:
 
-[initial devlog](https://github.com/pygame/pygame/issues/718) 
-[pygame-ce devlog](https://github.com/pygame-community/pygame-ce/issues/540)
-
-[Python Wasm explained by core dev Christian Heimes (youtube video)](https://www.youtube.com/watch?v=oa2LllRZUlU)
-
+- [initial devlog](https://github.com/pygame/pygame/issues/718) 
+- [pygame-ce devlog](https://github.com/pygame-community/pygame-ce/issues/540)
+- [Python Wasm explained by core dev Christian Heimes (youtube video)](https://www.youtube.com/watch?v=oa2LllRZUlU)
 
 ### Early demos from above talk, may not fully work as intended :)
 
-[pygame tech demo PyCon DE & PyData Berlin 2022](https://pmp-p.github.io/pygame-wasm/)
-
-[Galaxy Attack](https://pmp-p.github.io/pygame-galaxy-attack-wasm/)
+- [pygame tech demo PyCon DE & PyData Berlin 2022](https://pmp-p.github.io/pygame-wasm/)
+- [Galaxy Attack](https://pmp-p.github.io/pygame-galaxy-attack-wasm/)
 
 
 French : Python WebAssembly at PyCon FR 2023
@@ -178,11 +169,10 @@ French : Python WebAssembly at PyCon FR 2023
 
 ## Current status
 
-[package porting](https://github.com/pygame-web/pkg-porting-wasm/issues)
-
-[PyPI stats](https://pepy.tech/project/pygbag)
-
-[pyodide/pyscript](https://github.com/pyodide/pyodide/issues/289#issuecomment-1121021861)
+- [Current issues](https://github.com/pygame-web/pygbag/issues)
+- [Package porting](https://github.com/pygame-web/pkg-porting-wasm/issues)
+- [PyPI stats](https://pepy.tech/project/pygbag)
+- [pyodide/pyscript](https://github.com/pyodide/pyodide/issues/289#issuecomment-1121021861)
 
 
 ### Thanks for supporting pygame-ce and pygbag. Without support now, there would not be pygame-ce + pygbag later.
@@ -191,12 +181,9 @@ French : Python WebAssembly at PyCon FR 2023
 
 ### Discord servers
 
-[Pygame community](https://discord.gg/p7RjnVNTcM)
+- [Pygame Community](https://discord.gg/p7RjnVNTcM)
+- [WebAssembly/Python](https://discord.gg/MCTM4xFDMK)
 
-[WebAssembly/Python](https://discord.gg/MCTM4xFDMK)
+**Work in progress, pull requests welcomed, feel free to propose links to games or tutorials, please contribute!!!**
 
-#### Work in Progress, PR welcomed,  propose links to games or tutorials, please contribute !!!
-
-
-[edit this page](https://github.com/pygame-web/pygame-web.github.io/edit/main/README.md)
-
+[Edit this page](https://github.com/pygame-web/pygame-web.github.io/edit/main/README.md)
