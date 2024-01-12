@@ -1,36 +1,17 @@
 # Pygbag Wiki
 Hey there, Welcome to the Pygbag Wiki!
-> In this wiki, you will learn how to use pygbag, and how to convert your game, made with pygame, to web.
 
-#### Chapters in this wiki
-* Installation
-* Web Testing
-* Templates
-* Project Setup
-* Bonus: Uploading your game on itch.io
-* The End
+This page covers all the steps from installing Pygbag to packaging and uploading your Python game to be played by anyone on the Internet.
 
-***
 
 ## Installation
-So, to use any library, including pygbag, you would need to install that library, using a tool called pip
+Pip is a tool used to install Python libraries, and it's usually installed along with Python. 
 
-pip is a tool used to install libraries, it can be installed while installing python.
+Execute the following command in the terminal:
+`pip install git+https://github.com/pygame-web/pygbag --user --upgrade`.<br>
+This would install/upgrade to the latest version of pygbag.
 
-### Check if your device has pip
-1. Open your command prompt
-2. type `pip` in it and if it shows a ton of text, then you are good to go. But if shows something like <br>
-`'pip' is not recognized as an internal or external command, operable program or batch file.`<br>
-Then you can watch [this](https://www.youtube.com/watch?v=AdUZArA-kZw) tutorial to fix that.
-
-### Install pygbag
-1. Like the previous step, open your command prompt
-2. Type the following command in it:<br>
-`pip install git+https://github.com/pygame-web/pygbag --user --upgrade`<br>
-This would install and upgrade pygbag onto your device
-> The following command would install the pygbag repository in your device, though if you want you can also run this command<br>`pip install pygbag --upgrade`<br>This would install as well as update it so as to get the most recent version of the library. But this command is less preferred as just in case
-the author forgets to publish the latest version of the library to PyPI.
-***
+`pip install pygbag --user --upgrade` also works.
 
 ## Web Testing
 So, now we will check out how to run our games on web using pygbag.
