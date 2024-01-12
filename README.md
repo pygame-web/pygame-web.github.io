@@ -2,7 +2,8 @@
 This is the CDN root used by [Pygbag](https://pypi.org/project/pygbag/) and the site of its wiki.
 ([Source code](https://github.com/pygame-web/pygbag)/[Old runtimes](https://github.com/pygame-web/archives))
 
-Pygbag does not track usage at all, not even for statistical purposes. If you like it, please do not forget to [star](https://github.com/pygame-web/pygbag/stargazers)!
+Pygbag does not track usage at all, not even for statistical purposes. If you like it, please 
+[star](https://github.com/pygame-web/pygbag/stargazers) the repo!
 
 Check out some [demos](#demos-on-itchio) before you start!
 
@@ -11,8 +12,8 @@ Check out some [demos](#demos-on-itchio) before you start!
 
 ## Important notes
 
-**Do NOT forget to read the coding section for WASM. You WILL have to change a few lines to classic python/pygame code.**
-### All operating systems
+**Read the coding section for WASM. You WILL have to change a few lines of python/pygame code.**
+### General
 - Add `--template noctx.tmpl` to pygbag command line if using 3D/WebGL.
 - When importing complex wheels that depend on each other, always put them in order (but numpy first) in main.py.
 - Avoid using CPython's standard library for web operations, GUI (like tkinter), or I/O as it is very 
@@ -20,7 +21,7 @@ synchronous/platform-specific and will probably stay that way. In terms of GUI a
 pygame-ce, Panda3D provides directgui and Harfang3D provides imgui. They are all cross-platform.
 - Make sure all audio files are in OGG format when packaging, otherwise pygbag would not work.
 
-Before packaging, adapt your code this way if you still want WAV/MP3 format on desktop :
+Before packaging, adapt your code this way if you still want WAV/MP3 format on desktop:
 ```py
 if sys.platform == "emscripten":
     snd = pygame.mixer.Sound("sound.ogg")
@@ -30,8 +31,8 @@ else:
 
 ### Windows
 - Do not use python installed from the Windows Store, use an official python.org build. You can check version installed with
-`py --list` command. If python/pygbag is not in your PATH, add it to PATH or substitute any `pygbag` commands with `py -m pygbag`.
-- Use / instead of \ as a path separator (e.g. `open("img/my_image.png","rb")`) the change should not interfere and still work on recent Win32.
+`py --list` command. If python/pygbag is not in your PATH environment variable, add it to PATH or substitute any `pygbag` commands with `py -m pygbag`.
+- Use / instead of \ as a path separator (e.g. `open("img/my_image.png","rb")`) the change should still work on newer Windows versions.
 
 ### MacOS
 - If you get a SSL error, use the file "Install Certificates.command" in Applications/Python 3.XX
@@ -84,10 +85,9 @@ Useful .gitignore additions:
 - [Pygbag code examples](https://pygame-web.github.io/wiki/pygbag-code/#pygbag-code-specifics-samples-)
 - [List of available wheels](https://pygame-web.github.io/wiki/pkg/)
 
-mandatory when importing packages : put the  "import " at top of main.py ( eg import numpy, matplotlib )
+When importing complex packages (for example, numpy or matplotlib), you must put import statements at top of main.py.
 
-if using pygame-zero : put #!pgzrun near the top of main ( 2nd line is perfect if file already has a shebang )
-Note: pgzero is mostly untested 
+If using pygame-zero (mostly untested), put `#!pgzrun` near the top of main.py. (2nd line is perfect if the file already has a shebang)
 
 ## Debugging / Desktop Simulator
 - [How to enter debug mode](https://pygame-web.github.io/wiki/pygbag-debug/)
@@ -139,7 +139,7 @@ and also add a favicon.png icon 32x32 next to your game main.py, so it is picked
 
 ### Script demos
 
-nb : code is read-only, prefer right-click then open in new window.
+The code is read-only, so you should right-click then open in a new window.
 
 - [i18n bidi, complex scripts](/showroom/pypad_git.html?-i#src/test_hb.py)
 - [Camera](/showroom/pypad_git.html?-i#src/test_vidcap.py)
@@ -171,6 +171,6 @@ Python WebAssembly at PyCon FR 2023 (in French):
 - [Pygame Community Discord Server](https://discord.gg/p7RjnVNTcM)
 - [WebAssembly/Python Discord Server](https://discord.gg/MCTM4xFDMK)
 
-Thanks for reading and supporting pygame-ce and pygbag. These tools could not exist without your support.
+Thanks for reading and supporting pygame-ce and pygbag. These tools could not have existed without your support.
 
 [Edit this page](https://github.com/pygame-web/pygame-web.github.io/edit/main/README.md)
