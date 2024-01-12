@@ -1,4 +1,4 @@
-# *Home*
+# Pygbag Wiki
 Hey there, Welcome to the Pygbag Wiki!
 > In this wiki, you will learn how to use pygbag, and how to convert your game, made with pygame, to web.
 
@@ -12,8 +12,7 @@ Hey there, Welcome to the Pygbag Wiki!
 
 ***
 
-# *Installation*
-## In this chapter you will install pygbag
+## Installation
 So, to use any library, including pygbag, you would need to install that library, using a tool called pip
 
 pip is a tool used to install libraries, it can be installed while installing python.
@@ -33,8 +32,7 @@ This would install and upgrade pygbag onto your device
 the author forgets to publish the latest version of the library to PyPI.
 ***
 
-# *Web Testing*
-## In this chapter, you will test out pygbag
+## Web Testing
 So, now we will check out how to run our games on web using pygbag.
 
 ### Creating a project
@@ -85,8 +83,7 @@ After running this command go to your preferred web browser, and go to https://l
 If you were able to complete this step, congratulations you were successfully able to setup pygbag and also able to test it out.
 ***
 
-# *Templates*
-## In this chapter you will learn about templates in pygbag
+## Templates
 So, you might be wondering that how will the players play your game if your window looks so small and the console takes up so much of place. To fix this, you can change the layout of the webpage using templates or remove the #debug from url.
 
 ### Using other templates
@@ -110,8 +107,7 @@ Using the second approach would be better and also recommended, as in this appro
 >NOTE: Almost all line are important, so please think a lot before deleting a line, because only one missing line  could break the whole thing.
 ***
 
-# *Project Setup*
-## In this chapter you will learn how to setup your project
+## Project Setup
 
 ### Use assets
 Assets are essentially all the images, fonts and sound tracks you use to make your game better. And if you are using pygame in general, you can place the assets wherever you feel like, but with pygbag, you would need to place all your assets inside your game folder, without it your program won't run. Thought if your game doesn't need any assets then you are good to go ahead not using the assets folder.
@@ -130,8 +126,7 @@ The necessary changes you need to make are:
 4. In the last line of the program, out side th main function write this line `asyncio.run( main() )`
 > NOTE: Don't write anything after this line as this line is kind of like running the code and anything after this line would be ignored by the program.
 
-# *Uploading your game on itch.io (Bonus)*
-## In this chapter you will learn how to upload your game on itch.io
+## Uploading your game on itch.io (Optional)
 So, for others to be able to play your game you online, you would need to publish your game in some platform like itch.io
 
 ### Zipping the files
@@ -154,7 +149,7 @@ So to upload the file
 After following these step, if you view your game page, then you would be able to see you game.
 Thought, if your are unable to do so, you can ask for help in the [pygame discord server](https://discord.gg/s6Hhrh77aq)
 
-# *The End*
+## Conclusion
 Congratulations! You were able to finish this tutorial on pygbag, now you can go ahead and try to make all your games available in the web too!!<br>
 Thank you for following along!
 
