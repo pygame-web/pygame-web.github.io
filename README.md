@@ -146,18 +146,18 @@ nb : code is read-only, prefer right-click then open in new window.
 - [Audio Record/Play](/showroom/pypad_dev.html?-i#src/test_audio.py)
 - [HTML output](/showroom/pypad_dev.html?-i#src/test_html.py)
 
-## Technology:
+## Technology
 
-- [initial devlog](https://github.com/pygame/pygame/issues/718) 
-- [pygame-ce devlog](https://github.com/pygame-community/pygame-ce/issues/540)
-- [Python Wasm explained by core dev Christian Heimes (youtube video)](https://www.youtube.com/watch?v=oa2LllRZUlU)
+- [Initial discussion](https://github.com/pygame/pygame/issues/718) 
+- [Discussion at pygame-ce repo](https://github.com/pygame-community/pygame-ce/issues/540)
+- [Python-WASM explained by core dev Christian Heimes (video)](https://www.youtube.com/watch?v=oa2LllRZUlU)
 
 ### Early demos from above talk, may not fully work as intended :)
 
-- [pygame tech demo PyCon DE & PyData Berlin 2022](https://pmp-p.github.io/pygame-wasm/)
+- [Pygame tech demo PyCon DE & PyData Berlin 2022](https://pmp-p.github.io/pygame-wasm/)
 - [Galaxy Attack](https://pmp-p.github.io/pygame-galaxy-attack-wasm/)
 
-French : Python WebAssembly at PyCon FR 2023
+Python WebAssembly at PyCon FR 2023 (in French): 
 [Pour quoi, pour qui et comment](https://harfang3d.github.io/pyconfr2023/#1)
 
 ## Useful links
