@@ -2,7 +2,7 @@
 This is the CDN root used by [Pygbag](https://pypi.org/project/pygbag/) and the site of its wiki.
 ([Source code](https://github.com/pygame-web/pygbag)/[Old runtimes](https://github.com/pygame-web/archives))
 
-Pygbag does not track usage at all, not even for statistical purposes. If you like it, please do not forget to [star](https://github.com/pygame-web/pygbag/stargazers) it !
+Pygbag does not track usage at all, not even for statistical purposes. If you like it, please do not forget to [star](https://github.com/pygame-web/pygbag/stargazers)!
 
 Check out some [demos](https://pygame-web.github.io/#demos-on-itchio-) before you start!
 
@@ -15,7 +15,10 @@ Check out some [demos](https://pygame-web.github.io/#demos-on-itchio-) before yo
 ### All operating systems
 - Add `--template noctx.tmpl` to pygbag command line if using 3D/WebGL.
 - When importing complex wheels that depend on each other, always put them in order (but numpy first) in main.py.
-- Make sure all audio files are OGG when packaging, otherwise pygbag would not work.
+- Avoid using CPython's standard library for web operations, GUI (like tkinter), or I/O as it is very 
+synchronous/platform-specific and will probably stay that way. In terms of GUI alternatives, pygame_gui works on top of 
+pygame-ce, Panda3D provides directgui and Harfang3D provides imgui. They are all cross-platform.
+- Make sure all audio files are in OGG format when packaging, otherwise pygbag would not work.
 
 Before packaging, adapt your code this way if you still want WAV/MP3 format on desktop :
 ```py
@@ -38,13 +41,14 @@ else:
 
 Avoid raw formats like BMP for your image assets, they are too big for web use; use PNG or JPG instead.
 
+A full packaging guide can be found [here](https://pygame-web.github.io/wiki/pygbag/).
+
 ## Template
 
-There is none actually, because pygbag is not a framework it is just a friendly web version of official CPython (nothing has been changed, just [some facilities added](https://discuss.python.org/t/status-of-wasm-in-cpythons-main-branch/15542/12?u=pmp-p)). Most desktop code will run (and will continue to run) with only a few lines changes. This is actually true for games  but for applications it can be very difficult to port, even sometimes impossible.
-
-Try to avoid relying on CPython stdlib for web operations, GUI (like tk) or I/O as it is very synchronous, platform specific and will probably stay that way.
-
-Note about GUI:  pygame-ce provides pygame_gui, Panda3D provides directgui and Harfang3D imgui => and they are all cross platform.
+There is actually none, because Python-WASM is a web-friendly version of CPython with
+[some added facilities](https://discuss.python.org/t/status-of-wasm-in-cpythons-main-branch/15542/12?u=pmp-p).
+Most desktop code will run (and continue to run) with only a few changes. This is actually true for games  but for 
+applications it can be very difficult to port, even sometimes impossible.
 
 As alternative using pygame or pygbag supported game engines will ensure you platform independence including access to mobile ones.
 
