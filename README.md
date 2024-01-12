@@ -160,21 +160,16 @@ nb : code is read-only, prefer right-click then open in new window.
 French : Python WebAssembly at PyCon FR 2023
 [Pour quoi, pour qui et comment](https://harfang3d.github.io/pyconfr2023/#1)
 
-## Current status
+## Useful links
 
 - [Current issues](https://github.com/pygame-web/pygbag/issues)
 - [Package porting](https://github.com/pygame-web/pkg-porting-wasm/issues)
 - [PyPI stats](https://pepy.tech/project/pygbag)
-- [pyodide/pyscript](https://github.com/pyodide/pyodide/issues/289#issuecomment-1121021861)
+- [Pyodide/Pyscript](https://github.com/pyodide/pyodide)
+- [Pygame Community](https://pyga.me/)
+- [Pygame Community Discord Server](https://discord.gg/p7RjnVNTcM)
+- [WebAssembly/Python Discord Server](https://discord.gg/MCTM4xFDMK)
 
-
-### Thanks for supporting pygame-ce and pygbag. Without support now, there would not be pygame-ce + pygbag later.
-
-[Hello from the pygame-ce community.](https://pyga.me/)
-
-### Discord servers
-
-- [Pygame Community](https://discord.gg/p7RjnVNTcM)
-- [WebAssembly/Python](https://discord.gg/MCTM4xFDMK)
+Thanks for reading and supporting pygame-ce and pygbag. These tools could not exist without your support.
 
 [Edit this page](https://github.com/pygame-web/pygame-web.github.io/edit/main/README.md)
