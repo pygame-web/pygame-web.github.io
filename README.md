@@ -4,7 +4,7 @@ This is the CDN root used by [Pygbag](https://pypi.org/project/pygbag/) and the 
 
 Pygbag does not track usage at all, not even for statistical purposes. If you like it, please do not forget to [star](https://github.com/pygame-web/pygbag/stargazers)!
 
-Check out some [demos](https://pygame-web.github.io/#demos-on-itchio-) before you start!
+Check out some [demos](#demos-on-itchio) before you start!
 
 **Work in progress, pull requests welcomed, feel free to propose links to games or tutorials, please contribute!!!**
 
@@ -52,7 +52,7 @@ applications it can be very difficult to port, even sometimes impossible.
 
 As alternative using pygame or pygbag supported game engines will ensure you platform independence including access to mobile ones.
 
-[basic structure of a game should be like :](https://github.com/pygame-web/pygbag/tree/main/test)
+Basic structure of a game:
 ```
 test
 ├── img
@@ -65,7 +65,9 @@ test
 ```
 then run `pygbag test/main.py` against it, and first goes to http://localhost:8000?-i (with terminal and debugging info, for older pygbag version use http://localhost:8000#debug instead) or  http://localhost:8000 (fullscreen windowed when it is running ok)
 
-usefull additions to your .gitignore 
+See it [here](https://github.com/pygame-web/pygbag/tree/main/test).
+
+Useful .gitignore additions:
 ```
 *.wav
 *.mp3
@@ -77,9 +79,9 @@ usefull additions to your .gitignore
 ```
 
 ## Coding
-- [for WASM](https://pygame-web.github.io/wiki/python-wasm/)
-- [with pygbag](https://pygame-web.github.io/wiki/pygbag-code/) FAQ
-- [pygbag code examples](https://pygame-web.github.io/wiki/pygbag-code/#pygbag-code-specifics-samples-)
+- [General Python-WASM](https://pygame-web.github.io/wiki/python-wasm/)
+- [With Pygbag in particular](https://pygame-web.github.io/wiki/pygbag-code/)
+- [Pygbag code examples](https://pygame-web.github.io/wiki/pygbag-code/#pygbag-code-specifics-samples-)
 - [List of available wheels](https://pygame-web.github.io/wiki/pkg/)
 
 mandatory when importing packages : put the  "import " at top of main.py ( eg import numpy, matplotlib )
@@ -88,22 +90,21 @@ if using pygame-zero : put #!pgzrun near the top of main ( 2nd line is perfect i
 Note: pgzero is mostly untested 
 
 ## Debugging / Desktop Simulator
-- [enter debug mode](https://pygame-web.github.io/wiki/pygbag-debug/)
-- while working you can access simulator of web loop by replacing `import asyncio` by `import pygbag.aio as asyncio` at top of main.py and run program directly from main.py folder
-- TODO: android remote debugging via [chromium browsers series](https://developer.chrome.com/docs/devtools/remote-debugging/)
-- TODO: universal remote debugging via irc client or websocket using pygbag.net
+- [How to enter debug mode](https://pygame-web.github.io/wiki/pygbag-debug/)
+- While working you can access simulator of web loop by replacing `import asyncio` by `import pygbag.aio as asyncio` at top of main.py and run program directly from main.py folder
+- TODO: Android remote debugging via [chromium browsers series](https://developer.chrome.com/docs/devtools/remote-debugging/)
+- TODO: Universal remote debugging via irc client or websocket using pygbag.net
    
 ## Running
-- [pygbag-script](https://pygame-web.github.io/wiki/pygame-script/) (wip!)
-- [REPL](https://pygame-web.github.io/showroom/python.html?-i-&-X-dev#https://gist.githubusercontent.com/pmp-p/cfd398c75608504293d21f2642e87968/raw/773022eef4a2cc676ab0475890577a2b5e79e429/hello.py)
-- [CPython testsuite](https://pygame-web.github.io/showroom/pythondev.html?-d#src/testsuite.py%20all) (wip!)
 
-## Packaging
-[ how to package a game](https://pygame-web.github.io/wiki/pygbag/)
+- [Pygbag-script](https://pygame-web.github.io/wiki/pygame-script/) (wip!)
+- [REPL](https://pygame-web.github.io/showroom/python.html?-i-&-X-dev#https://gist.githubusercontent.com/pmp-p/cfd398c75608504293d21f2642e87968/raw/773022eef4a2cc676ab0475890577a2b5e79e429/hello.py)
+- [CPython test suite](https://pygame-web.github.io/showroom/pythondev.html?-d#src/testsuite.py%20all) (wip!)
 
 ## Publishing
-- [to github pages from your repo](https://pygame-web.github.io/wiki/pygbag/github.io/)
-- [to itch from web.zip](https://pygame-web.github.io/wiki/pygbag/itch.io/)
+
+- [Github Pages](https://pygame-web.github.io/wiki/pygbag/github.io/)
+- [Itch.io](https://pygame-web.github.io/wiki/pygbag/itch.io/)
 
 ## Demos
 
