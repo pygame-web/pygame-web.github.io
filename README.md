@@ -1,6 +1,7 @@
 # pygame-web.github.io
 
-This is the CDN root used by [Pygbag](https://pypi.org/project/pygbag/) and the site of its wiki.
+This is the CDN root used by [Pygbag](https://pypi.org/project/pygbag/) and the site of its 
+[wiki](https://pygame-web.github.io/wiki/pygbag).
 ([Source code](https://github.com/pygame-web/pygbag)/[Old runtimes](https://github.com/pygame-web/archives))
 
 Pygbag does not track usage at all, not even for statistical purposes. If you like it, please 
