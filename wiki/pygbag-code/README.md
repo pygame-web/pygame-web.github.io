@@ -44,7 +44,7 @@ you need to remove driver using the serial port for that ( rmmod or zadig )
 
 
 ### File uploading
-#### sample : image file viewer
+#### sample : image file viewer [try it](https://pygame-web.github.io/showroom/pypad.html#src/test_upload.py)
 ```py
 import platform
 
@@ -113,7 +113,7 @@ not implemented, TODO : https://developer.mozilla.org/en-US/docs/Web/API/FileSys
 
 
 
-#### sample : using async input() [[try it]](https://pygame-web.github.io/showroom/pypad_git.html#src/test_input.py)
+#### sample : using async input() [[try it]](https://pygame-web.github.io/showroom/pypad.html#src/test_input.py)
 ```py
 import asyncio
 
@@ -213,7 +213,7 @@ if sys.platform == "emscripten":
 
 TODO, drag/drop events, gestures.
 
-### getting camera image [try it](http://pygame-web.github.io/showroom/pypad_git.html?-i#src/vidcap.py)
+### getting camera image [try it](http://pygame-web.github.io/showroom/pypad.html?-i#src/vidcap.py)
 
 TODO, pygame interface is not finished.
 
