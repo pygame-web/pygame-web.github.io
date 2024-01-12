@@ -1,4 +1,5 @@
 # pygame-web.github.io
+
 This is the CDN root used by [Pygbag](https://pypi.org/project/pygbag/) and the site of its wiki.
 ([Source code](https://github.com/pygame-web/pygbag)/[Old runtimes](https://github.com/pygame-web/archives))
 
@@ -9,11 +10,12 @@ Check out some [demos](#demos-on-itchio) before you start!
 
 **Work in progress, pull requests welcomed, feel free to propose links to games or tutorials, please contribute!!!**
 
-
 ## Important notes
 
 **Read the coding section for WASM. You WILL have to change a few lines of python/pygame code.**
+
 ### General
+
 - Add `--template noctx.tmpl` to pygbag command line if using 3D/WebGL.
 - When importing complex wheels that depend on each other, always put them in order (but numpy first) in main.py.
 - Avoid using CPython's standard library for web operations, GUI (like tkinter), or I/O as it is very 
@@ -30,14 +32,17 @@ else:
 ```
 
 ### Windows
+
 - Do not use python installed from the Windows Store, use an official python.org build. You can check version installed with
 `py --list` command. If python/pygbag is not in your PATH environment variable, add it to PATH or substitute any `pygbag` commands with `py -m pygbag`.
 - Use / instead of \ as a path separator (e.g. `open("img/my_image.png","rb")`) the change should still work on newer Windows versions.
 
 ### MacOS
+
 - If you get a SSL error, use the file "Install Certificates.command" in Applications/Python 3.XX
 
 ### Linux
+
 - When using webusb ftdi serial emulation, use `sudo rmmod ftdi_sio` after plugging devices.
 
 Avoid raw formats like BMP for your image assets, they are too big for web use; use PNG or JPG instead.
@@ -64,7 +69,6 @@ test
 └── sfx
     └── beep.ogg
 ```
-then run `pygbag test/main.py` against it, and first goes to http://localhost:8000?-i (with terminal and debugging info, for older pygbag version use http://localhost:8000#debug instead) or  http://localhost:8000 (fullscreen windowed when it is running ok)
 
 See it [here](https://github.com/pygame-web/pygbag/tree/main/test).
 
@@ -80,6 +84,7 @@ Useful .gitignore additions:
 ```
 
 ## Coding
+
 - [General Python-WASM](https://pygame-web.github.io/wiki/python-wasm/)
 - [With Pygbag in particular](https://pygame-web.github.io/wiki/pygbag-code/)
 - [Pygbag code examples](https://pygame-web.github.io/wiki/pygbag-code/#pygbag-code-specifics-samples-)
@@ -90,6 +95,7 @@ When importing complex packages (for example, numpy or matplotlib), you must put
 If using pygame-zero (mostly untested), put `#!pgzrun` near the top of main.py. (2nd line is perfect if the file already has a shebang)
 
 ## Debugging / Desktop Simulator
+
 - [How to enter debug mode](https://pygame-web.github.io/wiki/pygbag-debug/)
 - While working you can access simulator of web loop by replacing `import asyncio` by `import pygbag.aio as asyncio` at top of main.py and run program directly from main.py folder
 - TODO: Android remote debugging via [chromium browsers series](https://developer.chrome.com/docs/devtools/remote-debugging/)
