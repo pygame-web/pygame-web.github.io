@@ -105,21 +105,23 @@ Note: pgzero is mostly untested
 - [to github pages from your repo](https://pygame-web.github.io/wiki/pygbag/github.io/)
 - [to itch from web.zip](https://pygame-web.github.io/wiki/pygbag/itch.io/)
 
-### Demos on itch.io :
+## Demos
 
-- [Games using WASM on itch.io](https://itch.io/c/2563651/pygame-wasm) ( expected to be stable )
-- [Panda3D demos](https://itch.io/c/3724091/panda3d-wasm) (still experimental)
+### Demos on itch.io
 
-### Demos on github pages :
+- [Games using Python-WASM](https://itch.io/c/2563651/pygame-wasm) (expected to be stable)
+- [Panda3D demos](https://itch.io/c/3724091/panda3d-wasm) (currently experimental)
+
+### Demos on Github Pages
 
 (for testing, may not always work since they use daily/weekly devel version)
 
-##### Heavy CPU load, not for low-end devices:
+#### Heavy CPU load, not for low-end devices
 
 - [Perfect Rain](https://pmp-p.github.io/pygame-perfect-rain-wasm/)
 - [Alien Dimension](https://pmp-p.github.io/pygame-alien-dimension-wasm/)
 
-##### Light CPU load :
+#### Light CPU load
 
 - [Breakout](https://pmp-p.github.io/pygame-breakout-wasm/index.html)
 - [PyChess](https://pmp-p.github.io/pygame-pychess-wasm/index.html)
@@ -129,22 +131,20 @@ Note: pgzero is mostly untested
 - [Arachnoids](https://pmp-p.github.io/pygame-arachnoids-wasm/)
 - [Sudoku Solver](https://www.pete-j-matthews.com/Sudoku-Solver/)
 
-### View code from above games and others on github
+Source code for these games can be found [here](https://github.com/pmp-p?tab=repositories&q=pygame-.-wasm&sort=name).
 
-[[view the code]](https://github.com/pmp-p?tab=repositories&q=pygame-.-wasm&sort=name)
-
-Please ! use the tag [pygame-wasm](https://github.com/topics/pygame-wasm) for your projects hosted on Github
+Please use the tag [pygame-wasm](https://github.com/topics/pygame-wasm) for your projects hosted on Github
 and also add a favicon.png icon 32x32 next to your game main.py, so it is picked up by default.
 
 ### Script demos
 
 nb : code is read-only, prefer right-click then open in new window.
 
-- [i18n bidi,complex scripts](/showroom/pypad_git.html?-i#src/test_hb.py)
-- [camera](/showroom/pypad_git.html?-i#src/test_vidcap.py)
+- [i18n bidi, complex scripts](/showroom/pypad_git.html?-i#src/test_hb.py)
+- [Camera](/showroom/pypad_git.html?-i#src/test_vidcap.py)
 - [Panda3D](/showroom/pypad_dev.html?-i#src/test_panda3d_cube.py)
 - [Audio Record/Play](/showroom/pypad_dev.html?-i#src/test_audio.py)
-- [Html output](/showroom/pypad_dev.html?-i#src/test_html.py)
+- [HTML output](/showroom/pypad_dev.html?-i#src/test_html.py)
 
 ## Technology:
 
