@@ -88,8 +88,13 @@ and please use a [pep 0723](https://peps.python.org/pep-0723/) header in `main.p
 ```
 # /// script
 # dependencies = [
-#   "requests",
-#   "rich",
+#  "six",
+#  "bs4",
+#  "markdown-it-py",
+#  "pygments",
+#  "rich",
+#  "mdurl",
+#  "textual",
 # ]
 # requires-python = ">=3.11"
 # ///
