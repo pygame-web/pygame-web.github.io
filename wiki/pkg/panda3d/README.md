@@ -79,7 +79,7 @@ and installed.
 
 # /// script
 # dependencies = [
-#   "padan3d",
+#   "panda3d",
 # ]
 # ///
 
