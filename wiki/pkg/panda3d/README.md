@@ -12,7 +12,7 @@ import panda3d.core as p3d
 ShowBase.run() must be patched because it is not async, for convenience
 pygbag runtime applies a monkey-patch to do that automatically.
 But if you use taskMgr.step() or use the wheel in your own python runtime then you should do it that way:
-```py
+```python
 async def main():
     while True:
         taskMgr.step()
@@ -58,7 +58,7 @@ note: preferably use a 1024x600 screen size.
 
 so my original code uses this kind of mainloop:
 
-```
+```python
 def main():
     W = Wrapper()
     while True:
@@ -75,7 +75,7 @@ Which has the advantage that it's "obvious" where the main loop takes place. `W.
 this is changed to, note the PEP 723 block to tell the runtime you will use Panda3D wasm wheel so it gets downloaded
 and installed.
 
-```
+```python
 
 # /// script
 # dependencies = [
@@ -97,7 +97,7 @@ if __name__=="__main__":
 
 with an additional import of
 
-```
+```python
 import pygbag.aio as asyncio
 ```
 
