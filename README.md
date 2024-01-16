@@ -84,6 +84,16 @@ usefull additions to your .gitignore
 - [List of available wheels](https://pygame-web.github.io/wiki/pkg/)
 - 
 mandatory when importing packages : put the  "import " at top of main.py ( eg import numpy, matplotlib )
+and please use a [pep 0723](https://peps.python.org/pep-0723/) header in `main.py`
+```
+# /// script
+# dependencies = [
+#   "requests",
+#   "rich",
+# ]
+# requires-python = ">=3.11"
+# ///
+```
 
 if using pygame-zero : put #!pgzrun near the top of main ( 2nd line is perfect if file already has a shebang )
 Note: pgzero is mostly untested 
