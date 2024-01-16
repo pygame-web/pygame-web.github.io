@@ -72,9 +72,17 @@ if __name__=="__main__":
 
 Which has the advantage that it's "obvious" where the main loop takes place. `W.main` is performing the steps defined by the programmer/user and `W.b.taskMgr.step()` executes all the engine functionality, like rendering.
 
-this is changed to
+this is changed to, note the PEP 723 block to tell the runtime you will use Panda3D wasm wheel so it gets downloaded
+and installed.
 
 ```
+
+# /// script
+# dependencies = [
+#   "padan3d",
+# ]
+# ///
+
 async def main(): # this one defines the main as async
     W = Wrapper()
     while True:
