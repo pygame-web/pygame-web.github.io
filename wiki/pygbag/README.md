@@ -13,7 +13,7 @@ This would install/upgrade to the latest version of pygbag.
 `pip install pygbag --user --upgrade` also works.
 
 ## Web Testing
-When packaging, Pygbag sets up a local server which runs your game and provides debug information. This is only accessible from your own computer. If this is unwanted, add `--build` to the command line options.
+When packaging, Pygbag sets up a local server which runs your game and provides debug information. This is only accessible from your own computer. If you do not need to debug your game, add `--build` to the command line options.
 
 ### Creating a project
 Create a folder. This folder will include all your game files.
