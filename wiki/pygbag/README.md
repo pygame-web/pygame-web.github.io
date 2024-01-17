@@ -3,6 +3,8 @@ Hey there, welcome to the Pygbag Wiki!
 
 This page covers installing Pygbag, using it to package your game, and uploading it to be played by anyone on the Internet.
 
+If you have questions at any point, you can ask for help in [Pygame's Discord Server](https://discord.gg/s6Hhrh77aq).
+
 ## Installation
 Pip is a tool used to install Python libraries, and it's usually installed along with Python. 
 
@@ -57,7 +59,6 @@ If `pygbag` isn't recognised as a command, you can run `python -m pygbag folder_
 
 After running this command, navigate to [localhost:8000#debug](https://localhost:8000#debug). The browser should show a page like this: 
 ![image](https://user-images.githubusercontent.com/78538391/169882643-a93622e2-99fe-4f71-90ed-017ab2da51c6.png)
-> If the page doesn't load, try the previous steps again. If it still does not package your game correctly, you can join the [Pygame's discord server](https://discord.gg/653AkjMd) to ask for help.
 
 So, you might be wondering how players will play your game if your game window is so small and the debug console takes up so much space. The answer is that you can navigate to [localhost:8000](https://localhost:8000/) instead to hide the debug console.
 
@@ -83,7 +84,7 @@ With this approach, you can customize the template as you like, and test out cha
 ### Assets
 Assets are the images, fonts and sounds your game uses. If you aren't using Pygbag, you can place the assets in any folder (although it's good practice to put them in your project folder anyways). With Pygbag, you must place all your assets in your project folder, or they will not be packaged.
 
-### Importing other libraries
+### Other libraries
 Most libraries can be used normally, but certain complex ones (e.g. numpy, matplotlib) need to be imported at the top of `main.py`.
 
 ### Code
@@ -95,28 +96,21 @@ You won't need to change much of your project's code to make it compatiable with
 3. Put `await asyncio.sleep(0)` in your game loop.
 4. Put `asyncio.run(main())` at the end of the file. The game loop will be run here, so any additional lines will not be run.
 
-## Uploading your game on itch.io (Optional)
-So, for others to be able to play your game you online, you would need to publish your game in some platform like itch.io
+## Hosting your game on itch.io (Optional)
+To let others play your game online, you must publish your game on a publicly accessible website. [itch.io](https://itch.io) offers free hosting and allows you to customise your game page.
 
-### Zipping the files
-So to upload you website to itch.io you would need to zip its source code and upload it to itch.io
-for that for
-1. go inside your game folder
-2. go inside the build folder
-3. go inside the web folder
-4. then select the contents inside the folder
-5. zip those contents
+### Zipping
+To host your game on itch.io, you need to zip the bundle created by Pygbag and upload it. Use the `--archive` option if you want Pygbag to produce a ZIP file. This will be located at `PROJECT_DIR/build/web.zip`
 
-### Uploading to itch.io
-So to upload the file
-1. Create a new project
-2. Select the Kind of project as HTML
-3. Upload the .zip file on the website
-4. Select `This file will be played in the browser`
-5. Then save your project
+### Uploading
+1. [Create a new project](https://itch.io/game/new)
+2. Set `Kind of project` to `HTML`
+3. Fill in other project parameters
+4. Upload the .zip file to the page
+5. Tick `This file will be played in the browser` on the upload
+6. Save your project
 
-After following these step, if you view your game page, then you would be able to see you game.
-Thought, if your are unable to do so, you can ask for help in the [pygame discord server](https://discord.gg/s6Hhrh77aq)
+More information can be found [here](https://itch.io/docs/creators/html5). After following these steps, if you view your game page, you would be able to see your game. If you update your games frequently, you can use [butler](https://itch.io/docs/butler/), a command-line tool made by the developers of itch.
 
 ## Conclusion
 Congratulations! You were able to finish this tutorial on pygbag, now you can go ahead and try to make all your games available in the web too!!<br>
