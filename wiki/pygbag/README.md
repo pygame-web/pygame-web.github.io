@@ -78,24 +78,22 @@ With this approach, you can customize the template as you like, and test out cha
 
 > Before editing templates, you should have a good knowledge of HTML. The code in templates is important to running the game properly, so edit them carefully. Remember to test that your game still packages correctly after switching/editing templates.
 
-## Project Setup
+## Project Structure
 
-### Use assets
-Assets are essentially all the images, fonts and sound tracks you use to make your game better. And if you are using pygame in general, you can place the assets wherever you feel like, but with pygbag, you would need to place all your assets inside your game folder, without it your program won't run. Thought if your game doesn't need any assets then you are good to go ahead not using the assets folder.
+### Assets
+Assets are the images, fonts and sounds your game uses. If you aren't using Pygbag, you can place the assets in any folder (although it's good practice to put them in your project folder anyways). With Pygbag, you must place all your assets in your project folder, or they will not be packaged.
 
 ### Importing other libraries
-Libraries ae basically packets of code, they are used by people to avoid the complexity of doing certain things, for eg. pygame is a graphics rendering library, and people use it so that they don't need to code all those functionalities by themselves. You wouldn't need to change anything to use libraries, you can import them how you usually do!
-
->NOTE: There's an issue related to the numpy module, and using it would break your game, so I suggest not to use it.
+Most libraries can be used normally, but certain complex ones (e.g. numpy, matplotlib) need to be imported at the top of `main.py`.
 
 ### Code
-You won't need to change much of your code to enable it to run with pygbag.
-The necessary changes you need to make are: 
-1. Add an `import asyncio
-2. encapsulate your variable declarations(other than the window as other functions might use it too) and mainloop inside the main() function. don't forget to make it an async function (just put async before def)
-3. write this line right after `pygame.display.update()`, `await asyncio.sleep(0)`
-4. In the last line of the program, out side th main function write this line `asyncio.run( main() )`
-> NOTE: Don't write anything after this line as this line is kind of like running the code and anything after this line would be ignored by the program.
+You won't need to change much of your project's code to make it compatiable with Pygbag:
+
+1. Add `import asyncio` to the script containing your game loop.
+2. Encapsulate your variable declarations (other than the window, as other functions might use it too)
+3. Put the game loop inside `main()`. It must be an asynchronous function (use `async def` instead of `def`).
+3. Put `await asyncio.sleep(0)` in your game loop.
+4. Put `asyncio.run(main())` at the end of the file. The game loop will be run here, so any additional lines will not be run.
 
 ## Uploading your game on itch.io (Optional)
 So, for others to be able to play your game you online, you would need to publish your game in some platform like itch.io
