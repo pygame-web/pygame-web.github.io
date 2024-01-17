@@ -14,12 +14,13 @@ This would install/upgrade to the latest version of pygbag.
 `pip install pygbag --user --upgrade` also works.
 
 ## Web Testing
-So, now we will check out how to run our games on web using pygbag.
+When packaging, Pygbag sets up a local server which runs your game and provides debug information. This is only accessible from your own computer. If this is unwanted, add `--build` to the command line options.
 
 ### Creating a project
-Firstly, make a folder. This folder would include all your game files.
+Create a folder. This folder will include all your game files.
 
-Now, add a main.py inside that folder and put this code inside it<br>
+Now, create `main.py` inside that folder and paste this code into it.
+
 ```py
 import asyncio
 import pygame
@@ -48,20 +49,20 @@ async def main():
 
 asyncio.run( main() )
 ```
-You don't need to understand what this code does, for now, as this is just some test code to check if you have the right setup.
+This is some test code to check if Pygbag is running correctly.
 
-### Running your code with pygbag
-Now open your command line interface and navigate to the parent directory of the folder you made for the project. (Parent directory as in the directory which holds the folder).
-> Now type this command into it and press enter:<br>
-`pygbag folder_name`<br>
-(replace folder_name with the name that you gave to your game folder).<br>
-Note that you can also use `python -m pygbag folder_name`, if `pygbag` isn't recognized as a command.
+### Running your packaged project in your own browser
+On the command line, navigate to the parent directory of your project. (that is, the directory which holds it)
 
-After running this command go to your preferred web browser, and go to https://localhost:8000#debug and it should show something like
+Run this command: `pygbag folder_name` (replace folder_name with the name that you gave your game folder)
+
+If `pygbag` isn't recognised as a command, you can run `python -m pygbag folder_name` as an alternative.
+
+After running this command, navigate to [localhost:8000#debug](https://localhost:8000#debug) and it should show a page like this: 
 ![image](https://user-images.githubusercontent.com/78538391/169882643-a93622e2-99fe-4f71-90ed-017ab2da51c6.png)
-> Don't worry if you didn't get the same result, just try redoing the previous steps, and if even that doesn't work, you can feel free to join the [pygame discord server](https://discord.gg/653AkjMd) and ask your queries there!
+> If the page doesn't load, try the previous steps again. If it still does not package your game correctly, you can join the [Pygame's discord server](https://discord.gg/653AkjMd) to ask for help.
 
-If you were able to complete this step, congratulations you were successfully able to setup pygbag and also able to test it out.
+If you were able to complete this step, congratulations! You have successfully set up Pygbag and tested that your game runs in the browser!
 ***
 
 ## Templates
