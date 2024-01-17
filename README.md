@@ -1,11 +1,8 @@
 # pygame-web.github.io
 
-This is the CDN root used by [Pygbag](https://pypi.org/project/pygbag/)
-([Source code](https://github.com/pygame-web/pygbag)/[Old runtimes](https://github.com/pygame-web/archives)) 
-and the site of its [wiki](https://pygame-web.github.io/wiki/pygbag).
+This is the CDN root used by [Pygbag](https://pypi.org/project/pygbag/) ([Source code](https://github.com/pygame-web/pygbag)/[Old runtimes](https://github.com/pygame-web/archives)) and the site of its [wiki](https://pygame-web.github.io/wiki/pygbag).
 
-Pygbag does not track usage at all, not even for statistical purposes. If you like it, please 
-[star](https://github.com/pygame-web/pygbag/stargazers) the repo!
+Pygbag does not track usage at all, not even for statistical purposes. If you like it, please [star](https://github.com/pygame-web/pygbag/stargazers) the repo!
 
 Check out some [demos](#demos-on-itchio) before you start! 
 
@@ -13,8 +10,7 @@ Check out some [demos](#demos-on-itchio) before you start!
 
 ## Important points
 
-Read Pygbag's [project description](https://pypi.org/project/pygbag/) for a more detailed overview. A full packaging 
-guide can be found [here](https://pygame-web.github.io/wiki/pygbag/).
+Read Pygbag's [project description](https://pypi.org/project/pygbag/) for a more detailed overview. A full packaging guide can be found [here](https://pygame-web.github.io/wiki/pygbag/).
 
 ### General
 
@@ -22,9 +18,7 @@ guide can be found [here](https://pygame-web.github.io/wiki/pygbag/).
 - Make your main loop async-aware and use `asyncio.sleep(0)` every iteration to give control back to the main thread.
 - Add `--template noctx.tmpl` to pygbag command line if using 3D/WebGL.
 - Put the import statements of complex packages in order (but numpy first) at the top of main.py.
-- Avoid using CPython's standard library for web operations, GUI (like tkinter), or I/O as it is very 
-synchronous/platform-specific and will probably stay that way. In terms of GUI alternatives, [pygame_gui](https://pypi.org/project/pygame_gui) works on top of 
-[pygame-ce](https://pyga.me), [Panda3D](https://www.panda3d.org/) provides [directgui](https://docs.panda3d.org/1.10/python/programming/gui/directgui/index) and Harfang3D provides imgui. They are all cross-platform.
+- Avoid using CPython's standard library for web operations, GUI (like tkinter), or I/O as it is very synchronous/platform-specific and will probably stay that way. In terms of GUI alternatives, [pygame_gui](https://pypi.org/project/pygame_gui) works on top of [pygame-ce](https://pyga.me), [Panda3D](https://www.panda3d.org/) provides [directgui](https://docs.panda3d.org/1.10/python/programming/gui/directgui/index) and Harfang3D provides imgui. They are all cross-platform.
 - You can add a square image file named `favicon.png` in your game's root folder to make Pygbag use it as the web package's favicon.
 - Make sure all audio files are in OGG format, and all image files are compressed. (that is, not in BMP)
 
@@ -38,13 +32,12 @@ else:
 
 ### Windows
 
-- Use Python that was downloaded from python.org rather than the Windows Store. You can check installed version(s) with
-`py --list` command.
-- Use `/` instead of `\​` as a path separator (e.g. `open("img/my_image.png","rb")`) the change should still work on newer Windows versions.
+- Use Python that was downloaded from python.org rather than the Windows Store. You can check installed version(s) with the `py --list` command.
+- Use `/` instead of `\​` as a path separator (e.g. `img/my_image.png` instead of `img\my_image.png`). The path should still be valid on newer Windows versions.
 
 ### MacOS
 
-- If you get a SSL error, use the file "Install Certificates.command" in Applications/Python 3.XX
+- If you get a SSL error, use the file `Install Certificates.command` in `Applications/Python 3.XX`.
 
 ### Linux
 
@@ -54,9 +47,7 @@ Avoid raw formats like BMP for your image assets, they are too big for web use; 
 
 ## Template
 
-There is actually none, because Python-WASM is a web-friendly version of CPython with
-[some added facilities](https://discuss.python.org/t/status-of-wasm-in-cpythons-main-branch/15542/12?u=pmp-p).
-Most desktop code will run (and continue to run) with only a few changes. 
+There is actually none, because Python-WASM is a web-friendly version of CPython with [some added facilities](https://discuss.python.org/t/status-of-wasm-in-cpythons-main-branch/15542/12?u=pmp-p). Most desktop code will run (and continue to run) with only a few changes. 
 
 Basic structure of a game (available [here](https://github.com/pygame-web/pygbag/tree/main/test)): 
 ```
@@ -88,22 +79,22 @@ Useful .gitignore additions:
 - [Pygbag code examples](https://pygame-web.github.io/wiki/pygbag-code/#pygbag-code-specifics-samples-)
 - [List of available wheels](https://pygame-web.github.io/wiki/pkg/)
 
-When importing complex packages (for example, numpy or matplotlib), you must put import statements at top of main.py.
+When importing complex packages (for example, numpy or matplotlib), you must put their import statements at top of main.py.
 
 If using pygame-zero (mostly untested), put `#!pgzrun` near the top of main.py. (2nd line is perfect if the file already has a shebang)
 
 ## Debugging / Desktop Simulator
 
 - [How to enter debug mode](https://pygame-web.github.io/wiki/pygbag-debug/)
-- While working you can access simulator of web loop by replacing `import asyncio` by `import pygbag.aio as asyncio` at top of main.py and run program directly from main.py folder
-- TODO: Android remote debugging via [chromium browsers series](https://developer.chrome.com/docs/devtools/remote-debugging/)
-- TODO: Universal remote debugging via irc client or websocket using pygbag.net
+- While working, you can access the simulator of the web loop by replacing `import asyncio` by `import pygbag.aio as asyncio` at top of main.py and run the program from the folder containing it.
+- TODO: Android remote debugging via [chromium browsers series](https://developer.chrome.com/docs/devtools/remote-debugging/).
+- TODO: Universal remote debugging via IRC Client or websocket using pygbag.net.
    
 ## Running
 
-- [Pygbag-script](https://pygame-web.github.io/wiki/pygame-script/) (wip!)
+- [Pygbag-script](https://pygame-web.github.io/wiki/pygame-script/) (WIP)
 - [REPL](https://pygame-web.github.io/showroom/python.html?-i-&-X-dev#https://gist.githubusercontent.com/pmp-p/cfd398c75608504293d21f2642e87968/raw/773022eef4a2cc676ab0475890577a2b5e79e429/hello.py)
-- [CPython test suite](https://pygame-web.github.io/showroom/pythondev.html?-d#src/testsuite.py%20all) (wip!)
+- [CPython test suite](https://pygame-web.github.io/showroom/pythondev.html?-d#src/testsuite.py%20all) (WIP)
 
 ## Publishing
 
@@ -114,12 +105,12 @@ If using pygame-zero (mostly untested), put `#!pgzrun` near the top of main.py. 
 
 ### Demos on itch.io
 
-- [Games using Python-WASM](https://itch.io/c/2563651/pygame-wasm) (expected to be stable)
-- [Panda3D demos](https://itch.io/c/3724091/panda3d-wasm) (currently experimental)
+- [Games using Python-WASM](https://itch.io/c/2563651/pygame-wasm) (Expected to be stable)
+- [Panda3D demos](https://itch.io/c/3724091/panda3d-wasm) (Experimental)
 
 ### Demos on Github Pages
 
-(for testing, may not always work since they use daily/weekly devel version)
+These are provided for testing purposes only, and may not always work since they use development versions of Pygbag.
 
 #### Heavy CPU load, not for low-end devices
 
@@ -136,8 +127,7 @@ If using pygame-zero (mostly untested), put `#!pgzrun` near the top of main.py. 
 - [Arachnoids](https://pmp-p.github.io/pygame-arachnoids-wasm/)
 - [Sudoku Solver](https://www.pete-j-matthews.com/Sudoku-Solver/)
 
-Source code for these games can be found [here](https://github.com/pmp-p?tab=repositories&q=pygame-.-wasm&sort=name). 
-You can tag your Github repositories with [[pygame-wasm]](https://github.com/topics/pygame-wasm).
+Source code for these games can be found [here](https://github.com/pmp-p?tab=repositories&q=pygame-.-wasm&sort=name). You can tag your Github repositories with [[pygame-wasm]](https://github.com/topics/pygame-wasm).
 
 ### Script demos
 
