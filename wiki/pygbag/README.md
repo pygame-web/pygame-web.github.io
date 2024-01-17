@@ -55,36 +55,28 @@ Run this command: `pygbag folder_name` (replace folder_name with the name that y
 
 If `pygbag` isn't recognised as a command, you can run `python -m pygbag folder_name` as an alternative.
 
-After running this command, navigate to [localhost:8000#debug](https://localhost:8000#debug) and it should show a page like this: 
+After running this command, navigate to [localhost:8000#debug](https://localhost:8000#debug). The browser should show a page like this: 
 ![image](https://user-images.githubusercontent.com/78538391/169882643-a93622e2-99fe-4f71-90ed-017ab2da51c6.png)
 > If the page doesn't load, try the previous steps again. If it still does not package your game correctly, you can join the [Pygame's discord server](https://discord.gg/653AkjMd) to ask for help.
+
+So, you might be wondering how players will play your game if your game window is so small and the debug console takes up so much space. The answer is that you can navigate to [localhost:8000](https://localhost:8000/) instead to hide the debug console.
 
 If you were able to complete this step, congratulations! You have successfully set up Pygbag and tested that your game runs in the browser!
 
 ## Templates
-So, you might be wondering that how will the players play your game if your window looks so small and the console takes up so much of place. To fix this, you can change the layout of the webpage using templates or remove the #debug from url.
+You can change the page layout (and much more) using templates. They consist of HTML markup and Python/JavaScript code to contain your packaged game, plus some CSS to style it. To make your template better fit your game, you may want change it from the default one. Add `--template [TEMPLATE NAME].tmpl` to Pygbag's arguments when running it from the command line to set the template it uses.
 
-### Using other templates
-Currently, pygbag uses the default template which you might wanna change, for that there are 2 ways you can try
+### Using built-in templates
+This is recommended if you don't want to edit HTML. Check [/static](https://github.com/pygame-web/pygbag/tree/main/static) in Pygbag's repository for a list of available templates. Put the filename after `--template` to make Pygbag use it. <!--Not sure where the templates are hosted exactly, made my best guess. Correct me if I'm wrong.-->
 
-#### 1. Using the in-built templates
-For that you can use the following command<br>
-`pygbag --template default.tmpl folder_name`<br>
-this would now use the default template which is prebuilt in pygbag and this template would clear everything except the window on normal mode , or in #debug mode align your game window to the top right corner in debug mode to half the page and display the terminal, file upload widget and iframe + some controls.
+### Downloading a template and customising it
+[Here](https://github.com/pygame-web/pygbag/tree/main/static) you can find various templates available online. The simplest way to customise a template is to download one and edit them.
 
-#### 2. Installing a template and customizing it
-For this you can go to the static folder in the [pygbag repo](https://github.com/pygame-web/pygbag/tree/main/static) and look for the various templates available online.
-<br>
-To use one of them go with the following command:<br>
-`pygbag --template template-name.tmpl test`<br>
-replace template-name with the name given to the .tmpl file.
-Run again will port your game to web with your desired template without need to erase the cache.
-<br>
-If you want to use a template of your own just give the full path of your template file instead. The simplest way is to copy the above online templates to your drive and edit them.
-<br><br>
-Using the second approach would be better and also recommended, as in this approach, you can customize the template as per your choice and test out how would they look.(ps. the files are basically html files with internal styling and  internal javascript scripting)
->NOTE: Almost all line are important, so please think a lot before deleting a line, because only one missing line  could break the whole thing.
-***
+If you want to make Pygbag use a template on your computer, pass the full path of your template file instead of just the filename. Running Pygbag in this way will package your game with your desired template without erasing the cache.
+
+With this approach, you can customize the template as you like, and test out changes before you publish your game. 
+
+> Before editing templates, you should have a good knowledge of HTML. The code in templates is important to running the game properly, so edit them carefully. Remember to test that your game still packages correctly after switching/editing templates.
 
 ## Project Setup
 
