@@ -27,27 +27,25 @@ import pygame
 
 pygame.init()
 pygame.display.set_mode((320, 240))
-pygame.display.set_caption("TEST")
+clock = pygame.time.Clock()
 
 
 async def main():
-    count = 3
+    count = 60
 
     while True:
-        print(f"""
-
-        Hello[{count}] from Pygame
-
-""")
+        print(f"{count}: Hello from Pygame")
         pygame.display.update()
-        await asyncio.sleep(0)  # very important, and keep it 0
+        await asyncio.sleep(0)  # You must include this statement in your main loop. Keep the argument at 0.
 
         if not count:
             pygame.quit()
             return
-        count = count - 1
+        
+        count -= 1
+        clock.tick(60)
 
-asyncio.run( main() )
+asyncio.run(main())
 ```
 This is some test code to check if Pygbag is running correctly.
 
