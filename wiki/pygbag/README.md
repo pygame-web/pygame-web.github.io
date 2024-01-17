@@ -1,8 +1,7 @@
 # Pygbag Wiki
-Hey there, Welcome to the Pygbag Wiki!
+Hey there, welcome to the Pygbag Wiki!
 
-This page covers all the steps from installing Pygbag to packaging and uploading your Python game to be played by anyone on the Internet.
-
+This page covers installing Pygbag, using it to package your game, and uploading it to be played by anyone on the Internet.
 
 ## Installation
 Pip is a tool used to install Python libraries, and it's usually installed along with Python. 
@@ -61,13 +60,13 @@ After running this command, navigate to [localhost:8000#debug](https://localhost
 > If the page doesn't load, try the previous steps again. If it still does not package your game correctly, you can join the [Pygame's discord server](https://discord.gg/653AkjMd) to ask for help.
 
 If you were able to complete this step, congratulations! You have successfully set up Pygbag and tested that your game runs in the browser!
-***
 
 ## Templates
 So, you might be wondering that how will the players play your game if your window looks so small and the console takes up so much of place. To fix this, you can change the layout of the webpage using templates or remove the #debug from url.
 
 ### Using other templates
 Currently, pygbag uses the default template which you might wanna change, for that there are 2 ways you can try
+
 #### 1. Using the in-built templates
 For that you can use the following command<br>
 `pygbag --template default.tmpl folder_name`<br>
@@ -133,5 +132,4 @@ Thought, if your are unable to do so, you can ask for help in the [pygame discor
 Congratulations! You were able to finish this tutorial on pygbag, now you can go ahead and try to make all your games available in the web too!!<br>
 Thank you for following along!
 
-
-[contribute to this page](https://github.com/pygame-web/pygame-web.github.io/edit/main/wiki/pygbag/README.md)
+[Spotted a mistake? Contribute to this page.](https://github.com/pygame-web/pygame-web.github.io/edit/main/wiki/pygbag/README.md)
