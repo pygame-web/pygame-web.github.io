@@ -113,7 +113,6 @@ To host your game on itch.io, you need to zip the bundle created by Pygbag and u
 More information can be found [here](https://itch.io/docs/creators/html5). After following these steps, if you view your game page, you would be able to see your game. If you update your games frequently, you can use [butler](https://itch.io/docs/butler/), a command-line tool made by the developers of itch.
 
 ## Conclusion
-Congratulations! You were able to finish this tutorial on pygbag, now you can go ahead and try to make all your games available in the web too!!<br>
-Thank you for following along!
+Congratulations for finishing this tutorial! Now you can go ahead and make all your Python games playable in the browser! Thank you for reading.
 
 [Spotted a mistake? Contribute to this page.](https://github.com/pygame-web/pygame-web.github.io/edit/main/wiki/pygbag/README.md)
