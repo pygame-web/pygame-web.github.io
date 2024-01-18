@@ -4,15 +4,15 @@ This is the CDN root used by [Pygbag](https://pypi.org/project/pygbag/) ([Source
 
 Pygbag does not track usage at all, not even for statistical purposes. If you like it, please [star](https://github.com/pygame-web/pygbag/stargazers) the repo!
 
-Check out some [demos](#demos-on-itchio) before you start! 
-
-**Work in progress, pull requests welcomed, feel free to propose links to games or tutorials, please contribute!!!**
+Check out some [demos](#demos-on-itchio) before you start!
 
 ## Important points
 
 Read Pygbag's [project description](https://pypi.org/project/pygbag/) for a more detailed overview. A full packaging guide can be found [here](https://pygame-web.github.io/wiki/pygbag/).
 
-### General
+**<ins>Also, read the section for [making your code compatiable with WASM](https://pygame-web.github.io/wiki/python-wasm). You WILL have to change some of your code.</ins>**
+
+### All operating systems
 
 - Name your main game script `main.py` and put it in the root folder of your game.
 - Make your main loop async-aware and use `asyncio.sleep(0)` every iteration to give control back to the main thread.
@@ -153,16 +153,24 @@ The code is read-only, so you should right-click then open in a new window.
 Python WebAssembly at PyCon FR 2023 (in French): 
 [Pour quoi, pour qui et comment](https://harfang3d.github.io/pyconfr2023/#1)
 
-## Useful links
+## Status
 
 - [Current issues](https://github.com/pygame-web/pygbag/issues)
 - [Package porting](https://github.com/pygame-web/pkg-porting-wasm/issues)
 - [PyPI stats](https://pepy.tech/project/pygbag)
 - [Pyodide/Pyscript](https://github.com/pyodide/pyodide)
+
+## Support
+
 - [Pygame Community](https://pyga.me/)
+
+## Connect
+
 - [Pygame Community Discord Server](https://discord.gg/p7RjnVNTcM)
 - [WebAssembly/Python Discord Server](https://discord.gg/MCTM4xFDMK)
 
 Thanks for reading and supporting pygame-ce and pygbag. These tools could not have existed without your support.
+
+**Work in progress, pull requests welcomed. Feel free to propose links to games or tutorials. Please contribute!!!**
 
 [Edit this page](https://github.com/pygame-web/pygame-web.github.io/edit/main/README.md)
