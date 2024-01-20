@@ -30,7 +30,7 @@ Add everything you need alongside `main.py`, including binary modules. They must
 
 It is possible to access FTDI (and clones) USB serial ports, but it is very experimental. You need to remove the driver using the serial port for that (rmmod or zadig).
 
-## Pygbag code specifics/samples :
+## Pygbag code specifics/samples
 
 ### File uploading
 #### sample : image file viewer [try it](https://pygame-web.github.io/showroom/pypad.html#src/test_upload.py)
