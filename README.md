@@ -79,7 +79,21 @@ Useful .gitignore additions:
 - [Pygbag code examples](https://pygame-web.github.io/wiki/pygbag-code/#pygbag-code-specifics-samples-)
 - [List of available wheels](https://pygame-web.github.io/wiki/pkg/)
 
-When importing complex packages (for example, numpy or matplotlib), you must put their import statements at top of main.py.
+When importing complex packages (for example, numpy or matplotlib), you must put their import statements at top of `main.py`. You should also add a metadata header as specified by [PEP 723](https://peps.python.org/pep-0723/), for example:
+```
+# /// script
+# dependencies = [
+#  "six",
+#  "bs4",
+#  "markdown-it-py",
+#  "pygments",
+#  "rich",
+#  "mdurl",
+#  "textual",
+# ]
+# requires-python = ">=3.11"
+# ///
+```
 
 If using pygame-zero (mostly untested), put `#!pgzrun` near the top of main.py. (2nd line is perfect if the file already has a shebang)
 
