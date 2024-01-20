@@ -2,7 +2,7 @@
 
 This is the CDN root used by [Pygbag](https://pypi.org/project/pygbag/) ([Source code](https://github.com/pygame-web/pygbag)/[Old runtimes](https://github.com/pygame-web/archives)) and the site of its [wiki](https://pygame-web.github.io/wiki/pygbag).
 
-Pygbag does not track usage at all, not even for statistical purposes. If you like it, please [star](https://github.com/pygame-web/pygbag/stargazers) the repo!
+Pygbag does not track usage at all, not even for statistical purposes. If you like it, please [star](https://github.com/pygame-web/pygbag/stargazers) the repository!
 
 Check out some [demos](#demos-on-itchio) before you start!
 
@@ -10,14 +10,14 @@ Check out some [demos](#demos-on-itchio) before you start!
 
 Read Pygbag's [project description](https://pypi.org/project/pygbag/) for a more detailed overview. A full packaging guide can be found [here](https://pygame-web.github.io/wiki/pygbag/).
 
-**<ins>Also, read the section for [making your code compatiable with WASM](https://pygame-web.github.io/wiki/python-wasm). You WILL have to change some of your code.</ins>**
+**<ins>Also, read the page on [making your code compatiable with WASM](https://pygame-web.github.io/wiki/python-wasm). You will probably have to change some of your code.</ins>**
 
 ### All operating systems
 
 - Name your main game script `main.py` and put it in the root folder of your game.
 - Make your main loop async-aware and use `asyncio.sleep(0)` every iteration to give control back to the main thread.
 - Add `--template noctx.tmpl` to pygbag command line if using 3D/WebGL.
-- Put the import statements of complex packages in order (but numpy first) at the top of main.py.
+- Put the import statements of complex packages in order (but numpy first) at the top of `main.py`.
 - Avoid using CPython's standard library for web operations, GUI (like tkinter), or I/O as it is very synchronous/platform-specific and will probably stay that way. In terms of GUI alternatives, [pygame_gui](https://pypi.org/project/pygame_gui) works on top of [pygame-ce](https://pyga.me), [Panda3D](https://www.panda3d.org/) provides [directgui](https://docs.panda3d.org/1.10/python/programming/gui/directgui/index) and Harfang3D provides imgui. They are all cross-platform.
 - You can add a square image file named `favicon.png` in your game's root folder to make Pygbag use it as the web package's favicon.
 - Make sure all audio files are in OGG format, and all image files are compressed. (that is, not in BMP)
@@ -110,7 +110,7 @@ If using pygame-zero (mostly untested), put `#!pgzrun` near the top of main.py. 
 
 ### Demos on Github Pages
 
-These are provided for testing purposes only, and may not always work since they use development versions of Pygbag.
+These are provided for testing purposes only, and might not always work since they use development versions of Pygbag.
 
 #### Heavy CPU load, not for low-end devices
 
@@ -121,7 +121,7 @@ These are provided for testing purposes only, and may not always work since they
 
 - [Breakout](https://pmp-p.github.io/pygame-breakout-wasm/index.html)
 - [PyChess](https://pmp-p.github.io/pygame-pychess-wasm/index.html)
-- [Penguins Can't Fly !](https://pmp-p.github.io/pygame-PenguinsCantFly-wasm/)
+- [Penguins Can't Fly!](https://pmp-p.github.io/pygame-PenguinsCantFly-wasm/)
 - [John's Adventure](https://pmp-p.github.io/pygame-JohnsAdventure-wasm/)
 - [3D Tic-Tac-Toe](https://pmp-p.github.io/pygame-ttt-3d-wasm/)
 - [Arachnoids](https://pmp-p.github.io/pygame-arachnoids-wasm/)

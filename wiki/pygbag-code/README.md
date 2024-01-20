@@ -26,9 +26,9 @@ Add everything you need alongside `main.py`, including hand-picked stdlib module
 
 Add everything you need alongside `main.py`, including binary modules. They must be compatiable with **the Python version loaded by Pygbag in the web page**: this may not be the python version you used to run pygbag - when they are not wasm abi3 modules. Sometimes you may have to wait for the maintainer to provide a build, build your own with [python-wasm-sdk](https://github.com/pygame-web/python-wasm-sdk), extract a wheel from or pyodide's build,  or maybe just ask/offer a link to it [here](https://github.com/pygame-web/pkg-porting-wasm/issues).
 
-### "I want to access a micro-controller via pyserial"
+### "I want to access a micro-controller via pyserial."
 
-It is possible to access FTDI (and clones) USB serial ports, but it is very experimental. You need to remove the driver using the serial port for that (rmmod or zadig).
+It is possible to access FTDI (and clones) USB serial ports, but it is very experimental. You need to remove the driver using the serial port for that (`rmmod` or `zadig`).
 
 ## Pygbag code specifics/samples
 
