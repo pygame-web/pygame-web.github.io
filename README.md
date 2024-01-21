@@ -47,7 +47,7 @@ Avoid raw formats like BMP for your image assets, they are too big for web use; 
 
 ## Template
 
-There is actually none, because Python-WASM is a web-friendly version of CPython with [some added facilities](https://discuss.python.org/t/status-of-wasm-in-cpythons-main-branch/15542/12?u=pmp-p). Most desktop code will run (and continue to run) with only a few changes. 
+There is actually none, because Python-WASM is just a web-friendly version of CPython REPL with [some added facilities](https://discuss.python.org/t/status-of-wasm-in-cpythons-main-branch/15542/12?u=pmp-p). Most desktop code will run (and continue to run) with only a few changes. 
 
 Basic structure of a game (available [here](https://github.com/pygame-web/pygbag/tree/main/test)): 
 ```
