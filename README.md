@@ -10,7 +10,7 @@ Check out some [demos](#demos-on-itchio) before you start!
 
 Read Pygbag's [project description](https://pypi.org/project/pygbag/) for a more detailed overview. A full packaging guide can be found [here](https://pygame-web.github.io/wiki/pygbag/).
 
-**<ins>Also, read the page on [making your code compatiable with WASM](https://pygame-web.github.io/wiki/python-wasm). You will probably have to change some of your code.</ins>**
+**<ins>Also, read the page on [making your code compatible with browser game loop](https://pygame-web.github.io/wiki/python-wasm). You will probably have to change some of your code.</ins>**
 
 ### All operating systems
 
