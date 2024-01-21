@@ -1,47 +1,36 @@
-## Python code specifics, when in the browser with pygbag runtime FAQ:
+# Pygbag code FAQ/Samples
+## FAQ
 
-### `pygbag` command is not found
-on some platforms pygbag is not in the PATH, so use `python3 -m pygbag` instead of just pygbag, 
-just python if you don't have also python2 installed or `py -m pygbag` on win32 platforms ( use official python, not a store one)
+### "Command `pygbag` is not found. What should I do?"
+On some platforms, pygbag is not included in the PATH environment variable, so use `python3 -m pygbag` instead of just pygbag, `python -m pygbag` if you don't also have Python 2 installed or `py -m pygbag` on Windows platforms. (Make sure to use Python downloaded from python.org, not Microsoft Store)
 
-### My game does not start automatically
-This is the default, because browser will not start any music until user says so
-by interacting clicking/gamepad/keyboard with game tab
+### "My game does not start automatically."
+This is the default, because most browsers will not start any music until user interacts with the game.
 
-### but i really don't have any music on game start
-then prepend `--ume_block=0` on pygbag command line and your game will auto start.
+### "But I *really* want my game to start automatically."
+Append `--ume_block=0` to your command and your game will start without user input.
 
 ### Sound problems for versions < 0.1.5
-SDL2 is hard realtime, so sometimes the game asks too much from average devices and is a bit late on frame :
-As a result SFX get garbled, solution : upgrade to 0.1.5 or use external javascript sound manager.
+SDL2 is hard realtime, so sometimes the game asks too much from average devices and is a bit late on frame. Because of this, sound effects are distorted. To solve this, upgrade to 0.1.5 or use external Javascript sound manager.
 
-Possible other solution: replace sdl2_audio by openal, PR welcomed ...
+Possible other solution: replace sdl2_audio by openal, PR welcomed...
 
-### I get very low fps, but only on web ...
-make sure you have removed all debug print() or logging to console, printing to terminal or javascript console is very costly 
-in term of performance
+### "My game has low frame rate in the browser."
+Make sure you have removed all debug `print()` calls, as printing to the terminal or console reduces performance a lot.
 
-### I have custom modules or something looks like it is missing from stdlib
+### "I need to use third-party modules./Something from the standard library is missing."
 
-Just add everything you need alongside your main.py, including hand picked stdlib modules.
-We did not put everything from stdlib in order to keep a small size for mobile connections.
-you can find extra stdlib modules in pythonx.xx.x.zip from [python.org](https://www.python.org/downloads/source/) matching pygbag python version ( 3.11 is the default )
+Add everything you need alongside `main.py`, including hand-picked stdlib modules. Pygbag does not include Python's entire standard library in order to keep a small build size for mobile connections. You can find extra stdlib modules in `pythonx.xx.x.zip` from [python.org](https://www.python.org/downloads/source/) matching pygbag python version (3.11 is the default)
 
-### but I want numpy or binary modules
+### "I need to use numpy or binary modules."
 
-Just add everything you need alonside you main.py, including binary modules.
-They just have to **match python version** pygbag is loading - in the web page : beware this may not be the python version you used to run pygbag - when they are not wasm abi3 modules.
-Sometimes you may have to wait for maintener to provide a build, build your own with [python-wasm-sdk](https://github.com/pygame-web/python-wasm-sdk), extract a wheel from or pyodide's build,  or maybe just ask/offer a link to it
-[here](https://github.com/pygame-web/pkg-porting-wasm/issues)
+Add everything you need alongside `main.py`, including binary modules. They must be compatiable with **the Python version loaded by Pygbag in the web page**: this may not be the python version you used to run pygbag - when they are not wasm abi3 modules. Sometimes you may have to wait for the maintainer to provide a build, build your own with [python-wasm-sdk](https://github.com/pygame-web/python-wasm-sdk), extract a wheel from or pyodide's build,  or maybe just ask/offer a link to it [here](https://github.com/pygame-web/pkg-porting-wasm/issues).
 
-### i want to access a micro controller via pyserial
+### "I want to access a micro-controller via pyserial."
 
-it is possible to access FTDI (and clones) usb serial ports, but it is very experimental.
-you need to remove driver using the serial port for that ( rmmod or zadig )
+It is possible to access FTDI (and clones) USB serial ports, but it is very experimental. You need to remove the driver using the serial port for that (`rmmod` or `zadig`).
 
-
-## pygbag code specifics, samples :
-
+## Pygbag code specifics/samples
 
 ### File uploading
 #### sample : image file viewer [try it](https://pygame-web.github.io/showroom/pypad.html#src/test_upload.py)

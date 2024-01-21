@@ -1,56 +1,56 @@
-## CPython Wasm specifics, when in the browser with emscripten runtime
+# CPython WASM specifics
 
-### detect browser platform
+These code snippets are useful when running your game in a browser with Emscripten.
+
+## Check if game is running in the browser
 
 ```py
 if sys.platform == "emscripten":
-    ...
+    pass
 ```
 
-### detect Web Assembly CPU
+## Detect WebAssembly CPU
 
 ```py
 if 'wasm' in __import__('platform').machine():
-    ...
+    pass
 ```
 
-### MANDATORY main loop (async) 
+## Main loop example (must be asynchronous) 
 
 ```py
 import asyncio
 import pygame
 
+pygame.init()
 
-# init pygame here
 
 def menu(events):
-    ...
     # draw
     # check events
     # change state
-    ...
+    pass
 
 
 def play(events):
-    ...
     # draw
     # check events
     # change state
-    ...
+    pass
 
 game_state = menu
 
 async def main():
     global game_state
     
-    # or init pygame here 
+    # You can initialise pygame here as well
 
     while game_state:
         game_state(pygame.event.get())
         pygame.display.update()
         await asyncio.sleep(0)
         
-    # Closing the game. not strictly required, neither on desktop
+    # Closing the game (not strictly required)
     pygame.quit()
     sys.exit()
         
@@ -58,8 +58,7 @@ if __name__ == "__main__":
     asyncio.run(main())
 ```
 
-everything else if probably pygbag specific so look here instead
-[pygbag with example snippets](https://github.com/pygame-web/pygame-web.github.io/blob/main/wiki/pygbag-code/README.md#pygbag-code-specifics-samples-)
+Everything else is probably specific to Pygbag. You can find more information/code [here](https://pygame-web.github.io/wiki/pygbag-code/#pygbag-code-specificssamples).
 
 
-[contribute to this page](https://github.com/pygame-web/pygame-web.github.io/edit/main/wiki/python-wasm/README.md)
+[Contribute to this page](https://github.com/pygame-web/pygame-web.github.io/edit/main/wiki/python-wasm/README.md)
