@@ -27,7 +27,7 @@ import panda3d.core as p3d
 ShowBase.run() must be patched because it is not async, for convenience
 pygbag runtime applies a monkey-patch to do that automatically.
 
-eg for running asteroids sample, go into panda3d/samples/asteroirds
+eg for running asteroids sample, go into panda3d/samples/asteroids/
 edit main.py to add
 ```py
 # /// script
