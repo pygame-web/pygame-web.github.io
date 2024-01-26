@@ -2,15 +2,46 @@
 
 [original documentation](https://docs.panda3d.org/1.10/python/index)
 
-typical import
+typical import, note the PEP block at the top which specify to pip install Panda3D wheel
 
 ```
+
+# /// script
+# [project]
+# name = "name"
+# version = "version"
+# description = "description"
+# readme = {file = "README.txt", content-type = "text/markdown"}
+# requires-python = ">=3.11"
+#
+# dependencies = [
+#    "panda3d",
+# ]
+# ///
+
+
 import panda3d.core as p3d
 ```
 
 ## main loop
 ShowBase.run() must be patched because it is not async, for convenience
 pygbag runtime applies a monkey-patch to do that automatically.
+
+eg for running asteroids sample, go into panda3d/samples/asteroirds
+edit main.py to add
+```py
+# /// script
+# [project]
+# dependencies = [
+#    "panda3d",
+# ]
+# ///
+```
+then run eg `python3 -m pygbag --PYBUILD 3.12 --git --ume_block 0 main.py` to use cpython 3.12 with pygbag git
+and go to http://localhost:8000/?-i
+
+
+
 But if you use taskMgr.step() or use the wheel in your own python runtime then you should do it that way:
 ```python
 async def main():
