@@ -4,16 +4,10 @@
 
 typical import, note the PEP block at the top which specify to pip install Panda3D wheel
 
+NB not implemented that way yet, see the pyproject one under while testing.
 ```
 
 # /// script
-# [project]
-# name = "name"
-# version = "version"
-# description = "description"
-# readme = {file = "README.txt", content-type = "text/markdown"}
-# requires-python = ">=3.11"
-#
 # dependencies = [
 #    "panda3d",
 # ]
@@ -30,7 +24,7 @@ pygbag runtime applies a monkey-patch to do that automatically.
 eg for running asteroids sample, go into panda3d/samples/asteroids/
 edit main.py to add
 ```py
-# /// script
+# /// pyproject
 # [project]
 # dependencies = [
 #    "panda3d",
