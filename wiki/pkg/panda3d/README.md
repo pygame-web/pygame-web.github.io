@@ -3,29 +3,25 @@
 [original documentation](https://docs.panda3d.org/1.10/python/index)
 
 typical import, note the PEP block at the top which specify to pip install Panda3D wheel
-
-NB not implemented that way yet, see the pyproject one under while testing.
 ```
-
 # /// script
 # dependencies = [
 #    "panda3d",
 # ]
 # ///
 
-
 import panda3d.core as p3d
 ```
 
 ## main loop
-ShowBase.run() must be patched because it is not async, for convenience
+
+ShowBase.run() - the default loop - must be patched because it is not async, for convenience
 pygbag runtime applies a monkey-patch to do that automatically.
 
 eg for running asteroids sample, go into panda3d/samples/asteroids/
 edit main.py to add
 ```py
-# /// pyproject
-# [project]
+# /// script
 # dependencies = [
 #    "panda3d",
 # ]
@@ -33,8 +29,6 @@ edit main.py to add
 ```
 then run eg `python3 -m pygbag --PYBUILD 3.12 --git --ume_block 0 main.py` to use cpython 3.12 with pygbag git
 and go to http://localhost:8000/?-i
-
-
 
 But if you use taskMgr.step() or use the wheel in your own python runtime then you should do it that way:
 ```python
@@ -46,6 +40,9 @@ async def main():
 if __name__=="__main__":
     asyncio.run( main() )
 ```
+
+If you don't want to use asyncio it is also possible to use a generator function as a main() but that method is not very suitable for readable cross platform code.
+
 
 ## shaders
 Use either '#version 100' GLES1/2 or GLES3 
