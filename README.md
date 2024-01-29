@@ -30,6 +30,12 @@ else:
     snd = pygame.mixer.Sound("sound.wav") # or .WAV, .mp3, .MP3, etc.
 ```
 
+if you want to keep pixelated look whatever the device screen size is use:
+```py
+if sys.platform == "emscripten":
+    __import__('platform').window.canvas.style.imageRendering = "pixelated"
+```
+
 ### Windows
 
 - Use Python that was downloaded from python.org rather than the Windows Store. You can check installed version(s) with the `py --list` command.
