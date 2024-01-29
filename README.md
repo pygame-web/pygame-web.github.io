@@ -32,8 +32,9 @@ else:
 
 if you want to keep pixelated look whatever the device screen size is use:
 ```py
+import sys, platform
 if sys.platform == "emscripten":
-    __import__('platform').window.canvas.style.imageRendering = "pixelated"
+    platform.window.canvas.style.imageRendering = "pixelated"
 ```
 
 ### Windows
