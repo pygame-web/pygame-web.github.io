@@ -30,6 +30,8 @@ else:
     snd = pygame.mixer.Sound("sound.wav") # or .WAV, .mp3, .MP3, etc.
 ```
 
+if you have heightmaps in your assets use `--no_opt` to prevent png recompression.
+
 if you want to keep pixelated look whatever the device screen size is use:
 ```py
 import sys, platform
