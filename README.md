@@ -21,6 +21,7 @@ Read Pygbag's [project description](https://pypi.org/project/pygbag/) for a more
 - Avoid using CPython's standard library for web operations, GUI (like tkinter), or I/O as it is very synchronous/platform-specific and will probably stay that way. In terms of GUI alternatives, [pygame_gui](https://pypi.org/project/pygame_gui) works on top of [pygame-ce](https://pyga.me), [Panda3D](https://www.panda3d.org/) provides [directgui](https://docs.panda3d.org/1.10/python/programming/gui/directgui/index) and Harfang3D provides imgui. They are all cross-platform.
 - You can add a square image file named `favicon.png` in your game's root folder to make Pygbag use it as the web package's favicon.
 - Make sure all audio files are in OGG format, and all image files are compressed. (that is, not in BMP)
+- Do not use filenames like `*-pygbag.*`  that pattern is reserved for pygbag internal use (optimizing pass).
 
 Before packaging, adapt your code this way if you still want WAV/MP3 format on desktop:
 ```py
