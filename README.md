@@ -87,7 +87,11 @@ Useful .gitignore additions:
 - [General Python-WASM](https://pygame-web.github.io/wiki/python-wasm/)
 - [With Pygbag specifically](https://pygame-web.github.io/wiki/pygbag-code/)
 - [Pygbag code examples](https://pygame-web.github.io/wiki/pygbag-code/#pygbag-code-specifics-samples-)
+
+## Adding modules
+
 - [List of available wheels](https://pygame-web.github.io/wiki/pkg/)
+- [requesting modules](https://github.com/pygame-web/pkg-porting-wasm/issues)
 
 When importing complex packages (for example, numpy or matplotlib), you must put their import statements at top of `main.py`. You should also add a metadata header as specified by [PEP 723](https://peps.python.org/pep-0723/), for example:
 ```
@@ -101,7 +105,6 @@ When importing complex packages (for example, numpy or matplotlib), you must put
 #  "mdurl",
 #  "textual",
 # ]
-# requires-python = ">=3.11"
 # ///
 ```
 
