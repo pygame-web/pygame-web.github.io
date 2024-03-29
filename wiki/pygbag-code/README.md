@@ -20,7 +20,7 @@ Make sure you have removed all debug `print()` calls, as printing to the termina
 
 ### "I need to use third-party modules./Something from the standard library is missing."
 
-Add everything you need alongside `main.py`, including hand-picked stdlib modules. Pygbag does not include Python's entire standard library in order to keep a small build size for mobile connections. You can find extra stdlib modules in `pythonx.xx.x.zip` from [python.org](https://www.python.org/downloads/source/) matching pygbag python version (3.11 is the default)
+Add everything you need alongside `main.py`, including hand-picked stdlib modules. Pygbag does not include Python's entire standard library in order to keep a small build size for mobile connections. You can find extra stdlib modules in `pythonx.xx.x.zip` from [python.org](https://www.python.org/downloads/source/) matching pygbag python version (3.12 is the default). You can change python stdlib version adding `--PYBUILD 3.13` .
 
 ### "I need to use numpy or binary modules."
 
