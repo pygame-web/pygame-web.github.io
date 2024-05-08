@@ -185,7 +185,12 @@ Python WebAssembly at PyCon FR 2023 (in French):
 - [Current issues](https://github.com/pygame-web/pygbag/issues)
 - [Package porting](https://github.com/pygame-web/pkg-porting-wasm/issues)
 - [PyPI stats](https://pepy.tech/project/pygbag)
-- [Pyodide/Pyscript](https://github.com/pyodide/pyodide)
+
+## Other Pythons in browser
+
+- [Pyodide/Pyscript](https://github.com/pyodide/pyodide) ( py3.12+ not suitable for heavy games, music or 3D )
+- [Micropython/Pyscript](https://www.npmjs.com/package/@micropython/micropython-webassembly-pyscript) ( py3.4, no pygame, but pysdl2/javascript libraries possible )
+- PocketPy, not any Python spec compliant but sometimes close. Can make Terminal/raylib based games.
 
 ## Support
 
