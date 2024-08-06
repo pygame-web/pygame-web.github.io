@@ -88,11 +88,15 @@ print( json.dumps(repo["packages"], sort_keys=True, indent=4) )
 implemented, event based, TODO sample
 
 ### downloading files created by python
-
-( you can use cd/ls/pwd to navigate filesystem)
-type in the repl:
+Python files can still be created normally and will appear in the browser's filesystem.
+```py
+# example
+with open("file.txt", "w") as f:
+    f.write("newly created file")
 ```
-rx /path/of/file_to_download/name_of_file
+
+Downloading these files from the browser's filesystem to a user's filesystem is possible through pygbag's debug repl.
+Ways to do so are available in the [debug repl's wiki page](https://pygame-web.github.io/wiki/pygbag-debug/).
 ```
 
 ### editing local files 
