@@ -88,16 +88,15 @@ print( json.dumps(repo["packages"], sort_keys=True, indent=4) )
 implemented, event based, TODO sample
 
 ### downloading files created by python
-Python files can still be created normally and will appear in the browser's filesystem.
+Python files can still be created normally and will appear in the browser's filesystem. They can then be downloaded from the browser's filesystem to a user's filesystem with `platform.window.MM.download(filepath)`.
 ```py
-# example
+import sys, platform
 with open("file.txt", "w") as f:
-    f.write("newly created file")
+    f.write("newly created example file")
+if sys.platform == "emscripten":
+    platform.window.MM.download("file.txt")
 ```
-
-Downloading these files from the browser's filesystem to a user's filesystem is possible through pygbag's debug repl.
-Ways to do so are available in the [debug repl's wiki page](https://pygame-web.github.io/wiki/pygbag-debug/).
-```
+`platform.window.MM.download("file.txt")` is code taken from the debug REPL's shell implementation. Read about the debug REPL [here](https://pygame-web.github.io/wiki/pygbag-debug/).
 
 ### editing local files 
 
