@@ -122,8 +122,11 @@ Make sure you're not pulling assets from outside your folder, like this!
 ```
 
 
+### Adding Modules
+- [List of available wheels](/wiki/pkg/)
+- [requesting modules](https://github.com/pygame-web/pkg-porting-wasm/issues)
 
-### Complex Packages
+#### Complex Packages
 When importing complex packages (for example, numpy or matplotlib), you must put their import statements at top of `main.py`. You should also add a metadata header as specified by [PEP 723](https://peps.python.org/pep-0723/), for example:
 ```
 # /// script
