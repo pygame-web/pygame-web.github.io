@@ -113,7 +113,7 @@ If using pygame-zero (mostly untested), put `#!pgzrun` near the top of main.py. 
    
 ## Running
 
-- [Pygbag-script](/wiki/pygame-script/) (WIP)
+- [Pygbag-script](/wiki/pygbag-script/) (WIP)
 - [REPL](https://pygame-web.github.io/showroom/python.html?-i-&-X-dev#https://gist.githubusercontent.com/pmp-p/cfd398c75608504293d21f2642e87968/raw/773022eef4a2cc676ab0475890577a2b5e79e429/hello.py)
 - [CPython test suite](https://pygame-web.github.io/showroom/pythondev.html?-d#src/testsuite.py%20all) (WIP)
 
