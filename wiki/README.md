@@ -54,11 +54,11 @@ Source code for these games can be found [here](https://github.com/pmp-p?tab=rep
 
 The code is read-only, so you should right-click then open in a new window.
 
-- [i18n bidi, complex scripts](/showroom/pypad_git.html?-i#src/test_hb.py)
-- [Camera](/showroom/pypad_git.html?-i#src/test_vidcap.py)
-- [Panda3D](/showroom/pypad_dev.html?-i#src/test_panda3d_cube.py)
-- [Audio Record/Play](/showroom/pypad_dev.html?-i#src/test_audio.py)
-- [HTML output](/showroom/pypad_dev.html?-i#src/test_html.py)
+- [i18n bidi, complex scripts](https://pygame-web.github.io/showroom/pypad_git.html?-i#src/test_hb.py)
+- [Camera](https://pygame-web.github.io/showroom/pypad_git.html?-i#src/test_vidcap.py)
+- [Panda3D](https://pygame-web.github.io/showroom/pypad_dev.html?-i#src/test_panda3d_cube.py)
+- [Audio Record/Play](https://pygame-web.github.io/showroom/pypad_dev.html?-i#src/test_audio.py)
+- [HTML output](https://pygame-web.github.io/showroom/pypad_dev.html?-i#src/test_html.py)
 
 ## Technology
 
