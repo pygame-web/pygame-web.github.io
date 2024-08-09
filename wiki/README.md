@@ -98,4 +98,4 @@ Python WebAssembly at PyCon FR 2023 (in French):
 Thanks for reading and supporting pygame-ce and pygbag. These tools could not have existed without your support.
 
 
-[edit this pages](https://github.com/pygame-web/pygame-web.github.io/edit/main/wiki/README.md)
+[edit this page](https://github.com/pygame-web/pygame-web.github.io/edit/main/wiki/README.md)
