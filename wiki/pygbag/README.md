@@ -96,21 +96,8 @@ You won't need to change much of your project's code to make it compatiable with
 3. Put `await asyncio.sleep(0)` in your game loop.
 4. Put `asyncio.run(main())` at the end of the file. The game loop will be run here, so any additional lines will not be run.
 
-## Hosting your game on itch.io (Optional)
-To let others play your game online, you must publish your game on a publicly accessible website. [itch.io](https://itch.io) offers free hosting and allows you to customise your game page.
-
-### Zipping
-To host your game on itch.io, you need to zip the bundle created by Pygbag and upload it. Use the `--archive` option if you want Pygbag to produce a ZIP file. This will be located at `PROJECT_DIR/build/web.zip`
-
-### Uploading
-1. [Create a new project](https://itch.io/game/new)
-2. Set `Kind of project` to `HTML`
-3. Fill in other project parameters
-4. Upload the .zip file to the page
-5. Tick `This file will be played in the browser` on the upload
-6. Save your project
-
-More information can be found [here](https://itch.io/docs/creators/html5). After following these steps, if you view your game page, you would be able to see your game. If you update your games frequently, you can use [butler](https://itch.io/docs/butler/), a command-line tool made by the developers of itch.
+## Publishing (Optional)
+To let others play your game online, you must publish your game on a publicly accessible website. We provide documentation for publishing [via itch.io](/wiki/publishing/itch.io/) and [via Github Pages](/wiki/publishing/github.io/).
 
 ## Conclusion
 Congratulations for finishing this tutorial! Now you can go ahead and make all your Python games playable in the browser! Thank you for reading.
