@@ -1,6 +1,6 @@
 # pygame-web.github.io
 
-This is the CDN root used by [Pygbag](https://pypi.org/project/pygbag/) ([Source code](https://github.com/pygame-web/pygbag)/[Old runtimes](https://github.com/pygame-web/archives)) and the site of its [wiki](https://pygame-web.github.io/wiki/pygbag).
+This is the CDN root used by [Pygbag](https://pypi.org/project/pygbag/) ([Source code](https://github.com/pygame-web/pygbag)/[Old runtimes](https://github.com/pygame-web/archives)) and the site of its [wiki](/wiki/pygbag).
 
 Pygbag does not track usage at all, not even for statistical purposes. If you like it, please [star](https://github.com/pygame-web/pygbag/stargazers) the repository!
 
@@ -8,9 +8,9 @@ Check out some [demos](#demos-on-itchio) before you start!
 
 ## Important points
 
-Read Pygbag's [project description](https://pypi.org/project/pygbag/) for a more detailed overview. A full packaging guide can be found [here](https://pygame-web.github.io/wiki/pygbag/).
+Read Pygbag's [project description](https://pypi.org/project/pygbag/) for a more detailed overview. A full packaging guide can be found [here](/wiki/pygbag/).
 
-**<ins>Also, read the page on [making your code compatible with browser game loop](https://pygame-web.github.io/wiki/python-wasm). You will probably have to change some of your code.</ins>**
+**<ins>Also, read the page on [making your code compatible with browser game loop](/wiki/python-wasm). You will probably have to change some of your code.</ins>**
 
 ### All operating systems
 
@@ -84,13 +84,13 @@ Useful .gitignore additions:
 
 ## Coding
 
-- [General Python-WASM](https://pygame-web.github.io/wiki/python-wasm/)
-- [With Pygbag specifically](https://pygame-web.github.io/wiki/pygbag-code/)
-- [Pygbag code examples](https://pygame-web.github.io/wiki/pygbag-code/#pygbag-code-specifics-samples-)
+- [General Python-WASM](/wiki/python-wasm/)
+- [With Pygbag specifically](/wiki/pygbag-code/)
+- [Pygbag code examples](/wiki/pygbag-code/#pygbag-code-specifics-samples-)
 
 ## Adding modules
 
-- [List of available wheels](https://pygame-web.github.io/wiki/pkg/)
+- [List of available wheels](/wiki/pkg/)
 - [requesting modules](https://github.com/pygame-web/pkg-porting-wasm/issues)
 
 When importing complex packages (for example, numpy or matplotlib), you must put their import statements at top of `main.py`. You should also add a metadata header as specified by [PEP 723](https://peps.python.org/pep-0723/), for example:
@@ -112,21 +112,21 @@ If using pygame-zero (mostly untested), put `#!pgzrun` near the top of main.py. 
 
 ## Debugging / Desktop Simulator
 
-- [How to enter debug mode](https://pygame-web.github.io/wiki/pygbag-debug/)
+- [How to enter debug mode](/wiki/pygbag-debug/)
 - While working, you can access the simulator of the web loop by replacing `import asyncio` by `import pygbag.aio as asyncio` at top of main.py and run the program from the folder containing it.
 - TODO: Android remote debugging via [chromium browsers series](https://developer.chrome.com/docs/devtools/remote-debugging/).
 - TODO: Universal remote debugging via IRC Client or websocket using pygbag.net.
    
 ## Running
 
-- [Pygbag-script](https://pygame-web.github.io/wiki/pygame-script/) (WIP)
+- [Pygbag-script](/wiki/pygame-script/) (WIP)
 - [REPL](https://pygame-web.github.io/showroom/python.html?-i-&-X-dev#https://gist.githubusercontent.com/pmp-p/cfd398c75608504293d21f2642e87968/raw/773022eef4a2cc676ab0475890577a2b5e79e429/hello.py)
 - [CPython test suite](https://pygame-web.github.io/showroom/pythondev.html?-d#src/testsuite.py%20all) (WIP)
 
 ## Publishing
 
-- [Github Pages](https://pygame-web.github.io/wiki/pygbag/github.io/)
-- [Itch.io](https://pygame-web.github.io/wiki/pygbag/itch.io/)
+- [Github Pages](/wiki/pygbag/github.io/)
+- [Itch.io](/wiki/pygbag/itch.io/)
 
 ## Demos
 
