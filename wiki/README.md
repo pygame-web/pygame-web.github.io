@@ -119,8 +119,8 @@ If using pygame-zero (mostly untested), put `#!pgzrun` near the top of main.py. 
 
 ## Publishing
 
-- [Github Pages](/wiki/pygbag/github.io/)
-- [Itch.io](/wiki/pygbag/itch.io/)
+- [Github Pages](/wiki/publishing/github.io/)
+- [Itch.io](/wiki/publishing/itch.io/)
 
 ## Demos
 
