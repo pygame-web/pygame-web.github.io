@@ -32,6 +32,20 @@ It is possible to access FTDI (and clones) USB serial ports, but it is very expe
 
 ## Pygbag code specifics/samples
 
+### Check if game is running in the browser
+
+```py
+if sys.platform == "emscripten":
+    pass
+```
+
+### Detect WebAssembly CPU
+
+```py
+if 'wasm' in __import__('platform').machine():
+    pass
+```
+
 ### File uploading
 #### sample : image file viewer [try it](https://pygame-web.github.io/showroom/pypad.html#src/test_upload.py)
 ```py

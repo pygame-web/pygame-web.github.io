@@ -25,9 +25,11 @@ To set up the project:
 4. Select `This file will be played in the browser`
 5. Then save your project
 
-After following these step, if you view your game page and set it to public, then you would be able to see your game.
+More information can be found [here](https://itch.io/docs/creators/html5). After following these steps, if you view your game page, you would be able to see your game. If you update your games frequently, you can use [butler](https://itch.io/docs/butler/), a command-line tool made by the developers of itch.
 
-Thought, if your are unable to do so, you can ask for help in the [pygame discord server](https://discord.gg/s6Hhrh77aq)
+After following these steps, if you view your game page and set it to public, then you would be able to see your game.
+
+Though, if you are unable to do so, you can ask for help in the [pygame discord server](https://discord.gg/s6Hhrh77aq)
 
 
 
