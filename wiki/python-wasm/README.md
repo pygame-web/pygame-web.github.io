@@ -48,7 +48,7 @@ async def main():
     while game_state:
         game_state(pygame.event.get())
         pygame.display.update()
-        await asyncio.sleep(0)
+        await asyncio.sleep(0) # do not forget that one, it must be called on every frame
         
     # Closing the game (not strictly required)
     pygame.quit()
