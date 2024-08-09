@@ -1,1 +1,7 @@
 /.idea
+
+# for local testing
+Gemfile.lock
+Gemfile
+.jekyll-metadata
+_site
