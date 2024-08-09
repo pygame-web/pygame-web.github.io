@@ -96,3 +96,6 @@ Python WebAssembly at PyCon FR 2023 (in French):
 - [WebAssembly/Python Discord Server](https://discord.gg/MCTM4xFDMK)
 
 Thanks for reading and supporting pygame-ce and pygbag. These tools could not have existed without your support.
+
+
+[edit this pages](https://github.com/pygame-web/pygame-web.github.io/edit/main/wiki/README.md)
