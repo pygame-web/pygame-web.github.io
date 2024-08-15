@@ -79,6 +79,7 @@ Useful .gitignore additions:
 /dist
 ```
 
+[controlling pygbag packing and options from pygbag.ini](/wiki/pygbag-configuration)
 
 ## Coding
 
@@ -113,7 +114,7 @@ When importing non-stdlib packages (for example, numpy or matplotlib), you must 
 - While working, you can access the simulator of the web loop by replacing `import asyncio` by `import pygbag.aio as asyncio` at top of main.py and run the program from the folder containing it.
 - TODO: Android remote debugging via [chromium browsers series](https://developer.chrome.com/docs/devtools/remote-debugging/).
 - TODO: Universal remote debugging via IRC Client or websocket using pygbag.net.
-   
+- [pygbag runtime ?](/wiki/pygbag-internals)
 
 
 There's number of command line options : read Pygbag's [project description](https://pypi.org/project/pygbag/) for a more detailed overview.
