@@ -6,9 +6,10 @@ Check out some [demos](#demos-on-itchio) before you start!
 
 ## Configuring Pygbag
 
+[WIP: pygbag.ini](/wiki/pygbag-configuration)
+
 [command line](https://github.com/pygame-web/pygbag)
 
-[pygbag.ini](/wiki/pygbag-configuration)
 
 ## Debugging / Desktop Simulator
 
