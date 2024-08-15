@@ -4,6 +4,12 @@ Check out some [demos](#demos-on-itchio) before you start!
 - Visit [this page](/wiki/pygbag/) on how to use Pygbag to make web games with Python.
 - Visit [this page](/wiki/pygbag-code/) for useful Pygbag code snippets and a Pygbag FAQ.
 
+## Configuring Pygbag
+
+[command line](https://github.com/pygame-web/pygbag)
+
+[pygbag.ini](/wiki/pygbag-configuration)
+
 ## Debugging / Desktop Simulator
 
 - [How to enter debug mode](/wiki/pygbag-debug/)
@@ -61,11 +67,12 @@ The code is read-only, so you should right-click then open in a new window.
 - [HTML output](https://pygame-web.github.io/showroom/pypad_dev.html?-i#src/test_html.py)
 
 ## Technology
-
+- [Overview of internals](/wiki/pygbag-internals)
 - [Initial discussion](https://github.com/pygame/pygame/issues/718) 
 - [Discussion at pygame-ce repo](https://github.com/pygame-community/pygame-ce/issues/540)
 - [Python-WASM explained by core dev Christian Heimes (video)](https://www.youtube.com/watch?v=oa2LllRZUlU)
 
+ 
 ### Early demos from above talk, may not work as intended :)
 
 - [Pygame tech demo PyCon DE & PyData Berlin 2022](https://pmp-p.github.io/pygame-wasm/)
