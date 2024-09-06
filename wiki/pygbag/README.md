@@ -204,4 +204,4 @@ There is very little because Python-WASM is just a web-friendly version of CPyth
 ## Conclusion
 Congratulations for finishing this tutorial! Now you can go ahead and make all your Python games playable in the browser! Thank you for reading.
 
-[Spotted a mistake? Contribute to this page.](https://github.com/pygame-web/pygame-web.github.io/edit/main/wiki/pygbag/README.md)
+[Contribute to this page.](https://github.com/pygame-web/pygame-web.github.io/edit/main/wiki/pygbag/README.md)
