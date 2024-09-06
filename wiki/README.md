@@ -59,13 +59,13 @@ Source code for these games can be found [here](https://github.com/pmp-p?tab=rep
 
 ### Script demos
 
-The code is read-only, so you should right-click then open in a new window.
+The code is read-only,right-click examples links to open in a new window.
 
 - [i18n bidi, complex scripts](https://pygame-web.github.io/showroom/pypad_git.html?-i#src/test_hb.py)
 - [Camera](https://pygame-web.github.io/showroom/pypad_git.html?-i#src/test_vidcap.py)
-- [Panda3D](https://pygame-web.github.io/showroom/pypad_dev.html?-i#src/test_panda3d_cube.py)
-- [Audio Record/Play](https://pygame-web.github.io/showroom/pypad_dev.html?-i#src/test_audio.py)
-- [HTML output](https://pygame-web.github.io/showroom/pypad_dev.html?-i#src/test_html.py)
+- [Panda3D](https://pygame-web.github.io/showroom/pypad.html?-i#src/test_panda3d_cube.py)
+- [Audio Record/Play](https://pygame-web.github.io/showroom/pypad_git.html?-i#src/test_audio.py)
+- [HTML output](https://pygame-web.github.io/showroom/pypad_git.html?-i#src/test_html.py)
 
 ## Technology
 - [Overview of internals](/wiki/pygbag-internals)
