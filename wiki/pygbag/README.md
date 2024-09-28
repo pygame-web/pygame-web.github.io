@@ -161,7 +161,7 @@ You can use `--no_opt` to prevent png recompression.
 
 ### File formats and names
 - You can add a square image file named `favicon.png` in your game's root folder to make Pygbag use it as the web package's favicon.
-- Make sure all audio files are in OGG format, and all files are compressed. (that is, not in WAV/AIFF)
+- Make sure all audio files are in OGG format, and all files are compressed. (that is, not in WAV/AIFF/M4A/MP3)
 - Avoid raw formats like BMP for your image assets, they are too big for web use; use PNG/WEBP or JPG instead.
 
 - Do not use filenames like `*-pygbag.*`  that pattern is reserved for pygbag internal use (optimizing pass).
