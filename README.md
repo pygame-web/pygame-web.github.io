@@ -1,10 +1,19 @@
 # pygame-web.github.io
 
-This is the CDN root used by [Pygbag](https://pypi.org/project/pygbag/) ([Source code](https://github.com/pygame-web/pygbag)/[Old runtimes](https://github.com/pygame-web/archives)) and the site of its [wiki](/wiki/).
+This is the CDN root used by [Pygbag](https://pypi.org/project/pygbag/).
 
-Pygbag does not track usage at all, not even for statistical purposes. If you like it, please [star](https://github.com/pygame-web/pygbag/stargazers) the repository!
+[The wiki](/wiki/).
 
-## Important points
+[Source code](https://github.com/pygame-web/pygbag)
+
+[Old runtimes and current](https://github.com/pygame-web/archives)
+
+
+### Pygbag does not track usage at all, not even for statistical purposes. 
+If you like it, please [star](https://github.com/pygame-web/pygbag/stargazers) the repository!
+
+## (Very) important points
+<details><summary>expand</summary>
 
 **<ins>Also, read the page on [making your code compatible with browser game loop](https://pygame-web.github.io/wiki/python-wasm). You will probably have to change some of your code.</ins>**
 
@@ -50,10 +59,10 @@ if sys.platform == "emscripten":
 ### Linux
 
 - When using webusb ftdi serial emulation, use `sudo rmmod ftdi_sio` after plugging devices.
-
+</details>
 
 ## Template
-
+<details><summary>expand</summary>
 There is actually none, because Python-WASM is just a web-friendly version of CPython REPL with [some added facilities](https://discuss.python.org/t/status-of-wasm-in-cpythons-main-branch/15542/12?u=pmp-p). Most desktop code will run (and continue to run) with only a few changes. 
 
 Basic structure of a game (available [here](https://github.com/pygame-web/pygbag/tree/main/test)): 
@@ -80,6 +89,7 @@ Useful .gitignore additions:
 ```
 
 [controlling pygbag packing and options from pygbag.ini](/wiki/pygbag-configuration)
+</details>
 
 ## Coding
 
@@ -109,6 +119,7 @@ When importing **non-stdlib** packages (for example, numpy or matplotlib), you m
 
 
 ## Debugging / Desktop Simulator
+<details><summary>expand</summary>
 - The REPL shortcut http://localhost:8000?-i, REPL will (should) run concurrently as main.py.
 - [How to enter debug mode](/wiki/pygbag-debug/)
 - While working, you can access the simulator of the web loop by replacing `import asyncio` by `import pygbag.aio as asyncio` at top of main.py and run the program from the folder containing it.
@@ -119,9 +130,9 @@ When importing **non-stdlib** packages (for example, numpy or matplotlib), you m
 
 There's number of command line options : read Pygbag's [project description](https://pypi.org/project/pygbag/) for a more detailed overview.
 
+</details>
 
 Visit the [wiki](/wiki/) to get started!
-
 
 
 **Work in progress, pull requests welcomed. Feel free to propose links to games or tutorials. Please contribute!!!**
