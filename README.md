@@ -61,9 +61,10 @@ if sys.platform == "emscripten":
 - When using webusb ftdi serial emulation, use `sudo rmmod ftdi_sio` after plugging devices.
 </details>
 
-## Template
+## Templates
 <details><summary>expand</summary>
-There is actually none, because Python-WASM is just a web-friendly version of CPython REPL with [some added facilities](https://discuss.python.org/t/status-of-wasm-in-cpythons-main-branch/15542/12?u=pmp-p). Most desktop code will run (and continue to run) with only a few changes. 
+    
+There is actually nothing specific for projects except naming entry point main.py, because Python-WASM is just a web-friendly version of CPython REPL with [some added facilities](https://discuss.python.org/t/status-of-wasm-in-cpythons-main-branch/15542/12?u=pmp-p). Most desktop code will run (and continue to run) with only a few changes. 
 
 Basic structure of a game (available [here](https://github.com/pygame-web/pygbag/tree/main/test)): 
 ```
@@ -87,9 +88,13 @@ Useful .gitignore additions:
 /build
 /dist
 ```
+But there are templates to customize runtime startup for 2D and 3D, see [templates](/wiki/pygbag/#templates)
+
+
+</details>
 
 [controlling pygbag packing and options from pygbag.ini](/wiki/pygbag-configuration)
-</details>
+
 
 ## Coding
 
