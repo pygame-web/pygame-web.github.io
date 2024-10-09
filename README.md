@@ -13,7 +13,6 @@ This is the CDN root used by [Pygbag](https://pypi.org/project/pygbag/).
 If you like it, please [star](https://github.com/pygame-web/pygbag/stargazers) the repository!
 
 ## (Very) important points
-<details><summary>expand</summary>
 
 **<ins>Also, read the page on [making your code compatible with browser game loop](https://pygame-web.github.io/wiki/python-wasm). You will probably have to change some of your code.</ins>**
 
@@ -59,10 +58,10 @@ if sys.platform == "emscripten":
 ### Linux
 
 - When using webusb ftdi serial emulation, use `sudo rmmod ftdi_sio` after plugging devices.
-</details>
+
+
 
 ## Templates
-<details><summary>expand</summary>
     
 There is actually nothing specific for projects except naming entry point main.py, because Python-WASM is just a web-friendly version of CPython REPL with [some added facilities](https://discuss.python.org/t/status-of-wasm-in-cpythons-main-branch/15542/12?u=pmp-p). Most desktop code will run (and continue to run) with only a few changes. 
 
@@ -91,8 +90,6 @@ Useful .gitignore additions:
 But there are templates to customize runtime startup for 2D and 3D, see [templates](/wiki/pygbag/#templates)
 
 
-</details>
-
 [controlling pygbag packing and options from pygbag.ini](/wiki/pygbag-configuration)
 
 
@@ -108,7 +105,8 @@ But there are templates to customize runtime startup for 2D and 3D, see [templat
 - [requesting modules](https://github.com/pygame-web/pkg-porting-wasm/issues)
 
 When importing **non-stdlib** packages (for example, numpy or matplotlib), you must put their import statements at top of `main.py`. You should also add a metadata header as specified by [PEP 723](https://peps.python.org/pep-0723/), for example:
-```
+
+```py
 # /// script
 # dependencies = [
 #  "six",
@@ -135,7 +133,6 @@ When importing **non-stdlib** packages (for example, numpy or matplotlib), you m
 
 There's number of command line options : read Pygbag's [project description](https://pypi.org/project/pygbag/) for a more detailed overview.
 
-</details>
 
 Visit the [wiki](/wiki/) to get started!
 
