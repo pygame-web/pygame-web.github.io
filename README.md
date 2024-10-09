@@ -122,7 +122,7 @@ When importing **non-stdlib** packages (for example, numpy or matplotlib), you m
 
 
 ## Debugging / Desktop Simulator
-<details><summary>expand</summary>
+
 - The REPL shortcut http://localhost:8000?-i, REPL will (should) run concurrently as main.py.
 - [How to enter debug mode](/wiki/pygbag-debug/)
 - While working, you can access the simulator of the web loop by replacing `import asyncio` by `import pygbag.aio as asyncio` at top of main.py and run the program from the folder containing it.
