@@ -25,13 +25,21 @@ Current packages troubleshooting until full acceptation is done here :
 
 
 
-documented modified packages :
+Documented modified packages :
 
 
- - [pygame] Starting with 0.7 pygbag runtime will use [pygame-ce](https://github.com/pygame-community/pygame-ce) codebase.
+ - [pygame] Starting with 0.7 pygbag runtime will use [pygame-ce](https://github.com/pygame-community/pygame-ce) codebase. pygame-ce is built along with pygbag runtime.
  - [nurses_2](/wiki/pkg/nurses_2/)
- - [harfang] from [vendored pygbag](https://github.com/harfang3d/harfang-wasm)
  - [panda3d](/wiki/pkg/panda3d/) from [Panda3D wasm branch](https://github.com/panda3d/panda3d/tree/webgl-port) + [vendored pygbag](https://github.com/pmp-p/panda3d-wasm)
- 
+
+
+Packages built using pygbag-vendor :
+  
+ - [raylib-python-cffi](https://electronstudio.github.io/raylib-python-cffi/README.html#running-in-a-web-browser) from [vendored pygbag](https://github.com/electronstudio/pygbag-raylib)
+
+ - [harfang] from [vendored pygbag](https://github.com/harfang3d/harfang-wasm)
+
+
+
 
 [edit this page](https://github.com/pygame-web/pygame-web.github.io/edit/main/wiki/pkg/README.md)
