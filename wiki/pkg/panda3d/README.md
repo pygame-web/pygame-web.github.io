@@ -151,6 +151,13 @@ You can visit [http://localhost:8000/?-i](http://localhost:8000/?-i) instead to 
 
 The name `main.py` is actually important, your main file has to be called `main.py`, alternative names will not work.
 
+
+## github pages and CI
+
+Just clone this repo and adapt to your game : https://github.com/pmp-p/pygbag-panda3d-ci
+
+
+
 _________
 
 
