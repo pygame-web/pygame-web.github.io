@@ -103,6 +103,8 @@ But there are templates to customize runtime startup for 2D and 3D, see [templat
 
 - [List of available wheels](/wiki/pkg/)
 - [requesting modules](https://github.com/pygame-web/pkg-porting-wasm/issues)
+- Panda3D quickstart https://pygame-web.github.io/wiki/pkg/panda3d/
+
 
 When importing **non-stdlib** packages (for example, numpy or matplotlib), you must put their import statements at top of `main.py`. You should also add a metadata header as specified by [PEP 723](https://peps.python.org/pep-0723/), for example:
 
