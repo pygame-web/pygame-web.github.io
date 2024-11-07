@@ -24,7 +24,7 @@ If you like it, please [star](https://github.com/pygame-web/pygbag/stargazers) t
 - Put the import statements of complex packages in order (but numpy first) at the top of `main.py`.
 - Avoid using CPython's standard library for web operations, GUI (like tkinter), or I/O as it is very synchronous/platform-specific and will probably stay that way. In terms of GUI alternatives, [pygame_gui](https://pypi.org/project/pygame_gui) works on top of [pygame-ce](https://pyga.me), [Panda3D](https://www.panda3d.org/) provides [directgui](https://docs.panda3d.org/1.10/python/programming/gui/directgui/index) and Harfang3D provides imgui. They are all cross-platform.
 - You can add a square image file named `favicon.png` in your game's root folder to make Pygbag use it as the web package's favicon.
-- <ins>Make sure all audio files are in OGG (best compression format targeting 16bits 22Khz Mono). (that is especially **not in WAV/AIFF/M4A/MP3 format**)</ins>
+- <ins>Make sure all audio files are in OGG (best compression format targeting 16bits 24Khz Mono). (that is especially **not in WAV/AIFF/M4A/MP3 format**)</ins>
 - Avoid raw formats like BMP for your image assets, they are too big for web use; use PNG/WEBP or JPG instead.
 
 - Do not use filenames like `*-pygbag.*`  that pattern is reserved for pygbag internal use (optimizing pass).
