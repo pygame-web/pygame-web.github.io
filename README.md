@@ -27,7 +27,7 @@ If you like it, please [star](https://github.com/pygame-web/pygbag/stargazers) t
 - <ins>Make sure all audio files are in OGG (best compression format targeting 16bits 24Khz Mono). (that is especially **not in WAV/AIFF/M4A/MP3 format**)</ins>
 - Avoid raw formats like BMP for your image assets, they are too big for web use; use PNG/WEBP or JPG instead.
 
-- Do not use filenames like `*-pygbag.*`  that pattern is reserved for pygbag internal use (optimizing pass).
+- Filenames are case sensitive ( Folder/MyFile.png and folder/myfile.png are two different files). Do not use filenames like `*-pygbag.*`  that pattern is reserved for pygbag internal use (optimizing pass).
 
 Before packaging, adapt your code this way if you still want WAV/MP3 format on desktop:
 ```py
