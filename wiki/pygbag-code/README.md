@@ -69,10 +69,10 @@ ___
 ```py
 import platform
 from pathlib import Path
-cdn = Path("https://cdn.jsdelivr.net/pyodide/dev/full")
+cdn = Path("https://pygame-web.github.io/assets")
 
 async def main():
-    async with platform.fopen( cdn / "repodata.json", "r") as textfile:
+    async with platform.fopen( cdn / "index.html", "r") as textfile:
         print( len( textfile.read() ) )
 asyncio.run(main())
 ```
