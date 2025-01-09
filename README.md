@@ -143,4 +143,6 @@ Visit the [wiki](/wiki/) to get started!
 
 **Work in progress, pull requests welcomed. Feel free to propose links to games or tutorials. Please contribute!!!**
 
+Logo thanks to https://github.com/FinFetChannel 
+
 [Edit this page](https://github.com/pygame-web/pygame-web.github.io/edit/main/README.md)
