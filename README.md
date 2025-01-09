@@ -1,5 +1,7 @@
 # pygame-web.github.io
 
+![pygbag logo](assets/pygbag_logo.png?raw=true "Pygbag Logo")
+
 This is the CDN root used by [Pygbag](https://pypi.org/project/pygbag/).
 
 [The wiki](/wiki/).
