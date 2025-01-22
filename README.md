@@ -113,17 +113,13 @@ When importing **non-stdlib** packages (for example, numpy or matplotlib), you m
 ```py
 # /// script
 # dependencies = [
-#  "six",
-#  "bs4",
-#  "markdown-it-py",
-#  "pygments",
-#  "rich",
-#  "mdurl",
-#  "textual",
+#  "pygame-ce",
+#  "pyscroll",
+#  "pytmx",
 # ]
 # ///
 ```
-
+more on : https://packaging.python.org/en/latest/specifications/inline-script-metadata/#inline-script-metadata
 
 ## Debugging / Desktop Simulator
 
