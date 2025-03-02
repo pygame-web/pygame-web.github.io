@@ -30,7 +30,7 @@ Check out some [demos](#demos-on-itchio) before you start!
 - [Itch.io](/wiki/publishing/itch.io/)
 
 ## collab code sharing/editing/running
-- [hackmd]  see example https://hackmd.io/zZTCp8XETLiX0QA30bbPUQ?view and [run link](https://pygame-web.github.io/showroom/pythongit.html?-i#src/test_hackmd.py https://hackmd.io/zZTCp8XETLiX0QA30bbPUQ)
+- [hackmd]  see example https://hackmd.io/zZTCp8XETLiX0QA30bbPUQ?view and [run link](https://pygame-web.github.io/showroom/pythongit.html?-i#src/test_hackmd.py%20https://hackmd.io/zZTCp8XETLiX0QA30bbPUQ)
 - [etherdpad] see example https://etherpad.wikimedia.org/p/pygbag and [run link](https://pygame-web.github.io/showroom/pythongit.html?cpython3.12&-i&https://etherpad.wikimedia.org/p/panda3d/export/txt#)
 
 
