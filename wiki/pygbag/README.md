@@ -23,7 +23,7 @@ You won't need to change much of your project's code to make it compatible with 
 3. Put `await asyncio.sleep(0)` anywhere in your game loop. Right after your `clock.tick()` is fine.
 4. Put `asyncio.run(main())` at the end of the file. The game loop will be run here, so any additional lines will not be run.
 
-Here's a working example for what `main.py` might look like.
+Here's a working example for what `main.py` might look like ( to get a working console use -i in cpython arguments eg  http://localhost:8000?-i )
 ```py
 import asyncio
 import pygame
