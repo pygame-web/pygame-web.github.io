@@ -78,6 +78,7 @@ test
 └── sfx
     └── beep.ogg
 ```
+where `test` is the "runtime game folder", current working directory ( os.getcwd() ) or more simply  "."
 
 Useful .gitignore additions:
 ```
