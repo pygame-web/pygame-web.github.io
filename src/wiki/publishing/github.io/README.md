@@ -37,4 +37,4 @@ Finally, go back to "Actions" and run the "pages-build-deployment" action. Now y
 
 
 
-[contribute to this page](https://github.com/pygame-web/pygame-web.github.io/edit/main/wiki/pygbag/github.io/README.md)
+

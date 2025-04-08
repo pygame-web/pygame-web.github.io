@@ -33,4 +33,4 @@ Though, if you are unable to do so, you can ask for help in the [pygame discord 
 
 
 
-[contribute to this page](https://github.com/pygame-web/pygame-web.github.io/edit/main/wiki/pygbag/itch.io/README.md)
+

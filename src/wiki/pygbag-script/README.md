@@ -55,4 +55,4 @@ python3 -x index.html
 ~~follow that issue : https://github.com/psf/black/issues/3214~~
 done, now you can use `black -x -l 132` to format your code
 
-[contribute to this page](https://github.com/pygame-web/pygame-web.github.io/edit/main/wiki/pygame-script/README.md)
+

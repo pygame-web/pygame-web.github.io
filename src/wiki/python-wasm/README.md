@@ -61,4 +61,4 @@ if __name__ == "__main__":
 Everything else is probably specific to Pygbag. You can find more information/code [here](https://pygame-web.github.io/wiki/pygbag-code/#pygbag-code-specificssamples).
 
 
-[Contribute to this page](https://github.com/pygame-web/pygame-web.github.io/edit/main/wiki/python-wasm/README.md)
+
