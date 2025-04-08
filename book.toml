@@ -6,3 +6,6 @@ src = "src"
 
 [output.html]
 no-section-label = true
+git-repository-url = "https://github.com/pygame-web/pygame-web.github.io"
+git-repository-icon = "fa-github"
+edit-url-template = "https://github.com/pygame-web/pygame-web.github.io/edit/main/{path}"
