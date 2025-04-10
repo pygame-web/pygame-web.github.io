@@ -4,7 +4,10 @@ language = "en"
 multilingual = false
 src = "src"
 
+[preprocessor.pagetoc]
 [output.html]
+additional-css = ["theme/pagetoc.css"]
+additional-js  = ["theme/pagetoc.js"]
 no-section-label = true
 git-repository-url = "https://github.com/pygame-web/pygame-web.github.io"
 git-repository-icon = "fa-github"
