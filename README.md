@@ -11,3 +11,14 @@ and run
 mdbook serve --open
 ```
 where the current directory contains `book.toml`.
+
+To use the [pagetoc](https://github.com/slowsage/mdbook-pagetoc) and
+[admonishment](https://github.com/tommilligan/mdbook-admonish) preprocessors, 
+you need to install some Rust tools:
+```
+cargo install mdbook-pagetoc
+cargo install mdbook-admonish
+```
+Without these tools, the book may not compile. They only provide helpful but 
+nonessential rendering, so you comment out their respective section in the
+`book.toml`.
