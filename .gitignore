@@ -1,7 +1,8 @@
 /.idea
 
+# ignored generated pagetoc files from mdbook-pagetoc
+theme/pagetoc.css
+theme/pagetoc.js
+
 # for local testing
-Gemfile.lock
-Gemfile
-.jekyll-metadata
-_site
+book
