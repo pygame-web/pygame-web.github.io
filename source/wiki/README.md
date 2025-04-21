@@ -1,6 +1,8 @@
-Check out some [demos](#demos-on-itchio) before you start!
+# Using Pygbag
 
-## Using Pygbag
+```{seealso}
+Check out some [demos](#demos-on-itchio) before you start!
+```
 - Visit [this page](/wiki/pygbag/) on how to use Pygbag to make web games with Python.
 - Visit [this page](/wiki/pygbag-code/) for useful Pygbag code snippets and a Pygbag FAQ.
 

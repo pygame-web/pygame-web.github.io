@@ -1,3 +1,4 @@
+# panda3d
 [Panda3D is a framework for 3D rendering and game development for Python and C++ programs.](https://pypi.org/project/Panda3D/)
 
 [original documentation](https://docs.panda3d.org/1.10/python/index)
@@ -58,7 +59,7 @@ Changes made to get a wheel [PR against webgl-port branch](https://github.com/pm
 
 
 
-# conversion tutorial
+## conversion tutorial
 
 the basic command to produce a itch.io compatible zip is
 
@@ -70,13 +71,13 @@ note: only use `--ume_block 0` when you have no sound playing at game startup ( 
 
 This zip archive can be uploaded directly on itch after selection on the HTML game type . (provided everything else works and is set up as detailed below)
 
-## changes to the code.
+### changes to the code.
 
 The base used was [https://github.com/BMaxV/panda3d_shading 03main.py](https://github.com/BMaxV/panda3d_shading 03main.py)
 
 note: preferably use a 1024x600 screen size.
 
-## changes to the code for web
+### changes to the code for web
 
 so my original code uses this kind of mainloop:
 
@@ -125,7 +126,7 @@ import pygbag.aio as asyncio
 
 which "gives control to the browser" in between ticks.
 
-## importing a "pure python" custom module
+### importing a "pure python" custom module
 
 For example the imported custom module is https://github.com/BMaxV/panda3d_interface_glue and that one should have no dependencies except Panda3D.
 
@@ -143,7 +144,7 @@ which builds the module into a wheel at `interfacegluedir/dist` The wheel then s
 
 
 
-## testing
+### testing
 
 If you leave `--archive` out, it starts a local webserver instead and you can visit (default) http://localhost:8000/ to test how well it works.
 
@@ -152,7 +153,7 @@ You can visit [http://localhost:8000/?-i](http://localhost:8000/?-i) instead to 
 The name `main.py` is actually important, your main file has to be called `main.py`, alternative names will not work.
 
 
-## github pages and CI
+### github pages and CI
 
 Just clone this repo and adapt to your game : https://github.com/pmp-p/pygbag-panda3d-ci
 

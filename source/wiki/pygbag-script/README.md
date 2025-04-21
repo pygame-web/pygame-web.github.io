@@ -1,3 +1,5 @@
+# pygbag-script
+
 ## When to use pygbag script ?
 
  - when you don't need assets packaging because you download them at runtime.
