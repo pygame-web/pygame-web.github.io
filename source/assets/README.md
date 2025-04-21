@@ -1,8 +1,7 @@
 # assets
 Pygbag related community creations
 
-[<img src="pyg1.png">](https://github.com/pygame-web/pygame-web.github.io/tree/main/assets)
+![pyg1](pyg1.png)
 
-
-[<img src="pyg2.png">](https://github.com/pygame-web/pygame-web.github.io/tree/main/assets)
+![pyg2](pyg2.png)
 
