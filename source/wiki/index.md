@@ -1,4 +1,4 @@
-# Using Pygbag
+# Wiki
 
 ```{seealso}
 Check out some [demos](#demos-on-itchio) before you start!
@@ -114,3 +114,19 @@ Thanks for reading and supporting pygame-ce and pygbag. These tools could not ha
 
 
 [edit this page](https://github.com/pygame-web/pygame-web.github.io/edit/main/wiki/README.md)
+
+```{toctree}
+pygbag/README
+pygbag-code/README
+pygbag-configuration/README
+pygbag-debug/README
+pygbag-internals/README
+pygbag-script/README
+python-wasm/README
+dinovm/README
+pkg/README
+pkg/nurses_2/README
+pkg/panda3d/README
+publishing/github.io/README
+publishing/itch.io/README
+```
