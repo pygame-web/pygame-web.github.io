@@ -1,3 +1,4 @@
+# pygbag-configuration
 
 TODO: pygbag.ini
 

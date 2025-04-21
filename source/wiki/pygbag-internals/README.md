@@ -1,3 +1,4 @@
+# pygbag-internals
 
 When running in the webpage pygbag is in fact a C runtime linked to libpython ( cpython-wasm from python.org) compiled to WebAssembly with emscripten compiler and hosted on a CDN (pygame-web.github.io). It is downloaded once per game and per version update for fast local use.
 
