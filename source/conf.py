@@ -6,14 +6,22 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = "pygame-web"
-copyright = "2025, pygame-web"
-author = "pygame-web"
+project = "pygbag"
+copyright = "2025, pygbag"
+author = "pygbag"
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = ["myst_parser"]
+extensions = [
+    "myst_parser",
+    "sphinx_copybutton",
+    "sphinx_inline_tabs",
+]
+
+# https://sphinx-copybutton.readthedocs.io/en/latest/use.html
+copybutton_prompt_text = r"\$ |> "
+copybutton_prompt_is_regexp = True
 
 templates_path = ["_templates"]
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
