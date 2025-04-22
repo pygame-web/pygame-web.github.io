@@ -5,7 +5,7 @@
 ### Basics
 
 ```{seealso}
-[](../tutorials/simple-game-tutorial.md)
+[](../tutorials/simple-game-tutorial.md), [](../how-to/quick-start.md)
 ```
 
 - Name your main game script `main.py` and put it in the root folder of your

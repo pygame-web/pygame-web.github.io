@@ -54,7 +54,7 @@ $ pygbag main.py
 Serving HTTP on 127.0.0.1 port 8000 (http://localhost:8000/) ...
 ```
 
-See Quick Start (TODO) for a basic how-to guide on using `pygbag`, or
+See [](./how-to/quick-start.md) for a basic how-to guide on using `pygbag`, or
 [](./tutorials/simple-game-tutorial.md) for a longer step-by-step guide.
 
 <!-- ## (Very) important points
