@@ -5,5 +5,6 @@ need detailed information about pygbag's usage and requirements.
 
 ```{toctree}
 pygbag-requirements
+pygbag-options
 code-snippets
 ```

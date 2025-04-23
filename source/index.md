@@ -57,34 +57,8 @@ Serving HTTP on 127.0.0.1 port 8000 (http://localhost:8000/) ...
 See [](./how-to/quick-start.md) for a basic how-to guide on using `pygbag`, or
 [](./tutorials/simple-game-tutorial.md) for a longer step-by-step guide.
 
-<!-- ## (Very) important points
+<!--
 
-**<ins>Also, read the page on [making your code compatible with browser game loop](https://pygame-web.github.io/wiki/python-wasm). You will probably have to change some of your code.</ins>**
-
-
-- You can add a square image file named `favicon.png` in your game's root folder
-  to make Pygbag use it as the web package's favicon.
-
-- Before packaging, adapt your code this way if you still want WAV/MP3 format on
-desktop:
-
-```py
-if sys.platform == "emscripten":
-    snd = pygame.mixer.Sound("sound.ogg")
-else:
-    snd = pygame.mixer.Sound("sound.wav") # or .WAV, .mp3, .MP3, etc.
-```
-
-- If you have heightmaps in your assets use `--no_opt` to prevent png
-recompression.
-
-- if you want to keep pixelated look whatever the device screen size is use:
-
-```py
-import sys, platform
-if sys.platform == "emscripten":
-    platform.window.canvas.style.imageRendering = "pixelated"
-```
 
 
 ## Templates
@@ -133,18 +107,6 @@ But there are templates to customize runtime startup for 2D and 3D, see [templat
 - [Panda3D quickstart](https://pygame-web.github.io/wiki/pkg/panda3d)
 
 
-When importing **non-stdlib** packages (for example, numpy or matplotlib), you must put their import statements at top of `main.py`. You should also add a metadata header as specified by [PEP 723](https://peps.python.org/pep-0723/), for example:
-
-```py
-# /// script
-# dependencies = [
-#  "pygame-ce",
-#  "pyscroll",
-#  "pytmx",
-# ]
-# ///
-```
-more on : https://packaging.python.org/en/latest/specifications/inline-script-metadata/#inline-script-metadata
 
 ## Debugging / Desktop Simulator
 
@@ -154,9 +116,6 @@ more on : https://packaging.python.org/en/latest/specifications/inline-script-me
 - TODO: Android remote debugging via [chromium browsers series](https://developer.chrome.com/docs/devtools/remote-debugging/).
 - TODO: Universal remote debugging via IRC Client or websocket using pygbag.net.
 - [pygbag runtime ?](/wiki/pygbag-internals)
-
-
-There's number of command line options : read Pygbag's [project description](https://pypi.org/project/pygbag/) for a more detailed overview.
 
 
 **Work in progress, pull requests welcomed. Feel free to propose links to games or tutorials. Please contribute!!!**

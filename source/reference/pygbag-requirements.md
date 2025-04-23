@@ -28,8 +28,25 @@
 
 ### Packages
 
-- Put the import statements of complex packages in order (but numpy first) at
-  the top of `main.py`.
+- When importing **non-stdlib** packages (for example, numpy or matplotlib), you
+  must put their import statements at top of `main.py`. If numpy is used, it
+  should come first. You should also add a metadata header as specified by
+  [PEP 723](https://peps.python.org/pep-0723/), such as:
+
+  ```py
+  # /// script
+  # dependencies = [
+  #  "pygame-ce",
+  #  "pyscroll",
+  #  "pytmx",
+  # ]
+  # ///
+  ```
+
+  ```{seealso}
+  [https://packaging.python.org/en/latest/specifications/inline-script-metadata/#inline-script-metadata](https://packaging.python.org/en/latest/specifications/inline-script-metadata/#inline-script-metadata)
+  ```
+
 - Avoid using CPython's standard library for web operations, GUI (like tkinter),
   or I/O as it is very synchronous/platform-specific and will probably stay that
   way. In terms of GUI alternatives,
