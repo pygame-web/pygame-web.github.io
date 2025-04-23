@@ -151,7 +151,7 @@ async def main():  # CREATE AN ASYNC MAIN FUNCTION TO WRAP YOUR CODE
         clock.tick(60)
         await asyncio.sleep(0)  # GIVE CONTROL BACK TO THE BROWSER
 
-    pygame.quit()
+        pygame.quit()
 
 
 asyncio.run(main())  # RUN THE NEW MAIN FUNCTION
