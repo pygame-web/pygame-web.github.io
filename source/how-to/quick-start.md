@@ -5,8 +5,8 @@
 ```
 
 This how-to guide explains how to convert different types of existing pygame
-projects, in order of complexity, to be compatible with pygbag. It also explains
-how to run your converted game locally in your browser.
+projects to be compatible with pygbag. It also explains how to run your
+converted game locally in your browser.
 
 ## Convert for pygbag
 
