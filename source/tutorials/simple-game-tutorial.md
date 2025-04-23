@@ -56,7 +56,7 @@ pygame.quit()
 ```
 
 ```{note}
-For this tutorial, you will need to do a little operating of the terminal (known
+To use pygbag, you will need to do a little operating of the terminal (known
 as cmd or Powershell on Windows). If you are unfamiliar with basic terminal
 operations such as changing directories or using executables, you may consider
 finding a dedicated tutorial.
