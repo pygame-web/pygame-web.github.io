@@ -27,7 +27,7 @@ edit main.py to add
 # ]
 # ///
 ```
-then run eg `python3 -m pygbag --PYBUILD 3.12 --git --ume_block 0 --template notctx.tmpl main.py` to use cpython 3.12 with pygbag git
+then run eg `python3 -m pygbag --PYBUILD 3.12 --git --ume_block 0 --template noctx.tmpl main.py` to use cpython 3.12 with pygbag git
 and go to http://localhost:8000/?-i
 
 But if you use taskMgr.step() or use the wheel in your own python runtime then you should do it that way:
