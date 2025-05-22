@@ -126,6 +126,21 @@ Make sure you're not pulling assets from outside your folder, like this!
 - [List of available wheels](/wiki/pkg/)
 - [requesting modules](https://github.com/pygame-web/pkg-porting-wasm/issues)
 
+If you need to import a third-party module for PC, but not for web, use importlib. For example:
+```py
+# succeeds
+if sys.platform != "emscripten":
+    import importlib
+    importlib.import_module("copykitten")
+```
+The following will NOT work:
+```py
+# fails
+if sys.platform != "emscripten":
+    import copykitten
+```
+The import is detected by pygbag and assumes you will import it at some point in the future. `http://localhost:8000/` will likely reveal a `ModuleNotFoundError`.
+
 #### Complex Packages
 When importing complex packages (for example, numpy or matplotlib), you must put their import statements at top of `main.py`. You should also add a metadata header as specified by [PEP 723](https://peps.python.org/pep-0723/), for example:
 ```
