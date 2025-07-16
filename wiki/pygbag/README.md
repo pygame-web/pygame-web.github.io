@@ -1,5 +1,5 @@
 # Pygbag
-This page covers installing Pygbag, using it to package your game, and uploading it to be played by anyone on the Internet.
+This page covers installing Pygbag, using it to package your python3 game and its game libraries ( like pygame-ce, Panda3D, Harfang3D, raylib-cpython-ffi, etc ), and uploading it to be played by anyone on the Internet.
 
 If you have questions at any point, you can ask for help in [Pygame's Discord Server](https://discord.gg/s6Hhrh77aq).
 
