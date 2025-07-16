@@ -168,8 +168,10 @@ If using pygame-zero (mostly untested), put `#!pgzrun` near the top of main.py. 
 /build
 /dist
 ```
-### Using 3D/WebGL?
-Add `--template noctx.tmpl` to pygbag command line if using 3D/WebGL.
+### Using 3D/WebGL context ?
+Add `--template noctx.tmpl` to pygbag command line if using 3D/WebGL ( eg Panda3D / Harfang / raylib ) or pygame.sdl2 renderer.
+nb: a context is either 2D (pygame) or 3D(pygame.sdl2/3D engines) you cannot switch after the mode is inited.
+but you can use pygame 2D inside a 3D engine at the cost of surface to gpu texture conversion+uploading.
 
 ### Using heightmaps?
 You can use `--no_opt` to prevent png recompression.
