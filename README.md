@@ -2,7 +2,7 @@
 
 ![pygbag logo](assets/pygbag_logo.png?raw=true "Pygbag Logo")
 
-This is the CDN root used by [Pygbag](https://pypi.org/project/pygbag/).
+This is the CDN root used by [Pygbag](https://pypi.org/project/pygbag/). (pronounce pig-bag)
 
 [The wiki](/wiki/).
 
