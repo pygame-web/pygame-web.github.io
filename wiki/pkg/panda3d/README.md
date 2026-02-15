@@ -27,7 +27,7 @@ edit main.py to add
 # ]
 # ///
 ```
-then run eg `python3 -m pygbag --PYBUILD 3.12 --git --ume_block 0 --template noctx.tmpl main.py` to use cpython 3.12 with pygbag git
+then run eg `python3 -m pygbag --ume_block 0 main.py` to use cpython 3.12 with pygbag 0.9.3
 and go to http://localhost:8000/?-i
 
 But if you use taskMgr.step() or use the wheel in your own python runtime then you should do it that way:
@@ -63,10 +63,11 @@ Changes made to get a wheel [PR against webgl-port branch](https://github.com/pm
 the basic command to produce a itch.io compatible zip is
 
 ```
-python -m pygbag --archive --template noctx.tmpl --ume_block 0 main.py
+python -m pygbag --archive --ume_block 0 main.py
 ```
 
-note: only use `--ume_block 0` when you have no sound playing at game startup ( loading screen / main menu )
+note: if you check start game automatically on itch panel, only use `--ume_block 0` when you have no sound playing at game startup ( loading screen / main menu )
+also check if mobile and orientation have to be set for your build to run
 
 This zip archive can be uploaded directly on itch after selection on the HTML game type . (provided everything else works and is set up as detailed below)
 
