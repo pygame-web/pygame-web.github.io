@@ -7,10 +7,10 @@ If you have questions at any point, you can ask for help in [Pygame's Discord Se
 First, we need to install Pygbag itself. Pip is a tool used to install Python libraries, and it's usually installed along with Python. 
 
 Execute the following command in the terminal:
-`pip install git+https://github.com/pygame-web/pygbag --user --upgrade`.<br>
-This would install/upgrade to the latest version of pygbag.
+`pip install pygbag --user --upgrade`.<br>
+This would install/upgrade to the latest version of pygbag ( expected to be tested and quite stable ).
 
-`pip install pygbag --user --upgrade` also works.
+`pip install git+https://github.com/pygame-web/pygbag --user --upgrade` would also work and install devel version of pygbag with potentially newer features or more recent python / modules.
 
 ## Quick Start Guide
 ### Code
@@ -29,24 +29,20 @@ import asyncio
 import pygame
 
 pygame.init()
-pygame.display.set_mode((320, 240))
+pygame.display.set_mode((990, 540))
 clock = pygame.time.Clock()
-
 
 async def main():
     count = 60
 
-    while True:
+    while count:
         print(f"{count}: Hello from Pygame")
-        pygame.display.update()
-        await asyncio.sleep(0)  # You must include this statement in your main loop. Keep the argument at 0.
-
-        if not count:
-            pygame.quit()
-            return
-        
         count -= 1
         clock.tick(60)
+        pygame.display.update()
+        await asyncio.sleep(0)  # You must include this statement in your main loop. Keep the argument at 0.     
+
+    pygame.quit()
 
 asyncio.run(main())
 ```
@@ -156,7 +152,7 @@ When importing complex packages (for example, numpy or matplotlib), you must put
 # ]
 # ///
 ```
-If using pygame-zero (mostly untested), put `#!pgzrun` near the top of main.py. (2nd line is perfect if the file already has a shebang)
+If using pygame-zero (mostly untested), put `#!pgzrun` near the top of main.py. (2nd line is ok if the file already has a shebang)
 
 ### Useful .gitignore additions
 ```
