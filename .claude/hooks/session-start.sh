@@ -16,11 +16,12 @@ fi
 
 echo "Git repo: OK"
 
-# Check for any markdown linter if available (markdownlint-cli)
-if command -v markdownlint &> /dev/null; then
-  echo "markdownlint: available"
-else
-  echo "markdownlint: not installed (optional)"
+# Install plaud-app npm dependencies
+PLAUD_DIR="${CLAUDE_PROJECT_DIR:-.}/plaud-app"
+if [ -f "${PLAUD_DIR}/package.json" ]; then
+  echo "Installing plaud-app dependencies..."
+  npm install --prefix "${PLAUD_DIR}"
+  echo "plaud-app: dependencies installed"
 fi
 
 echo "Session start hook: complete"
