@@ -1,220 +1,473 @@
-# Pygbag
-This page covers installing Pygbag, using it to package your python3 game and its game libraries ( like pygame-ce, Panda3D, Harfang3D, raylib-cpython-ffi, etc ), and uploading it to be played by anyone on the Internet.
-
-If you have questions at any point, you can ask for help in [Pygame's Discord Server](https://discord.gg/s6Hhrh77aq).
-
-## Installation
-First, we need to install Pygbag itself. Pip is a tool used to install Python libraries, and it's usually installed along with Python. 
-
-Execute the following command in the terminal:
-`pip install pygbag --user --upgrade`.<br>
-This would install/upgrade to the latest version of pygbag ( expected to be tested and quite stable ).
-
-`pip install git+https://github.com/pygame-web/pygbag --user --upgrade` would also work and install devel version of pygbag with potentially newer features or more recent python / modules.
-
-## Quick Start Guide
-### Code
-You won't need to change much of your project's code to make it compatible with Pygbag:
-
-1. Name the file with your game loop `main.py`.
-1. Add `import asyncio` to the script containing your game loop.
-2. Encapsulate your variable declarations (other than the window, as other functions might use it too)
-3. Put the game loop inside `main()`. It must be an asynchronous function (use `async def` instead of `def`).
-3. Put `await asyncio.sleep(0)` anywhere in your game loop. Right after your `clock.tick()` is fine.
-4. Put `asyncio.run(main())` at the end of the file. The game loop will be run here, so any additional lines will not be run.
-
-Here's a working example for what `main.py` might look like ( to get a working console use -i in cpython arguments eg  http://localhost:8000?-i )
-```py
 import asyncio
 import pygame
+import math
+import random
 
+# Khởi tạo Pygame
 pygame.init()
-pygame.display.set_mode((990, 540))
+
+WIDTH, HEIGHT = 950, 700
+screen = pygame.display.set_mode((WIDTH, HEIGHT))
+pygame.display.set_caption("Forsaken 2D - Spacebar Sprint Update")
 clock = pygame.time.Clock()
 
+# Bảng màu
+BLACK = (15, 15, 15)
+WHITE = (240, 240, 240)
+RED = (220, 50, 50)
+LIGHT_RED = (255, 100, 100)
+GREEN = (50, 220, 50)
+BLUE = (50, 150, 250)
+YELLOW = (240, 240, 50)
+PURPLE = (160, 32, 240)
+GRAY = (60, 60, 60)
+
+GAME_TIME = 150  # 2 phút 30 giây
+
+# Cấu hình thuộc tính nhân vật kèm MÁU (HP) & TỐC ĐỘ GỐC
+SURVIVOR_CLASSES = {
+    "Medic": {"base_speed": 3.0, "max_hp": 120, "skill": "Heal Aura", "malice_gain": 0.8},
+    "Engineer": {"base_speed": 2.8, "max_hp": 100, "skill": "Overcharge", "malice_gain": 0.6},
+    "Scout": {"base_speed": 3.4, "max_hp": 90, "skill": "Dash", "malice_gain": 0.7}
+}
+
+KILLER_CLASSES = {
+    "The Stalker": {"base_speed": 2.6, "damage": 40, "skill": "Shadow Leap", "malice_gain": 1.5, "range": 120},
+    "The Executioner": {"base_speed": 2.2, "damage": 65, "skill": "Slam Attack", "malice_gain": 2.0, "range": 95}
+}
+
+class Generator:
+    def __init__(self, x, y):
+        self.rect = pygame.Rect(x, y, 55, 55)
+        self.charges_left = 4
+        self.current_progress = 0
+        self.completed = False
+
+    def repair(self, amount):
+        if self.completed: return 0, 0
+        self.current_progress += amount
+        if self.current_progress >= 100:
+            self.charges_left -= 1
+            self.current_progress = 0
+            if self.charges_left <= 0:
+                self.completed = True
+            return 3, 0.5  
+        return 0, 0
+
+    def draw(self, surface):
+        color = GREEN if self.completed else (YELLOW if self.charges_left < 4 else GRAY)
+        pygame.draw.rect(surface, color, self.rect, 0, 6)
+        
+        font = pygame.font.Font(None, 22)
+        txt = font.render(f"x{self.charges_left}" if not self.completed else "OK", True, BLACK if self.completed else WHITE)
+        surface.blit(txt, (self.rect.x + 15, self.rect.y + 18))
+        
+        if not self.completed and self.charges_left > 0:
+            pygame.draw.rect(surface, RED, (self.rect.x, self.rect.y - 10, 55, 4))
+            pygame.draw.rect(surface, GREEN, (self.rect.x, self.rect.y - 10, int(55 * (self.current_progress / 100)), 4))
+
+class SurvivorEntity:
+    def __init__(self, x, y, name, is_bot=False):
+        self.x = x
+        self.y = y
+        self.name = name
+        self.is_bot = is_bot
+        self.role_data = SURVIVOR_CLASSES[name]
+        self.base_speed = self.role_data["base_speed"]
+        self.max_hp = self.role_data["max_hp"]
+        self.hp = self.max_hp
+        
+        # Hệ thống Stamina
+        self.stamina = 100.0
+        self.max_stamina = 100.0
+        self.exhausted = False
+        
+        self.radius = 15
+        self.malice = 0.0
+        self.alive = True
+        self.skill_cooldown = 0
+        self.show_hitbox_timer = 0
+        self.target_gen = None
+
+    def take_damage(self, amount):
+        if not self.alive: return
+        self.hp -= amount
+        if self.hp <= 0:
+            self.hp = 0
+            self.alive = False
+
+    def use_skill(self):
+        if self.skill_cooldown == 0 and not self.exhausted:
+            self.malice += self.role_data["malice_gain"]
+            self.skill_cooldown = 180  
+            self.show_hitbox_timer = 45 
+            self.stamina = max(0.0, self.stamina - 20.0)
+            
+            if self.name == "Medic" and self.alive:
+                self.hp = min(self.max_hp, self.hp + 15)
+            elif self.name == "Scout" and self.alive:
+                self.stamina = min(self.max_stamina, self.stamina + 40.0)
+            return True
+        return False
+
+    def handle_stamina(self, is_sprinting, is_moving):
+        if self.stamina <= 0:
+            self.exhausted = True
+        if self.exhausted and self.stamina >= 30: 
+            self.exhausted = False
+
+        if is_sprinting and is_moving and not self.exhausted:
+            self.stamina = max(0.0, self.stamina - 0.4) 
+            return self.base_speed * 1.6 
+        else:
+            fill_rate = 0.25 if is_moving else 0.45
+            self.stamina = min(self.max_stamina, self.stamina + fill_rate)
+            return self.base_speed if not self.exhausted else self.base_speed * 0.6
+
+    def update_ai(self, gens, killer_x, killer_y):
+        if not self.alive: return False
+        
+        dist_to_k = math.hypot(killer_x - self.x, killer_y - self.y)
+        is_sprinting = dist_to_k < 160 
+        
+        if dist_to_k < 160:
+            angle = math.atan2(self.y - killer_y, self.x - killer_x)
+            speed = self.handle_stamina(is_sprinting, True)
+            self.x += math.cos(angle) * speed
+            self.y += math.sin(angle) * speed
+            if random.random() < 0.01: self.use_skill()
+        else:
+            if not self.target_gen or self.target_gen.completed:
+                available = [g for g in gens if not g.completed]
+                if available: self.target_gen = random.choice(available)
+            
+            if self.target_gen:
+                dist_to_g = math.hypot(self.target_gen.rect.centerx - self.x, self.target_gen.rect.centery - self.y)
+                if dist_to_g > 30:
+                    speed = self.handle_stamina(False, True) 
+                    angle = math.atan2(self.target_gen.rect.centery - self.y, self.target_gen.rect.centerx - self.x)
+                    self.x += math.cos(angle) * speed
+                    self.y += math.sin(angle) * speed
+                else:
+                    self.handle_stamina(False, False)
+                    return True 
+            else:
+                self.handle_stamina(False, False)
+        
+        self.x = max(self.radius, min(WIDTH - self.radius, self.x))
+        self.y = max(self.radius, min(HEIGHT - self.radius, self.y))
+        if self.skill_cooldown > 0: self.skill_cooldown -= 1
+        if self.show_hitbox_timer > 0: self.show_hitbox_timer -= 1
+        return False
+
+    def draw(self, surface):
+        if not self.alive: return
+        color = BLUE if not self.is_bot else (0, 200, 200)
+        pygame.draw.circle(surface, color, (int(self.x), int(self.y)), self.radius)
+        
+        pygame.draw.rect(surface, GRAY, (self.x - 15, self.y - 23, 30, 3))
+        pygame.draw.rect(surface, GREEN, (self.x - 15, self.y - 23, int(30 * (self.hp / self.max_hp)), 3))
+        
+        if self.is_bot:
+            pygame.draw.rect(surface, GRAY, (self.x - 15, self.y - 19, 30, 2))
+            pygame.draw.rect(surface, YELLOW, (self.x - 15, self.y - 19, int(30 * (self.stamina / self.max_stamina)), 2))
+
+        if self.show_hitbox_timer > 0:
+            pygame.draw.circle(surface, PURPLE, (int(self.x), int(self.y)), 70, 2)
+
+class KillerEntity:
+    def __init__(self, x, y, name, is_bot=False):
+        self.x = x
+        self.y = y
+        self.name = name
+        self.is_bot = is_bot
+        self.role_data = KILLER_CLASSES[name]
+        self.base_speed = self.role_data["base_speed"]
+        self.damage = self.role_data["damage"]
+        self.range = self.role_data["range"]
+        
+        self.stamina = 100.0
+        self.max_stamina = 100.0
+        self.exhausted = False
+        
+        self.radius = 18
+        self.malice = 0.0
+        self.skill_cooldown = 0
+        self.show_hitbox_timer = 0
+        self.has_damaged_this_attack = [] 
+        self.waypoint = [random.randint(100, WIDTH-100), random.randint(100, HEIGHT-100)]
+
+    def use_attack(self):
+        if self.skill_cooldown == 0 and not self.exhausted:
+            self.malice += self.role_data["malice_gain"]
+            self.skill_cooldown = 120  
+            self.show_hitbox_timer = 30  
+            self.has_damaged_this_attack = [] 
+            self.stamina = max(0.0, self.stamina - 15.0)
+            return True
+        return False
+
+    def handle_stamina(self, is_sprinting, is_moving):
+        if self.stamina <= 0: self.exhausted = True
+        if self.exhausted and self.stamina >= 25: self.exhausted = False
+
+        if is_sprinting and is_moving and not self.exhausted:
+            self.stamina = max(0.0, self.stamina - 0.5) 
+            return self.base_speed * 1.7
+        else:
+            fill = 0.3 if is_moving else 0.5
+            self.stamina = min(self.max_stamina, self.stamina + fill)
+            return self.base_speed if not self.exhausted else self.base_speed * 0.5
+
+    def update_ai(self, survivors):
+        target = None
+        min_dist = 9999
+        for s in survivors:
+            if s.alive:
+                d = math.hypot(s.x - self.x, s.y - self.y)
+                if d < min_dist:
+                    min_dist = d
+                    target = s
+
+        is_sprinting = target and min_dist < 220
+        speed = self.handle_stamina(is_sprinting, True)
+
+        if target and min_dist < 220:
+            angle = math.atan2(target.y - self.y, target.x - self.x)
+            self.x += math.cos(angle) * speed
+            self.y += math.sin(angle) * speed
+            if min_dist <= self.range - 15:
+                self.use_attack()
+        else:
+            if math.hypot(self.waypoint[0] - self.x, self.waypoint[1] - self.y) < 20:
+                self.waypoint = [random.randint(100, WIDTH-100), random.randint(100, HEIGHT-100)]
+            angle = math.atan2(self.waypoint[1] - self.y, self.waypoint[0] - self.x)
+            self.x += math.cos(angle) * (speed * 0.7)
+            self.y += math.sin(angle) * (speed * 0.7)
+
+        if self.skill_cooldown > 0: self.skill_cooldown -= 1
+        if self.show_hitbox_timer > 0: self.show_hitbox_timer -= 1
+
+    def draw(self, surface):
+        color = RED if not self.is_bot else LIGHT_RED
+        pygame.draw.circle(surface, color, (int(self.x), int(self.y)), self.radius)
+        
+        if self.show_hitbox_timer > 0:
+            pygame.draw.circle(surface, (255, 0, 0), (int(self.x), int(self.y)), self.range, 2)
+
+
 async def main():
-    count = 60
+    game_state = "SELECT_FACTION"
+    my_side = "SURVIVOR" 
+    my_class_choice = ""
+    
+    time_remaining = GAME_TIME
+    frame_counter = 0
 
-    while count:
-        print(f"{count}: Hello from Pygame")
-        count -= 1
+    player_surv = None
+    killer = None
+    survivors = []
+    
+    generators = [Generator(150, 150), Generator(750, 150), Generator(450, 500)]
+    running = True
+    
+    while running:
+        screen.fill(BLACK)
+        mouse_pos = pygame.mouse.get_pos()
+        font_big = pygame.font.Font(None, 36)
+        font_sub = pygame.font.Font(None, 24)
+
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                running = False
+                
+            if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
+                if game_state == "SELECT_FACTION":
+                    if pygame.Rect(200, 300, 200, 80).collidepoint(mouse_pos):
+                        my_side = "SURVIVOR"
+                        game_state = "SELECT_CHAR"
+                    elif pygame.Rect(550, 300, 200, 80).collidepoint(mouse_pos):
+                        my_side = "KILLER"
+                        game_state = "SELECT_CHAR"
+                
+                elif game_state == "SELECT_CHAR":
+                    if my_side == "SURVIVOR":
+                        y_offset = 250
+                        for c_name in SURVIVOR_CLASSES:
+                            if pygame.Rect(350, y_offset, 250, 50).collidepoint(mouse_pos):
+                                my_class_choice = c_name
+                                player_surv = SurvivorEntity(450, 400, my_class_choice, is_bot=False)
+                                survivors.append(player_surv)
+                                
+                                remaining_classes = [c for c in SURVIVOR_CLASSES if c != my_class_choice]
+                                survivors.append(SurvivorEntity(200, 350, remaining_classes[0], is_bot=True))
+                                survivors.append(SurvivorEntity(700, 350, remaining_classes[1], is_bot=True))
+                                
+                                killer = KillerEntity(450, 100, random.choice(list(KILLER_CLASSES.keys())), is_bot=True)
+                                game_state = "PLAYING"
+                                break
+                            y_offset += 70
+                    else:
+                        y_offset = 250
+                        for k_name in KILLER_CLASSES:
+                            if pygame.Rect(350, y_offset, 250, 50).collidepoint(mouse_pos):
+                                my_class_choice = k_name
+                                killer = KillerEntity(450, 100, my_class_choice, is_bot=False)
+                                
+                                all_surv_classes = list(SURVIVOR_CLASSES.keys())
+                                survivors.append(SurvivorEntity(200, 400, all_surv_classes[0], is_bot=True))
+                                survivors.append(SurvivorEntity(450, 500, all_surv_classes[1], is_bot=True))
+                                survivors.append(SurvivorEntity(700, 400, all_surv_classes[2], is_bot=True))
+                                game_state = "PLAYING"
+                                break
+                            y_offset += 70
+
+            if game_state == "PLAYING" and event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_e:
+                    if my_side == "SURVIVOR" and player_surv.alive:
+                        player_surv.use_skill()
+                    elif my_side == "KILLER":
+                        killer.use_attack()
+
+        # =========================================================
+        # LOGIC TRẬN ĐẤU (PLAYING)
+        # =========================================================
+        if game_state == "PLAYING":
+            frame_counter += 1
+            if frame_counter % 60 == 0 and time_remaining > 0:
+                time_remaining -= 1
+
+            keys = pygame.key.get_pressed()
+            dx, dy = 0, 0
+            if keys[pygame.K_a]: dx = -1
+            if keys[pygame.K_d]: dx = 1
+            if keys[pygame.K_w]: dy = -1
+            if keys[pygame.K_s]: dy = 1
+            if dx != 0 and dy != 0: dx, dy = dx * 0.7071, dy * 0.7071
+
+            is_moving = dx != 0 or dy != 0
+            # --- MODIFIED: Đổi sang nhận diện nút Spacebar (Dấu cách) ---
+            is_sprinting = keys[pygame.K_SPACE] 
+
+            if my_side == "SURVIVOR" and player_surv.alive:
+                current_speed = player_surv.handle_stamina(is_sprinting, is_moving)
+                player_surv.x += dx * current_speed
+                player_surv.y += dy * current_speed
+                
+                if keys[pygame.K_q]:
+                    for gen in generators:
+                        if gen.rect.colliderect(pygame.Rect(player_surv.x-15, player_surv.y-15, 30, 30)):
+                            time_deduct, malice_gain = gen.repair(0.4)
+                            time_remaining = max(0, time_remaining - time_deduct)
+                            player_surv.malice += malice_gain
+                
+                if player_surv.skill_cooldown > 0: player_surv.skill_cooldown -= 1
+                if player_surv.show_hitbox_timer > 0: player_surv.show_hitbox_timer -= 1
+            
+            elif my_side == "KILLER":
+                current_speed = killer.handle_stamina(is_sprinting, is_moving)
+                killer.x += dx * current_speed
+                killer.y += dy * current_speed
+                if killer.skill_cooldown > 0: killer.skill_cooldown -= 1
+                if killer.show_hitbox_timer > 0: killer.show_hitbox_timer -= 1
+
+            if my_side == "SURVIVOR" or killer.is_bot:
+                killer.update_ai(survivors)
+                
+            for s in survivors:
+                if s.is_bot:
+                    is_repairing = s.update_ai(generators, killer.x, killer.y)
+                    if is_repairing and s.target_gen:
+                        time_deduct, malice_gain = s.target_gen.repair(0.2)
+                        time_remaining = max(0, time_remaining - time_deduct)
+                        s.malice += malice_gain
+
+            if killer.show_hitbox_timer > 0:
+                for s in survivors:
+                    if s.alive and (s not in killer.has_damaged_this_attack):
+                        dist = math.hypot(s.x - killer.x, s.y - killer.y)
+                        if dist <= killer.range: 
+                            s.take_damage(killer.damage)
+                            killer.has_damaged_this_attack.append(s)
+
+            surv_alive_count = sum(1 for s in survivors if s.alive)
+            if surv_alive_count == 0 or time_remaining <= 0:
+                game_state = "END"
+                result_text = "KILLER WIN! Trận đấu kết thúc."
+            elif all(g.completed for g in generators):
+                game_state = "END"
+                result_text = "SURVIVORS TRỐN THOÁT THÀNH CÔNG! WIN!"
+
+            for gen in generators: gen.draw(screen)
+            for s in survivors: s.draw(screen)
+            killer.draw(screen)
+
+            # HUD hiển thị Thể lực
+            my_stamina = player_surv.stamina if my_side == "SURVIVOR" else killer.stamina
+            is_ex = player_surv.exhausted if my_side == "SURVIVOR" else killer.exhausted
+            stamina_color = GREEN if my_stamina > 50 else (YELLOW if my_stamina > 20 else RED)
+            if is_ex: stamina_color = RED 
+            
+            pygame.draw.rect(screen, GRAY, (WIDTH - 220, HEIGHT - 50, 200, 15), 0, 4)
+            pygame.draw.rect(screen, stamina_color, (WIDTH - 220, HEIGHT - 50, int(200 * (my_stamina / 100)), 15), 0, 4)
+            
+            hud_label = font_sub.render(f"STAMINA: {int(my_stamina)}% " + ("(KIỆT SỨC)" if is_ex else ""), True, WHITE)
+            screen.blit(hud_label, (WIDTH - 220, HEIGHT - 75))
+
+            minutes = time_remaining // 60
+            seconds = time_remaining % 60
+            screen.blit(font_big.render(f"Thời gian: {minutes:02d}:{seconds:02d}", True, WHITE), (380, 20))
+
+            y_ui = 60
+            for i, s in enumerate(survivors):
+                status_str = f"HP: {int(s.hp)}/{s.max_hp}" if s.alive else "DEAD"
+                my_tag = " (Bạn)" if not s.is_bot else ""
+                txt = font_sub.render(f"Surv {i+1} [{s.name}]{my_tag}: {status_str} | Malice: {s.malice:.1f}", True, BLUE if s.alive else GRAY)
+                screen.blit(txt, (20, y_ui))
+                y_ui += 25
+                
+            k_tag = " (Bạn)" if not killer.is_bot else ""
+            ktxt = font_sub.render(f"Killer [{killer.name}]{k_tag}: Sát thương: {killer.damage} | Malice: {killer.malice:.1f}", True, RED)
+            screen.blit(ktxt, (20, y_ui + 10))
+
+            # --- MODIFIED UI TEXT: Sửa lại dòng hướng dẫn cho đúng phím SPACE ---
+            inst_str = "[W,A,S,D] Di chuyển | Giữ [SPACE] để chạy nhanh | [E] Kỹ năng"
+            if my_side == "SURVIVOR": inst_str += " | Giữ [Q] sửa máy"
+            screen.blit(font_sub.render(inst_str, True, WHITE), (20, HEIGHT - 30))
+
+        # =========================================================
+        # GIAO DIỆN LỰA CHỌN
+        # =========================================================
+        elif game_state == "SELECT_FACTION":
+            title = font_big.render("CHỌN PHE TRONG FORSAKEN 2D", True, WHITE)
+            screen.blit(title, (280, 180))
+            pygame.draw.rect(screen, BLUE, (200, 300, 200, 80), 0, 8)
+            pygame.draw.rect(screen, RED, (550, 300, 200, 80), 0, 8)
+            screen.blit(font_big.render("SURVIVOR", True, WHITE), (230, 325))
+            screen.blit(font_big.render("KILLER", True, WHITE), (600, 325))
+
+        elif game_state == "SELECT_CHAR":
+            title = font_big.render(f"CHỌN LỚP NHÂN VẬT ({my_side})", True, WHITE)
+            screen.blit(title, (320, 150))
+            y_offset = 250
+            if my_side == "SURVIVOR":
+                for c_name, data in SURVIVOR_CLASSES.items():
+                    pygame.draw.rect(screen, GRAY, (350, y_offset, 250, 50), 0, 5)
+                    txt = font_sub.render(f"{c_name} (Tốc gốc: {data['base_speed']})", True, WHITE)
+                    screen.blit(txt, (360, y_offset + 15))
+                    y_offset += 70
+            else:
+                for k_name, data in KILLER_CLASSES.items():
+                    pygame.draw.rect(screen, RED, (350, y_offset, 250, 50), 0, 5)
+                    txt = font_sub.render(f"{k_name}", True, WHITE)
+                    screen.blit(txt, (370, y_offset + 15))
+                    y_offset += 70
+
+        elif game_state == "END":
+            screen.blit(font_big.render(result_text, True, YELLOW), (150, HEIGHT // 2 - 20))
+
+        pygame.display.flip()
         clock.tick(60)
-        pygame.display.update()
-        await asyncio.sleep(0)  # You must include this statement in your main loop. Keep the argument at 0.     
+        await asyncio.sleep(0)
 
-    pygame.quit()
-
-asyncio.run(main())
-```
-<!-- ### Web Testing
-When packaging, Pygbag sets up a local server which runs your game and provides debug information. This is only accessible from your own computer. If you do not need to debug your game, add `--build` to the command line options. -->
-
-
-
-### Running your project in your own browser
-On the command line, navigate to the parent directory of your project. (that is, the directory which holds it)
-
-Run this command: `pygbag folder_name` (replace `folder_name` with the name that you gave your game folder)
-
-If `pygbag` isn't recognised as a command, you can run `python -m pygbag folder_name` as an alternative.
-
-After running this command, navigate to [localhost:8000](https://localhost:8000). Pygbag will take a while to load. As of writing, this phase shows a blank cyan page. This may take a long time the first load, but will speed up on later reloads.
-
-Once Pygbag has loaded, it will load your game. Once the loading bar completes, you should be able to click the screen to start.
-
-If you were able to complete these step, congratulations! You have successfully set up Pygbag and tested that your game runs in the browser! We will continue with some next steps you may consider.
-
-If you were not able to, scroll down to the [documentation](#detailed-documentation) to troubleshoot.
-
-### Debugging
-If you need to debug your game going forward, you may consider reading the page on [debugging](/wiki/pygbag-debug/) with Pygbag.
-
-### Publishing 
-To let others play your game online, you must publish your game on a publicly accessible website. We provide documentation for publishing [via itch.io](/wiki/publishing/itch.io/) and [via Github Pages](/wiki/publishing/github.io/).
-
-### Templates
-You can change the page layout (and much more) using templates. They consist of HTML markup and Python/JavaScript code to contain your packaged game, plus some CSS to style it. To make your template better fit your game, you may want change it from the default one. Add `--template [TEMPLATE NAME].tmpl` to Pygbag's arguments when running it from the command line to set the template it uses.
-
-#### Using built-in templates
-This is recommended if you don't want to edit HTML. Check [/static](https://github.com/pygame-web/pygbag/tree/main/static) in Pygbag's repository for a list of available templates. Put the filename after `--template` to make Pygbag use it. <!--Not sure where the templates are hosted exactly, made my best guess. Correct me if I'm wrong.-->
-
-#### Downloading a template and customising it
-[Here](https://github.com/pygame-web/pygbag/tree/main/static) you can find various templates available online. The simplest way to customise a template is to download one and edit them.
-
-If you want to make Pygbag use a template on your computer, pass the full path of your template file instead of just the filename. Running Pygbag in this way will package your game with your desired template without erasing the cache.
-
-With this approach, you can customize the template as you like, and test out changes before you publish your game. 
-
-> Before editing templates, you should have a good knowledge of HTML. The code in templates is important to running the game properly, so edit them carefully. Remember to test that your game still packages correctly after switching/editing templates.
-
-## Detailed Documentation
-
-### Asset location
-Assets are the images, fonts and sounds your game uses. If you aren't using Pygbag, you can place the assets in any folder (although it's good practice to put them in your project folder anyways). With Pygbag, you must place all your assets in your project folder, or they will not be packaged.
-
-Your project folder, `my-game`, might look like this:
-```
-my-game
-├── img
-│   ├── pygc.bmp
-│   ├── pygc.png
-│   └── tiger.svg
-├── main.py
-└── sfx
-    └── beep.ogg
-```
-
-Make sure you're not pulling assets from outside your folder, like this!
-```
-.
-├── my-game/
-│   ├── main.py
-│   └── sfx/
-│       └── beep.ogg
-└── img/
-    ├── pygc.bmp
-    ├── pygc.png
-    └── tiger.svg
-```
-
-
-### Adding Modules
-- [List of available wheels](/wiki/pkg/)
-- [requesting modules](https://github.com/pygame-web/pkg-porting-wasm/issues)
-
-If you need to import a third-party module for PC, but not for web, use importlib. For example:
-```py
-# succeeds
-if sys.platform != "emscripten":
-    import importlib
-    importlib.import_module("copykitten")
-```
-The following will NOT work:
-```py
-# fails
-if sys.platform != "emscripten":
-    import copykitten
-```
-The import is detected by pygbag and assumes you will import it at some point in the future. `http://localhost:8000/` will likely reveal a `ModuleNotFoundError`.
-
-#### Complex Packages
-When importing complex packages (for example, numpy or matplotlib), you must put their import statements at top of `main.py`. You should also add a metadata header as specified by [PEP 723](https://peps.python.org/pep-0723/), for example:
-```
-# /// script
-# dependencies = [
-#  "six",
-#  "bs4",
-#  "markdown-it-py",
-#  "pygments",
-#  "rich",
-#  "mdurl",
-#  "textual",
-# ]
-# ///
-```
-If using pygame-zero (mostly untested), put `#!pgzrun` near the top of main.py. (2nd line is ok if the file already has a shebang)
-
-### Useful .gitignore additions
-```
-*.wav
-*.mp3
-*.pyc
-*.egg-info
-*-pygbag.???
-/build
-/dist
-```
-### Using 3D/WebGL context ?
-~~Add `--template noctx.tmpl` to pygbag command line if using 3D/WebGL ( eg Panda3D / Harfang / raylib ) or pygame.sdl2 renderer.~~
-nb: a context is either 2D (pygame) or 3D(pygame.sdl2/3D engines) you cannot switch after the mode is inited.
-but you can use pygame 2D inside a 3D engine at the cost of surface to gpu texture conversion+uploading.
-
-### Using heightmaps?
-You can use `--no_opt` to prevent png recompression.
-
-### File formats and names
-- You can add a square image file named `favicon.png` in your game's root folder to make Pygbag use it as the web package's favicon.
-- Make sure all audio files are in OGG format, and all files are compressed. (that is, not in WAV/AIFF/M4A/MP3)
-- Avoid raw formats like BMP for your image assets, they are too big for web use; use PNG/WEBP or JPG instead.
-
-- Do not use filenames like `*-pygbag.*`  that pattern is reserved for pygbag internal use (optimizing pass).
-
-Before packaging, adapt your code this way if you still want WAV/MP3 format on desktop:
-```py
-if sys.platform == "emscripten":
-    snd = pygame.mixer.Sound("sound.ogg")
-else:
-    snd = pygame.mixer.Sound("sound.wav") # or .WAV, .mp3, .MP3, etc.
-```
-
-### Keep pixellated style?
-If you want to keep pixelated look whatever the device screen size is use:
-```py
-import sys, platform
-if sys.platform == "emscripten":
-    platform.window.canvas.style.imageRendering = "pixelated"
-```
-
-### Avoid GUI, I/O, web operations
-Avoid using CPython's standard library for web operations, GUI (like tkinter), or I/O as it is very synchronous/platform-specific and will probably stay that way. In terms of GUI alternatives, [pygame_gui](https://pypi.org/project/pygame_gui) works on top of [pygame-ce](https://pyga.me), [Panda3D](https://www.panda3d.org/) provides [directgui](https://docs.panda3d.org/1.10/python/programming/gui/directgui/index) and Harfang3D provides imgui. They are all cross-platform.
-
-### Windows
-- Use Python that was downloaded from python.org rather than the Windows Store. You can check installed version(s) with the `py --list` command.
-- Use `/` instead of `\​` as a path separator (e.g. `img/my_image.png` instead of `img\my_image.png`). The path should still be valid on newer Windows versions.
-
-### MacOS
-- If you get a SSL error, use the file `Install Certificates.command` in `Applications/Python 3.XX`.
-
-### Linux
-- When using webusb ftdi serial emulation, use `sudo rmmod ftdi_sio` after plugging devices.
-
-### Pypi
-Pygbag's project description on pypi exists here: [https://pypi.org/project/pygbag/](https://pypi.org/project/pygbag/)
-
-### Boilerplate code
-There is very little because Python-WASM is just a web-friendly version of CPython REPL with [some added facilities](https://discuss.python.org/t/status-of-wasm-in-cpythons-main-branch/15542/12?u=pmp-p). Most desktop code will run (and continue to run) with only a few changes. 
-
-## Conclusion
-Congratulations for finishing this tutorial! Now you can go ahead and make all your Python games playable in the browser! Thank you for reading.
-
-[Contribute to this page.](https://github.com/pygame-web/pygame-web.github.io/edit/main/wiki/pygbag/README.md)
+pygame.quit()
