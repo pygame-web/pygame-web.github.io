@@ -1,7 +1,132 @@
-/.idea
+import pygame
+import random
+import math
 
-# for local testing
-Gemfile.lock
-Gemfile
-.jekyll-metadata
-_site
+pygame.init()
+WIDTH, HEIGHT = 720, 1080
+screen = pygame.display.set_mode((WIDTH, HEIGHT))
+pygame.display.set_caption("灰鴉邊境：2040")
+clock = pygame.time.Clock()
+FPS = 60
+
+BG_COLOR = (18, 22, 30)
+PLAYER_COLOR = (26, 170, 70)
+ENEMY_COLOR = (170, 35, 35)
+BULLET_COLOR = (230, 230, 40)
+
+class Player:
+    def __init__(self):
+        self.x = WIDTH // 2
+        self.y = HEIGHT // 2
+        self.speed = 5
+        self.radius = 22
+
+    def move(self, dx, dy):
+        self.x += dx * self.speed
+        self.y += dy * self.speed
+        self.x = max(self.radius, min(WIDTH - self.radius, self.x))
+        self.y = max(self.radius, min(HEIGHT - self.radius, self.y))
+
+    def draw(self):
+        pygame.draw.circle(screen, PLAYER_COLOR, (int(self.x), int(self.y)), self.radius)
+
+class Bullet:
+    def __init__(self, x, y, angle):
+        self.x = x
+        self.y = y
+        self.speed = 10
+        self.angle = angle
+
+    def update(self):
+        self.x += math.cos(self.angle) * self.speed
+        self.y += math.sin(self.angle) * self.speed
+
+    def draw(self):
+        pygame.draw.circle(screen, BULLET_COLOR, (int(self.x), int(self.y)), 5)
+
+    def is_out(self):
+        return self.x < 0 or self.x > WIDTH or self.y < 0 or self.y > HEIGHT
+
+class Enemy:
+    def __init__(self):
+        side = random.choice(["top","bottom","left","right"])
+        if side == "top":
+            self.x = random.randint(0, WIDTH)
+            self.y = -30
+        elif side == "bottom":
+            self.x = random.randint(0, WIDTH)
+            self.y = HEIGHT + 30
+        elif side == "left":
+            self.x = -30
+            self.y = random.randint(0, HEIGHT)
+        else:
+            self.x = WIDTH + 30
+            self.y = random.randint(0, HEIGHT)
+        self.speed = 2
+        self.radius = 18
+
+    def update(self, px, py):
+        dx = px - self.x
+        dy = py - self.y
+        dist = math.hypot(dx, dy)
+        if dist > 0:
+            self.x += dx/dist * self.speed
+            self.y += dy/dist * self.speed
+
+    def draw(self):
+        pygame.draw.circle(screen, ENEMY_COLOR, (int(self.x), int(self.y)), self.radius)
+
+def main():
+    player = Player()
+    bullets = []
+    enemies = []
+    spawn_timer = 0
+    font = pygame.font.SysFont(None, 40)
+    running = True
+
+    while running:
+        clock.tick(FPS)
+        screen.fill(BG_COLOR)
+        mx, my = pygame.mouse.get_pos()
+
+        for e in pygame.event.get():
+            if e.type == pygame.QUIT:
+                running = False
+            if e.type == pygame.MOUSEBUTTONDOWN or e.type == pygame.FINGERDOWN:
+                tx, ty = e.pos
+                ang = math.atan2(ty - player.y, tx - player.x)
+                bullets.append(Bullet(player.x, player.y, ang))
+
+        move_x = (mx - player.x) * 0.08
+        move_y = (my - player.y) * 0.08
+        player.move(move_x, move_y)
+
+        spawn_timer += 1
+        if spawn_timer > 70:
+            enemies.append(Enemy())
+            spawn_timer = 0
+
+        for b in bullets[:]:
+            b.update()
+            b.draw()
+            if b.is_out():
+                bullets.remove(b)
+
+        for e in enemies[:]:
+            e.update(player.x, player.y)
+            e.draw()
+            for b in bullets[:]:
+                dist = math.hypot(e.x - b.x, e.y - b.y)
+                if dist < e.radius:
+                    enemies.remove(e)
+                    bullets.remove(b)
+                    break
+
+        player.draw()
+        tip = font.render("點擊畫面射擊 | 手指拖動移動", True, (210,210,210))
+        screen.blit(tip, (20, 20))
+        pygame.display.flip()
+    pygame.quit()
+
+if __name__ == "__main__":
+    main()
