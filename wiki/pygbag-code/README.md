@@ -214,7 +214,15 @@ import platform
 # document may not exist on non-emscripten platforms
 if sys.platform == "emscripten":    
     platform.document.body.style.background = "#404040"
-```    
+```
+### Getting a consistent random sequence across runs
+Call `random.seed()` before any random functions to base the sequence on the current time.
+
+```py
+import random, time
+random.seed(time.time())
+```
+
 ### mobile events handling 
 
 TODO, drag/drop events, gestures.
